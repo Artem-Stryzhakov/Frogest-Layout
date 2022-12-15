@@ -14,7 +14,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #34455e;
+  background-color: #2d3b51;
   height: 100px;
   gap: 20px;
 }
@@ -34,17 +34,52 @@ body {
   outline: none;
 }
 
-.nav-button {
+.dropdown-menu a:active {
+  background-color: green;
+}
+
+nav {
+  background-color: #2d3b51;
+}
+nav .container-fluid {
+  padding: 15px;
+}
+nav .container-fluid .navbar-toggler {
+  border-color: #ddd;
+}
+nav .container-fluid .navbar-toggler i {
+  color: #ddd;
+}
+@media screen and (max-width: 991px) {
+  nav .container-fluid img {
+    margin: auto;
+    width: 60%;
+  }
+  nav .container-fluid #navbarSupportedContent form {
+    margin: 25px auto 15px;
+  }
+}
+@media screen and (min-width: 992px) {
+  nav .container-fluid img {
+    max-width: 270px;
+    margin-left: 3%;
+  }
+  nav .container-fluid #navbarSupportedContent form {
+    margin: auto;
+    width: 400px;
+  }
+}
+nav .container-fluid .nav-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 7px;
+  gap: 10px;
   margin-right: 10px;
 }
-.nav-button > a {
+nav .container-fluid .nav-button > a {
   border: 1px solid #ddd;
   border-radius: 100%;
   height: 40%;
@@ -54,16 +89,15 @@ body {
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.nav-button > a:hover {
-  background-color: #2d3b51;
+nav .container-fluid .nav-button > a:hover {
+  background-color: #202a3a;
 }
-.nav-button i {
+nav .container-fluid .nav-button i {
   color: green;
   font-size: 30px;
 }
-
-.dropdown-menu a:active {
-  background-color: green;
+nav .container-fluid .nav-item > a {
+  color: #ddd;
 }
 
 .about-shop {
@@ -77,7 +111,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #34455e;
+  background-color: #2d3b51;
   color: white;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -89,13 +123,32 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.about-shop .content-about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 1400px) {
+  .about-shop .content-about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about-shop .content-about img {
+    border-bottom-right-radius: 10px;
+  }
 }
-.about-shop .content-about img {
-  border-bottom-right-radius: 10px;
+@media screen and (max-width: 1399px) {
+  .about-shop .content-about {
+    display: -ms-grid;
+    display: grid;
+  }
+  .about-shop .content-about img {
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+.about-shop .content-about {
+  position: relative;
+}
+.about-shop .description {
+  margin-right: 20px;
 }
 .about-shop .description p, .about-shop .description h2 {
   margin-top: 14px;
@@ -120,7 +173,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #34455e;
+  background-color: #2d3b51;
   color: white;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -144,24 +197,35 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 60px;
-  margin-top: 30px;
-  margin-bottom: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
 }
 .main-content .leadersPictures img {
   border-radius: 10px;
+  margin: 10px auto 10px;
 }
 
+@media screen and (max-width: 746px) {
+  .infoPanel {
+    display: -ms-grid;
+    display: grid;
+  }
+}
+@media screen and (min-width: 747px) {
+  .infoPanel {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 .infoPanel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -183,13 +247,12 @@ body {
 }
 
 footer {
-  background-color: #34455e;
+  background-color: #2d3b51;
 }
 footer .footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 5%;
   padding: 25px;
   margin-top: 50px;
 }
@@ -199,9 +262,18 @@ footer .footer-content p {
 footer .footer-content h6 {
   color: white;
 }
-footer .footer-content .logoFooter {
-  width: 20%;
-  margin-left: 30px;
+@media screen and (max-width: 580px) {
+  footer .footer-content .logoFooter {
+    width: 320px;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 581px) {
+  footer .footer-content .logoFooter {
+    width: 300px;
+    margin-left: 40px;
+    margin-right: 50px;
+  }
 }
 footer .footer-content .logoFooter .SNlinks {
   display: -webkit-box;
@@ -225,25 +297,36 @@ footer .footer-content .logoFooter .SNlinks a:not(.firstEl) {
   font-size: 20px;
   padding: 10px 15px;
 }
-footer .footer-content .contactFooter {
+footer .footer-content .extraInfoFooter {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 200px;
+  gap: 35px;
+}
+footer .footer-content .extraInfoFooter .contactFooter {
   max-width: 300px;
 }
-footer .footer-content .instagramFooter {
+footer .footer-content .extraInfoFooter .instagramFooter {
   max-width: 300px;
 }
-footer .footer-content .instagramFooter .instaPictures {
+footer .footer-content .extraInfoFooter .instagramFooter .instaPictures {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   max-width: 400px;
 }
-footer .footer-content .instagramFooter .instaPictures img {
+footer .footer-content .extraInfoFooter .instagramFooter .instaPictures img {
   margin: 3px;
   width: 90px;
   height: 90px;
 }
 footer .extraFooter {
   color: white;
-  background-color: #222d3d;
+  background-color: #1b2330;
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -251,18 +334,7 @@ footer .extraFooter {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-footer .extraFooter > span {
-  margin-left: 100px;
-}
-footer .extraFooter #moreCont {
-  margin: auto;
-  border: 1px solid white;
-  border-radius: 10px;
-  padding: 4px 15px;
-}
-footer .extraFooter a {
-  float: right;
-  margin-right: 100px;
-  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }

@@ -1,6 +1,6 @@
 $lineColor: #ddd
 $mainColor: green
-$secondColor: lighten(#2d3b51, 4)
+$secondColor: #2d3b51
 
 @mixin imgStyle()
   width: 50px
@@ -68,31 +68,67 @@ body
   &:focus
     outline: none
 
-.nav-button
-  display: flex
-  align-items: center
-  gap: 7px
-  margin-right: 10px
-
-  > a
-    border: 1px solid $lineColor
-    border-radius: 100%
-    height: (100% / 2.5)
-    width: 51px
-    padding: 8px
-    text-align: center
-    transition: 0.3s ease-in-out
-
-    &:hover
-      background-color: #2d3b51
-
-  i
-    color: $mainColor
-    font-size: 30px
-
 .dropdown-menu
   a:active
     background-color: $mainColor
+
+// ==========================================
+
+nav
+  background-color: $secondColor
+
+  .container-fluid
+    padding: 15px
+
+    .navbar-toggler
+      border-color: $lineColor
+      i
+        color: $lineColor
+
+    @media screen and (max-width: 991px)
+      img
+        margin: auto
+        width: 60%
+
+      #navbarSupportedContent
+        form
+          margin: 25px auto 15px
+
+    @media screen and (min-width: 992px)
+      img
+        max-width: 270px
+        margin-left: 3%
+
+      #navbarSupportedContent
+        form
+          margin: auto
+          width: 400px
+
+    .nav-button
+      display: flex
+      align-items: center
+      gap: 10px
+      margin-right: 10px
+
+      > a
+        border: 1px solid $lineColor
+        border-radius: 100%
+        height: (100% / 2.5)
+        width: 51px
+        padding: 8px
+        text-align: center
+        transition: 0.3s ease-in-out
+
+        &:hover
+          background-color: darken(#2d3b51, 7)
+
+      i
+        color: $mainColor
+        font-size: 30px
+
+
+    .nav-item > a
+      color: $lineColor
 
 // ===== MAIN CONTENT ===== //
 
@@ -102,13 +138,28 @@ body
   .title-shop
     @include titleStyle()
 
-  .content-about
-    display: flex
+  @media screen and (min-width: 1400px)
+    .content-about
+      display: flex
 
-    img
-      border-bottom-right-radius: 10px
+      img
+        border-bottom-right-radius: 10px
+
+  @media screen and (max-width: 1399px)
+    .content-about
+      display: grid
+
+      img
+        width: 100%
+        border-bottom-right-radius: 10px
+        border-bottom-left-radius: 10px
+
+
+  .content-about
+    position: relative
 
   .description
+    margin-right: 20px
     p, h2
       margin-top: 14px
       padding-left: 15px
@@ -133,20 +184,30 @@ body
   > h2
     text-align: center
 
-
   .leadersPictures
     display: flex
-    align-items: center
     justify-content: center
-    gap: 60px
-    margin-top: 30px
-    margin-bottom: 40px
+    flex-wrap: wrap
+    gap: 10px
+    width: fit-content
+
+    margin: auto
 
     img
       border-radius: 10px
+      margin: 10px auto 10px
+
+
+@media screen and (max-width: 746px)
+  .infoPanel
+    display: grid
+
+@media screen and (min-width: 747px)
+  .infoPanel
+    display: flex
+
 
 .infoPanel
-  display: flex
   align-items: center
   gap: 20px
   margin-top: 30px
@@ -172,7 +233,6 @@ footer
 
   .footer-content
     display: flex
-    gap: 5%
     padding: 25px
     margin-top: 50px
 
@@ -182,10 +242,19 @@ footer
     h6
       color: white
 
-    .logoFooter
-      width: 20%
-      margin-left: 30px
+    @media screen and (max-width: 580px)
+      .logoFooter
+        width: 320px
+        margin: auto
 
+    @media screen and (min-width: 581px)
+      .logoFooter
+        width: 300px
+        margin-left: 40px
+        margin-right: 50px
+
+
+    .logoFooter
       .SNlinks
         display: flex
         gap: 10px
@@ -199,20 +268,27 @@ footer
           @include footerButtons()
           padding: 10px 15px
 
-    .contactFooter
-      max-width: 300px
+    .extraInfoFooter
+      margin: auto
+      display: flex
+      justify-content: center
+      max-height: 200px
+      gap: 35px
 
-    .instagramFooter
-      max-width: 300px
+      .contactFooter
+        max-width: 300px
 
-      .instaPictures
-        flex-wrap: wrap
-        max-width: 400px
+      .instagramFooter
+        max-width: 300px
 
-        img
-          margin: 3px
-          width: 90px
-          height: 90px
+        .instaPictures
+          flex-wrap: wrap
+          max-width: 400px
+
+          img
+            margin: 3px
+            width: 90px
+            height: 90px
 
   .extraFooter
     color: white
@@ -220,17 +296,4 @@ footer
     height: 40px
     display: flex
     align-items: center
-
-    > span
-      margin-left: 100px
-
-    #moreCont
-      margin: auto
-      border: 1px solid white
-      border-radius: 10px
-      padding: 4px 15px
-
-    a
-      float: right
-      margin-right: 100px
-      color: white
+    justify-content: center
