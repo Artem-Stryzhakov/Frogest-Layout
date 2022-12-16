@@ -1,42 +1,4 @@
-$lineColor: #ddd
-$mainColor: green
-$secondColor: #2d3b51
-
-@mixin imgStyle()
-  width: 50px
-  height: 50px
-  padding: 10px
-  border: 1px solid $lineColor
-  border-radius: 50%
-
-@mixin topCornerRadius()
-  border-top-left-radius: 10px
-  border-top-right-radius: 10px
-
-@mixin infopagesDisplay()
-  width: 80%
-  margin: 70px auto auto
-  border: 1px solid $lineColor
-  background-color: white
-  border-radius: 10px
-
-@mixin titleStyle()
-  display: flex
-  background-color: $secondColor
-  color: white
-  align-items: center
-  font-family: Impact, sans-serif
-  font-size: 25px
-  padding-top: 12px
-  padding-left: 10px
-  @include topCornerRadius()
-
-@mixin footerButtons()
-  text-decoration: none
-  background-color: $mainColor
-  color: white
-  border-radius: 10px
-  font-size: 20px
+@import './mixins'
 
 body
   background-color: #e2e6ec

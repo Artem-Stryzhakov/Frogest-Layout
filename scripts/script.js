@@ -149,7 +149,7 @@ const optimizeContacts = () => {
     }
 }
 
-function optimizeInstagram() {
+const optimizeInstagram = () => {
     if (window.innerWidth < 1500){
         instagramFooter.remove()
     } else {
