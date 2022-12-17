@@ -1,3 +1,4 @@
+/*
 let instagramFooter = document.querySelector('.instagramFooter')
 let contactFooter = document.querySelector('.contactFooter')
 let accountFooter = document.querySelector('.accountFooter')
@@ -171,4 +172,4 @@ const optimizeInstagram = () => {
             instagramFooter = document.querySelector('.instagramFooter')
         }
     }
-}
+}*/

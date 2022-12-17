@@ -1,11 +1,9 @@
 @import './mixins'
 
-body
-  background-color: #e2e6ec
-
 *
   padding: 0
   margin: 0
+
 
 // ===== HEADER ===== //
 
@@ -152,8 +150,43 @@ nav
     flex-wrap: wrap
     gap: 10px
     width: fit-content
-
     margin: auto
+
+    .infoAboutPerson
+      position: relative
+
+      .info-name-role
+        position: absolute
+        bottom: 10px
+        display: flex
+        align-items: center
+        //gap: 50px
+        width: 100%
+        padding: 15px 5px
+        font-size: 15px
+        background-color: rgba(45, 59, 81, 0.9)
+        color: white
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+
+        a
+          color: white
+          transition: 0.3s ease-in-out
+
+          &:hover
+            color: $mainColor
+
+        .name-role
+          display: grid
+          width: 170px
+
+          .personName
+            font-weight: bolder
+
+          .personRole
+            font-size: 11px
+
+
 
     img
       border-radius: 10px
@@ -195,6 +228,7 @@ footer
 
   .footer-content
     display: flex
+    justify-content: center
     padding: 25px
     margin-top: 50px
 
@@ -206,17 +240,11 @@ footer
 
     @media screen and (max-width: 580px)
       .logoFooter
-        width: 320px
         margin: auto
 
-    @media screen and (min-width: 581px)
-      .logoFooter
-        width: 300px
-        margin-left: 40px
-        margin-right: 50px
-
-
     .logoFooter
+      width: 300px
+
       .SNlinks
         display: flex
         gap: 10px
@@ -237,8 +265,30 @@ footer
       max-height: 200px
       gap: 35px
 
+      @media screen and (max-width: 580px)
+        .infoFooter
+          display: none
+
+      @media screen and (max-width: 740px)
+        .companyFooter
+          display: none
+
+      @media screen and (max-width: 900px)
+        .accountFooter
+          display: none
+
+
+      @media screen and (max-width: 1180px)
+        .contactFooter
+          display: none
+
       .contactFooter
         max-width: 300px
+
+      @media screen and (max-width: 1500px)
+        .instagramFooter
+          display: none
+
 
       .instagramFooter
         max-width: 300px

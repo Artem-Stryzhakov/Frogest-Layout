@@ -1,7 +1,3 @@
-body {
-  background-color: #e2e6ec;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -35,7 +31,7 @@ body {
 }
 
 .dropdown-menu a:active {
-  background-color: green;
+  background-color: rgb(50, 156, 70);
 }
 
 nav {
@@ -93,7 +89,7 @@ nav .container-fluid .nav-button > a:hover {
   background-color: #202a3a;
 }
 nav .container-fluid .nav-button i {
-  color: green;
+  color: rgb(50, 156, 70);
   font-size: 30px;
 }
 nav .container-fluid .nav-item > a {
@@ -208,6 +204,45 @@ nav .container-fluid .nav-item > a {
   width: fit-content;
   margin: auto;
 }
+.main-content .leadersPictures .infoAboutPerson {
+  position: relative;
+}
+.main-content .leadersPictures .infoAboutPerson .info-name-role {
+  position: absolute;
+  bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 15px 5px;
+  font-size: 15px;
+  background-color: rgba(45, 59, 81, 0.9);
+  color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.main-content .leadersPictures .infoAboutPerson .info-name-role a {
+  color: white;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.main-content .leadersPictures .infoAboutPerson .info-name-role a:hover {
+  color: rgb(50, 156, 70);
+}
+.main-content .leadersPictures .infoAboutPerson .info-name-role .name-role {
+  display: -ms-grid;
+  display: grid;
+  width: 170px;
+}
+.main-content .leadersPictures .infoAboutPerson .info-name-role .name-role .personName {
+  font-weight: bolder;
+}
+.main-content .leadersPictures .infoAboutPerson .info-name-role .name-role .personRole {
+  font-size: 11px;
+}
 .main-content .leadersPictures img {
   border-radius: 10px;
   margin: 10px auto 10px;
@@ -240,7 +275,7 @@ nav .container-fluid .nav-item > a {
   padding: 20px;
 }
 .infoPanel .information #email > a {
-  color: #00cd00;
+  color: #53c869;
 }
 .infoPanel iframe {
   width: 100%;
@@ -254,6 +289,9 @@ footer .footer-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 25px;
   margin-top: 50px;
 }
@@ -265,16 +303,11 @@ footer .footer-content h6 {
 }
 @media screen and (max-width: 580px) {
   footer .footer-content .logoFooter {
-    width: 320px;
     margin: auto;
   }
 }
-@media screen and (min-width: 581px) {
-  footer .footer-content .logoFooter {
-    width: 300px;
-    margin-left: 40px;
-    margin-right: 50px;
-  }
+footer .footer-content .logoFooter {
+  width: 300px;
 }
 footer .footer-content .logoFooter .SNlinks {
   display: -webkit-box;
@@ -284,7 +317,7 @@ footer .footer-content .logoFooter .SNlinks {
 }
 footer .footer-content .logoFooter .SNlinks a:is(.firstEl) {
   text-decoration: none;
-  background-color: green;
+  background-color: rgb(50, 156, 70);
   color: white;
   border-radius: 10px;
   font-size: 20px;
@@ -292,7 +325,7 @@ footer .footer-content .logoFooter .SNlinks a:is(.firstEl) {
 }
 footer .footer-content .logoFooter .SNlinks a:not(.firstEl) {
   text-decoration: none;
-  background-color: green;
+  background-color: rgb(50, 156, 70);
   color: white;
   border-radius: 10px;
   font-size: 20px;
@@ -309,8 +342,33 @@ footer .footer-content .extraInfoFooter {
   max-height: 200px;
   gap: 35px;
 }
+@media screen and (max-width: 580px) {
+  footer .footer-content .extraInfoFooter .infoFooter {
+    display: none;
+  }
+}
+@media screen and (max-width: 740px) {
+  footer .footer-content .extraInfoFooter .companyFooter {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  footer .footer-content .extraInfoFooter .accountFooter {
+    display: none;
+  }
+}
+@media screen and (max-width: 1180px) {
+  footer .footer-content .extraInfoFooter .contactFooter {
+    display: none;
+  }
+}
 footer .footer-content .extraInfoFooter .contactFooter {
   max-width: 300px;
+}
+@media screen and (max-width: 1500px) {
+  footer .footer-content .extraInfoFooter .instagramFooter {
+    display: none;
+  }
 }
 footer .footer-content .extraInfoFooter .instagramFooter {
   max-width: 300px;
