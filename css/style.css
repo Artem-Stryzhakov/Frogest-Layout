@@ -96,14 +96,7 @@ nav .container-fluid .nav-item > a {
   color: #ddd;
 }
 
-.about-shop {
-  width: 80%;
-  margin: 70px auto auto;
-  border: 1px solid #ddd;
-  background-color: white;
-  border-radius: 10px;
-}
-.about-shop .title-shop {
+.contentTitles {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,6 +111,14 @@ nav .container-fluid .nav-item > a {
   padding-left: 10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.about-shop {
+  width: 80%;
+  margin: 70px auto auto;
+  border: 1px solid #ddd;
+  background-color: white;
+  border-radius: 10px;
 }
 @media screen and (min-width: 1400px) {
   .about-shop .content-about {
@@ -164,22 +165,6 @@ nav .container-fluid .nav-item > a {
   border: 1px solid #ddd;
   background-color: white;
   border-radius: 10px;
-}
-.contacts .title-contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #2d3b51;
-  color: white;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: Impact, sans-serif;
-  font-size: 25px;
-  padding-top: 12px;
-  padding-left: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .main-content {

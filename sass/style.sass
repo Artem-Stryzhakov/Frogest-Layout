@@ -92,11 +92,11 @@ nav
 
 // ===== MAIN CONTENT ===== //
 
-.about-shop
-  @include infopagesDisplay()
+.contentTitles
+  @include titleStyle
 
-  .title-shop
-    @include titleStyle()
+.about-shop
+  @include infopagesDisplay
 
   @media screen and (min-width: 1400px)
     .content-about
@@ -132,10 +132,7 @@ nav
       margin-bottom: 10px
 
 .contacts
-  @include infopagesDisplay()
-
-  .title-contacts
-    @include titleStyle()
+  @include infopagesDisplay
 
 .main-content
   max-width: 90%
@@ -185,8 +182,6 @@ nav
 
           .personRole
             font-size: 11px
-
-
 
     img
       border-radius: 10px
@@ -250,12 +245,12 @@ footer
         gap: 10px
 
         a:is(.firstEl)
-          @include footerButtons()
+          @include footerButtons
           padding: 10px 20px
 
 
         a:not(.firstEl)
-          @include footerButtons()
+          @include footerButtons
           padding: 10px 15px
 
     .extraInfoFooter
@@ -265,30 +260,7 @@ footer
       max-height: 200px
       gap: 35px
 
-      @media screen and (max-width: 580px)
-        .infoFooter
-          display: none
-
-      @media screen and (max-width: 740px)
-        .companyFooter
-          display: none
-
-      @media screen and (max-width: 900px)
-        .accountFooter
-          display: none
-
-
-      @media screen and (max-width: 1180px)
-        .contactFooter
-          display: none
-
-      .contactFooter
-        max-width: 300px
-
-      @media screen and (max-width: 1500px)
-        .instagramFooter
-          display: none
-
+        @include optimizeFooterContainers
 
       .instagramFooter
         max-width: 300px

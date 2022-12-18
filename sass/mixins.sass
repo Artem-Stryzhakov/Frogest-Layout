@@ -1,24 +1,24 @@
 @import './variables'
 
-@mixin imgStyle()
+@mixin imgStyle
   width: 50px
   height: 50px
   padding: 10px
   border: 1px solid $lineColor
   border-radius: 50%
 
-@mixin topCornerRadius()
+@mixin topCornerRadius
   border-top-left-radius: 10px
   border-top-right-radius: 10px
 
-@mixin infopagesDisplay()
+@mixin infopagesDisplay
   width: 80%
   margin: 70px auto auto
   border: 1px solid $lineColor
   background-color: white
   border-radius: 10px
 
-@mixin titleStyle()
+@mixin titleStyle
   display: flex
   background-color: $secondColor
   color: white
@@ -27,7 +27,7 @@
   font-size: 25px
   padding-top: 12px
   padding-left: 10px
-  @include topCornerRadius()
+  @include topCornerRadius
 
 @mixin footerButtons()
   text-decoration: none
@@ -35,3 +35,28 @@
   color: white
   border-radius: 10px
   font-size: 20px
+
+@mixin optimizeFooterContainers
+  @media screen and (max-width: 580px)
+    .infoFooter
+      display: none
+
+    @media screen and (max-width: 740px)
+      .companyFooter
+        display: none
+
+    @media screen and (max-width: 900px)
+      .accountFooter
+        display: none
+
+
+    @media screen and (max-width: 1180px)
+      .contactFooter
+        display: none
+
+    .contactFooter
+      max-width: 300px
+
+    @media screen and (max-width: 1500px)
+      .instagramFooter
+        display: none
