@@ -12,8 +12,9 @@
   border-top-right-radius: 10px
 
 @mixin infopagesDisplay
-  width: 80%
-  margin: 70px auto auto
+  margin-right: 50px
+  margin-left: 50px
+  margin-top: 80px
   border: 1px solid $lineColor
   background-color: white
   border-radius: 10px
@@ -35,28 +36,3 @@
   color: white
   border-radius: 10px
   font-size: 20px
-
-@mixin optimizeFooterContainers
-  @media screen and (max-width: 580px)
-    .infoFooter
-      display: none
-
-    @media screen and (max-width: 740px)
-      .companyFooter
-        display: none
-
-    @media screen and (max-width: 900px)
-      .accountFooter
-        display: none
-
-
-    @media screen and (max-width: 1180px)
-      .contactFooter
-        display: none
-
-    .contactFooter
-      max-width: 300px
-
-    @media screen and (max-width: 1500px)
-      .instagramFooter
-        display: none
