@@ -468,8 +468,15 @@ footer .footer-content h6 {
   }
 }
 footer .footer-content .logoFooter {
-  width: 300px;
+  width: 400px;
   margin-left: 40px;
+}
+footer .footer-content .logoFooter img {
+  width: 350px;
+}
+footer .footer-content .logoFooter p {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 footer .footer-content .logoFooter .SNlinks {
   display: -webkit-box;
