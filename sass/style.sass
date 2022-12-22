@@ -389,17 +389,13 @@ footer
 
     .logoFooter
       width: 300px
+      margin-left: 40px
 
       .SNlinks
         display: flex
         gap: 10px
 
-        a:is(.firstEl)
-          @include footerButtons
-          padding: 10px 20px
-
-
-        a:not(.firstEl)
+        a
           @include footerButtons
           padding: 10px 15px
 

@@ -5,19 +5,12 @@ const categoriesList_links = document.querySelectorAll('.list-of-categories li a
 const showDropdown = () => categoriesList.style.display = 'inherit'
 const hideDropdown = () => categoriesList.style.display = 'none'
 
-for (const categoriesChild of categories_children) {
-    categoriesChild.addEventListener('mouseenter', showDropdown)
-    categoriesChild.addEventListener('mouseout', hideDropdown)
+const addEventListeners = (element) => {
+    element.addEventListener('mouseenter', showDropdown)
+    element.addEventListener('mouseout', hideDropdown)
 }
 
-categoriesList.addEventListener('mouseenter', showDropdown)
+for (const categoriesChild of categories_children) addEventListeners(categoriesChild)
+for (const element of categoriesList.children) addEventListeners(element)
 
-for (const categoriesListElement of categoriesList.children) {
-    categoriesListElement.addEventListener('mouseenter', showDropdown)
-    categoriesListElement.addEventListener('mouseout', hideDropdown)
-}
-
-categoriesList_links.forEach((links) => {
-    links.addEventListener('mouseenter', showDropdown)
-    links.addEventListener('mouseout', hideDropdown)
-})
+categoriesList_links.forEach(links => addEventListeners(links))

@@ -469,6 +469,7 @@ footer .footer-content h6 {
 }
 footer .footer-content .logoFooter {
   width: 300px;
+  margin-left: 40px;
 }
 footer .footer-content .logoFooter .SNlinks {
   display: -webkit-box;
@@ -476,15 +477,7 @@ footer .footer-content .logoFooter .SNlinks {
   display: flex;
   gap: 10px;
 }
-footer .footer-content .logoFooter .SNlinks a:is(.firstEl) {
-  text-decoration: none;
-  background-color: rgb(50, 156, 70);
-  color: white;
-  border-radius: 10px;
-  font-size: 20px;
-  padding: 10px 20px;
-}
-footer .footer-content .logoFooter .SNlinks a:not(.firstEl) {
+footer .footer-content .logoFooter .SNlinks a {
   text-decoration: none;
   background-color: rgb(50, 156, 70);
   color: white;
