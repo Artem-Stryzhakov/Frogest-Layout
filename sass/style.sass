@@ -97,80 +97,6 @@ nav
 
 // ===== MAIN CONTENT ===== //
 
-.left-column
-  margin-left: 30px
-
-  // ===== CATEGORIES LIST ====== //
-
-  .categories
-    display: flex
-    align-items: center
-    width: 250px
-    height: 40px
-    background-color: #6bb42a
-    letter-spacing: 0.2px
-    font-weight: 500
-    font-size: 18px
-    position: relative
-    color: #ffffff
-    border-collapse: collapse
-
-    i
-      padding: 10px
-      height: 100%
-
-    span
-      display: flex
-      align-items: center
-      width: 100%
-      height: 40px
-
-  .list-of-categories
-    display: none
-    background-color: white
-    list-style-type: none
-    margin: 0
-    padding: 0
-    border-bottom-right-radius: 10px
-    border-bottom-left-radius: 10px
-
-    .orangle-font a
-        color: #ee5b44
-        font-weight: bold
-
-    .Xmas-sellout a
-      background-color: #ee5b44 !important
-      color: white
-      font-weight: bold
-
-    li:not(.border-bottom-none)
-      border-bottom: 1px solid lightgray
-
-    li
-      a
-        position: relative
-        display: flex
-        align-items: center
-        gap: 10px
-        width: 100%
-        text-align: left
-        text-decoration: none
-        color: #333
-        line-height: 24px
-        font-weight: 500
-        font-size: 15px
-        padding: 7px 13px
-        transition: 0.5s ease-in-out
-
-        &:hover:not(.Xmas-sellout)
-          background-color: rgb(204, 255, 166)
-
-        &:hover:is(.border-bottom-hover)
-          border-bottom-right-radius: 10px
-          border-bottom-left-radius: 10px
-
-  // ======================================
-
 .contentTitles
   @include titleStyle
 
@@ -295,6 +221,81 @@ nav
   display: flex
   justify-content: center
 
+  .left-column
+  margin-left: 30px
+
+  // ===== CATEGORIES LIST ====== //
+
+  .categories
+    background-color: #6bb42a
+    height: 35px
+    width: 230px
+
+    &:hover
+      .list-of-categories
+        display: inherit
+
+    .categories-dom
+      display: flex
+      align-items: center
+      gap: 8px
+      float: none
+      line-height: 24px
+      font-weight: 500
+      font-size: 18px
+      color: #ffffff
+      letter-spacing: 0.2px
+      margin: 0
+      padding: 9px 14px
+      width: 100%
+      height: 100%
+
+    .list-of-categories
+      display: none
+      background-color: white
+      list-style-type: none
+      margin: 0
+      padding: 0
+      border-bottom-right-radius: 10px
+      border-bottom-left-radius: 10px
+
+      .orangle-font a
+        color: #ee5b44
+        font-weight: bold
+
+      .Xmas-sellout a
+        background-color: #ee5b44 !important
+        color: white
+        font-weight: bold
+
+      li:not(.border-bottom-none)
+        border-bottom: 1px solid lightgray
+
+      li
+        a
+          position: relative
+          display: flex
+          align-items: center
+          gap: 10px
+          width: 100%
+          text-align: left
+          text-decoration: none
+          color: #333
+          line-height: 24px
+          font-weight: 500
+          font-size: 15px
+          padding: 7px 13px
+          transition: 0.5s ease-in-out
+
+          &:hover:not(.Xmas-sellout)
+            background-color: rgb(204, 255, 166)
+
+          &:hover:is(.border-bottom-hover)
+            border-bottom-right-radius: 10px
+            border-bottom-left-radius: 10px
+
+  // ======================================
+
   .right-column
     margin: 30px
     display: grid
@@ -323,10 +324,16 @@ nav
         align-items: center
         justify-content: center
         padding: 5px 5px
+        width: 90%
+        margin: auto
+        gap: 6px
+
+        img
+          width: 100px
 
         .product-info
           display: grid
-          width: 200px
+          width: 150px
 
           .product-name
             font-size: 15px
@@ -343,6 +350,7 @@ nav
       background-color: white
       border-radius: 10px
 
+
       > h5
         padding: 10px
         border-bottom: 1px solid $lineColor
@@ -351,6 +359,8 @@ nav
         display: grid
         align-items: center
         text-align: center
+        width: 90%
+        margin: auto
 
         img
           margin: auto auto 30px
@@ -414,11 +424,11 @@ footer
       display: flex
       justify-content: center
       max-height: 200px
-      gap: 35px
+      gap: 55px
 
       @media screen and (max-width: 580px)
-      .infoFooter
-        display: none
+        .infoFooter
+          display: none
 
       @media screen and (max-width: 740px)
         .companyFooter
