@@ -502,7 +502,7 @@ footer .footer-content .extraInfoFooter {
       -ms-flex-pack: center;
           justify-content: center;
   max-height: 200px;
-  gap: 55px;
+  gap: 54px;
 }
 @media screen and (max-width: 580px) {
   footer .footer-content .extraInfoFooter .infoFooter {
