@@ -53,11 +53,13 @@ nav
     @media screen and (max-width: 991px)
       img
         margin: auto
-        width: 60%
+        width: 50%
+        max-width: 400px
 
       #navbarSupportedContent
         form
-          margin: 25px auto 15px
+          input[type='search'], button
+            display: none
 
     @media screen and (min-width: 992px)
       img
@@ -69,11 +71,62 @@ nav
           margin: auto
           width: 400px
 
+          // Categories in a small window
+      @media screen and (max-width: 991px)
+        .nav-categories
+          display: inherit
+
+      @media screen and (min-width: 992px)
+        .nav-categories
+          display: none
+
+    .nav-categories
+      border: 1px solid white
+      border-radius: 20px
+      margin-top: 20px
+      width: 100%
+
+      .btn:hover, .focus-color // .focus-color используется в js файле
+        background-color: $mainColor
+
+      ul
+        list-style-type: none
+        padding: 0
+        margin: 0
+        @include categories_theme
+
+        li
+          .main-links
+            color: white
+
+          .collapse .card .collapse-container
+            font-size: 10px
+            gap: 50px
+
+            .under-categories
+              margin-top: -5px
+
+              h4 a
+                font-size: 18px
+                max-width: 150px
+
+              p a:hover
+                color: $mainColor
+
+
+    @media screen and (min-width: 992px)
+      .nav-button
+        margin-right: 30px
+
+    @media screen and (max-width: 991px)
+      .nav-button
+        margin: 10px auto
+
     .nav-button
       display: flex
+      width: fit-content
       align-items: center
       gap: 10px
-      margin-right: 10px
 
       > a
         border: 1px solid $lineColor
@@ -91,9 +144,36 @@ nav
         color: $mainColor
         font-size: 30px
 
+// ==========SEARCH BAR================
+@media screen and (max-width: 991px)
+  #searchbar .form-control
+    display: inherit
 
-    .nav-item > a
-      color: $lineColor
+  #searchbar i
+    display: inherit
+
+@media screen and (min-width: 992px)
+  #searchbar .form-control
+    display: none
+
+  #searchbar i
+    display: none
+
+// =====================================
+#searchbar
+  position: relative
+
+#searchbar .form-control
+  height: 45px
+
+#searchbar .form-control:focus
+  box-shadow: none
+  border: 1px solid #000
+
+#searchbar i
+  position: absolute
+  right: 10px
+  top: 15px
 
 // ===== MAIN CONTENT ===== //
 
@@ -103,25 +183,14 @@ nav
 .infoContainers
   @include infopagesDisplay
 
-  @media screen and (min-width: 1400px)
-    .content-about
-      display: flex
-
-      img
-        border-bottom-right-radius: 10px
-
-  @media screen and (max-width: 1399px)
-    .content-about
-      display: grid
-
-      img
-        width: 100%
-        border-bottom-right-radius: 10px
-        border-bottom-left-radius: 10px
-
-
   .content-about
+    display: grid
     position: relative
+
+    img
+      width: 100%
+      border-bottom-right-radius: 10px
+      border-bottom-left-radius: 10px
 
   .description
     margin-right: 20px
@@ -189,11 +258,11 @@ nav
       margin: 10px auto 10px
 
 
-@media screen and (max-width: 746px)
+@media screen and (max-width: 1270px)
   .infoPanel
     display: grid
 
-@media screen and (min-width: 747px)
+@media screen and (min-width: 1271px)
   .infoPanel
     display: flex
 
@@ -221,8 +290,16 @@ nav
   display: flex
   justify-content: center
 
+  @media screen and (max-width: 991px)
+    .left-column
+      display: none
+
+  @media screen and (min-width: 992px)
+    .left-column
+      display: inherit
+
   .left-column
-  margin-left: 30px
+    margin-left: 30px
 
   // ===== CATEGORIES LIST ====== //
 
@@ -253,52 +330,53 @@ nav
     .list-of-categories
       display: none
       background-color: white
-      list-style-type: none
-      margin: 0
-      padding: 0
-      border-bottom-right-radius: 10px
-      border-bottom-left-radius: 10px
+      @include categories_theme
 
-      .orangle-font a
-        color: #ee5b44
-        font-weight: bold
+      li a:hover
+        background-color: rgb(236, 255, 221)
 
-      .Xmas-sellout a
-        background-color: #ee5b44 !important
-        color: white
-        font-weight: bold
+      .phones-category
+        position: relative
+        display: flex
 
-      li:not(.border-bottom-none)
-        border-bottom: 1px solid lightgray
+        &:hover
+          .underlist-phones
+            display: inherit
 
-      li
-        a
-          position: relative
-          display: flex
-          align-items: center
-          gap: 10px
-          width: 100%
-          text-align: left
-          text-decoration: none
-          color: #333
-          line-height: 24px
-          font-weight: 500
-          font-size: 15px
-          padding: 7px 13px
-          transition: 0.5s ease-in-out
+        .underlist-phones
+          display: none
+          position: absolute
+          top: 0
+          left: 100%
+          width: calc(90vw - 240px)
+          max-width: 1020px
+          height: max-content
+          background-color: white
+          box-shadow: 1px 1px 5px #777
+          border: 1px solid #ccc
+          flex-wrap: wrap
+          z-index: 999
 
-          &:hover:not(.Xmas-sellout)
-            background-color: rgb(204, 255, 166)
+          .category-container
+            display: flex
+            max-width: max-content
+            margin: auto
 
-          &:hover:is(.border-bottom-hover)
-            border-bottom-right-radius: 10px
-            border-bottom-left-radius: 10px
+          h4 a
+            font-weight: bold
 
   // ======================================
 
+  @media screen and (max-width: 991px)
+    .right-column
+      display: none
+
+  @media screen and (min-width: 992px)
+    .right-column
+      display: grid
+
   .right-column
     margin: 30px
-    display: grid
     gap: 30px
     height: fit-content
     text-align: center

@@ -53,10 +53,11 @@ nav .container-fluid .navbar-toggler i {
 @media screen and (max-width: 991px) {
   nav .container-fluid img {
     margin: auto;
-    width: 60%;
+    width: 50%;
+    max-width: 400px;
   }
-  nav .container-fluid #navbarSupportedContent form {
-    margin: 25px auto 15px;
+  nav .container-fluid #navbarSupportedContent form input[type=search], nav .container-fluid #navbarSupportedContent form button {
+    display: none;
   }
 }
 @media screen and (min-width: 992px) {
@@ -69,7 +70,49 @@ nav .container-fluid .navbar-toggler i {
     width: 400px;
   }
 }
-nav .container-fluid .nav-button {
+@media screen and (min-width: 992px) and (max-width: 991px) {
+  nav .container-fluid .nav-categories {
+    display: inherit;
+  }
+}
+@media screen and (min-width: 992px) and (min-width: 992px) {
+  nav .container-fluid .nav-categories {
+    display: none;
+  }
+}
+nav .container-fluid .nav-categories {
+  border: 1px solid white;
+  border-radius: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+nav .container-fluid .nav-categories .btn:hover, nav .container-fluid .nav-categories .focus-color {
+  background-color: rgb(50, 156, 70);
+}
+nav .container-fluid .nav-categories ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+nav .container-fluid .nav-categories ul .orangle-font a {
+  color: #ee5b44;
+  font-weight: bold;
+}
+nav .container-fluid .nav-categories ul .Xmas-sellout a {
+  background-color: #ee5b44 !important;
+  color: white;
+  font-weight: bold;
+}
+nav .container-fluid .nav-categories ul li:not(.border-bottom-none) {
+  border-bottom: 1px solid lightgray;
+}
+nav .container-fluid .nav-categories ul li a {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,7 +120,59 @@ nav .container-fluid .nav-button {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  margin-right: 10px;
+  width: 100%;
+  text-align: left;
+  text-decoration: none;
+  color: #333;
+  line-height: 24px;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 7px 13px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+nav .container-fluid .nav-categories ul li a:hover:is(.border-bottom-hover) {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+nav .container-fluid .nav-categories ul li .main-links {
+  color: white;
+}
+nav .container-fluid .nav-categories ul li .collapse .card .collapse-container {
+  font-size: 10px;
+  gap: 50px;
+}
+nav .container-fluid .nav-categories ul li .collapse .card .collapse-container .under-categories {
+  margin-top: -5px;
+}
+nav .container-fluid .nav-categories ul li .collapse .card .collapse-container .under-categories h4 a {
+  font-size: 18px;
+  max-width: 150px;
+}
+nav .container-fluid .nav-categories ul li .collapse .card .collapse-container .under-categories p a:hover {
+  color: rgb(50, 156, 70);
+}
+@media screen and (min-width: 992px) {
+  nav .container-fluid .nav-button {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 991px) {
+  nav .container-fluid .nav-button {
+    margin: 10px auto;
+  }
+}
+nav .container-fluid .nav-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
 }
 nav .container-fluid .nav-button > a {
   border: 1px solid #ddd;
@@ -96,8 +191,41 @@ nav .container-fluid .nav-button i {
   color: rgb(50, 156, 70);
   font-size: 30px;
 }
-nav .container-fluid .nav-item > a {
-  color: #ddd;
+
+@media screen and (max-width: 991px) {
+  #searchbar .form-control {
+    display: inherit;
+  }
+  #searchbar i {
+    display: inherit;
+  }
+}
+@media screen and (min-width: 992px) {
+  #searchbar .form-control {
+    display: none;
+  }
+  #searchbar i {
+    display: none;
+  }
+}
+#searchbar {
+  position: relative;
+}
+
+#searchbar .form-control {
+  height: 45px;
+}
+
+#searchbar .form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 1px solid #000;
+}
+
+#searchbar i {
+  position: absolute;
+  right: 10px;
+  top: 15px;
 }
 
 .contentTitles {
@@ -125,29 +253,15 @@ nav .container-fluid .nav-item > a {
   background-color: white;
   border-radius: 10px;
 }
-@media screen and (min-width: 1400px) {
-  .infoContainers .content-about {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  .infoContainers .content-about img {
-    border-bottom-right-radius: 10px;
-  }
-}
-@media screen and (max-width: 1399px) {
-  .infoContainers .content-about {
-    display: -ms-grid;
-    display: grid;
-  }
-  .infoContainers .content-about img {
-    width: 100%;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-  }
-}
 .infoContainers .content-about {
+  display: -ms-grid;
+  display: grid;
   position: relative;
+}
+.infoContainers .content-about img {
+  width: 100%;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .infoContainers .description {
   margin-right: 20px;
@@ -230,13 +344,13 @@ nav .container-fluid .nav-item > a {
   margin: 10px auto 10px;
 }
 
-@media screen and (max-width: 746px) {
+@media screen and (max-width: 1270px) {
   .infoPanel {
     display: -ms-grid;
     display: grid;
   }
 }
-@media screen and (min-width: 747px) {
+@media screen and (min-width: 1271px) {
   .infoPanel {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -271,6 +385,18 @@ nav .container-fluid .nav-item > a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (max-width: 991px) {
+  .column .left-column {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .column .left-column {
+    display: inherit;
+  }
+}
+.column .left-column {
   margin-left: 30px;
 }
 .column .categories {
@@ -341,17 +467,65 @@ nav .container-fluid .nav-item > a {
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
-.column .categories .list-of-categories li a:hover:not(.Xmas-sellout) {
-  background-color: rgb(204, 255, 166);
-}
 .column .categories .list-of-categories li a:hover:is(.border-bottom-hover) {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
+.column .categories .list-of-categories li a:hover {
+  background-color: rgb(236, 255, 221);
+}
+.column .categories .list-of-categories .phones-category {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.column .categories .list-of-categories .phones-category:hover .underlist-phones {
+  display: inherit;
+}
+.column .categories .list-of-categories .phones-category .underlist-phones {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: calc(90vw - 240px);
+  max-width: 1020px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 5px #777;
+          box-shadow: 1px 1px 5px #777;
+  border: 1px solid #ccc;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  z-index: 999;
+}
+.column .categories .list-of-categories .phones-category .underlist-phones .category-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: auto;
+}
+.column .categories .list-of-categories .phones-category .underlist-phones h4 a {
+  font-weight: bold;
+}
+@media screen and (max-width: 991px) {
+  .column .right-column {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .column .right-column {
+    display: -ms-grid;
+    display: grid;
+  }
+}
 .column .right-column {
   margin: 30px;
-  display: -ms-grid;
-  display: grid;
   gap: 30px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -502,7 +676,7 @@ footer .footer-content .extraInfoFooter {
       -ms-flex-pack: center;
           justify-content: center;
   max-height: 200px;
-  gap: 54px;
+  gap: 55px;
 }
 @media screen and (max-width: 580px) {
   footer .footer-content .extraInfoFooter .infoFooter {

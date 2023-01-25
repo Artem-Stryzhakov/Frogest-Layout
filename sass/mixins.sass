@@ -11,6 +11,44 @@
   border-top-left-radius: 10px
   border-top-right-radius: 10px
 
+@mixin categories_theme
+  list-style-type: none
+  margin: 0
+  padding: 0
+  border-bottom-right-radius: 10px
+  border-bottom-left-radius: 10px
+
+  .orangle-font a
+    color: #ee5b44
+    font-weight: bold
+
+  .Xmas-sellout a
+    background-color: #ee5b44 !important
+    color: white
+    font-weight: bold
+
+  li:not(.border-bottom-none)
+    border-bottom: 1px solid lightgray
+  li
+    a
+      position: relative
+      display: flex
+      align-items: center
+      gap: 10px
+      width: 100%
+      text-align: left
+      text-decoration: none
+      color: #333
+      line-height: 24px
+      font-weight: 500
+      font-size: 15px
+      padding: 7px 13px
+      transition: 0.5s ease-in-out
+
+      &:hover:is(.border-bottom-hover)
+        border-bottom-right-radius: 10px
+        border-bottom-left-radius: 10px
+
 @mixin infopagesDisplay
   margin-right: 50px
   margin-left: 50px
