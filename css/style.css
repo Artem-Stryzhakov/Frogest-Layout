@@ -471,24 +471,30 @@ nav .container-fluid .nav-button i {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.column .categories .list-of-categories li a:hover {
+.column .categories .list-of-categories li {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.column .categories .list-of-categories li:hover {
   background-color: rgb(236, 255, 221);
 }
-.column .categories .list-of-categories .phones-category {
+.column .categories .list-of-categories .product-category {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.column .categories .list-of-categories .phones-category:hover .underlist-phones {
+.column .categories .list-of-categories .product-category:hover .underlist-product {
   display: inherit;
 }
-.column .categories .list-of-categories .phones-category .underlist-phones {
+.column .categories .list-of-categories .product-category .underlist-product {
   display: none;
   position: absolute;
   top: 0;
   left: 100%;
-  width: calc(90vw - 240px);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   max-width: 1020px;
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -501,16 +507,32 @@ nav .container-fluid .nav-button i {
       flex-wrap: wrap;
   z-index: 999;
 }
-.column .categories .list-of-categories .phones-category .underlist-phones .category-container {
+.column .categories .list-of-categories .product-category .underlist-product .top-line {
+  width: 100%;
+  height: 15px;
+  background-color: rgb(236, 255, 221);
+  text-indent: -9999px;
+}
+.column .categories .list-of-categories .product-category .underlist-product .category-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
-  margin: auto;
+  padding: 10px 15px;
 }
-.column .categories .list-of-categories .phones-category .underlist-phones h4 a {
+.column .categories .list-of-categories .product-category .underlist-product .category-container .categories-in-categories h4 {
+  max-width: 200px;
+}
+.column .categories .list-of-categories .product-category .underlist-product .category-container .categories-in-categories p {
+  margin: 0;
+  padding: 0;
+}
+.column .categories .list-of-categories .product-category .underlist-product h4 a {
   font-weight: bold;
 }
 @media screen and (max-width: 991px) {

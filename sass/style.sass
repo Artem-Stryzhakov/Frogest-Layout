@@ -332,23 +332,26 @@ nav
       background-color: white
       @include categories_theme
 
-      li a:hover
-        background-color: rgb(236, 255, 221)
+      li
+        transition: 0.5s ease-in-out
 
-      .phones-category
+        &:hover
+          background-color: rgb(236, 255, 221)
+
+      .product-category
         position: relative
         display: flex
 
         &:hover
-          .underlist-phones
+          .underlist-product
             display: inherit
 
-        .underlist-phones
+        .underlist-product
           display: none
           position: absolute
           top: 0
           left: 100%
-          width: calc(90vw - 240px)
+          width: max-content
           max-width: 1020px
           height: max-content
           background-color: white
@@ -357,11 +360,26 @@ nav
           flex-wrap: wrap
           z-index: 999
 
+          .top-line
+            width: 100%
+            height: 15px
+            background-color: rgb(236, 255, 221)
+            text-indent: -9999px
+
           .category-container
             display: flex
+            gap: 30px
+            flex-wrap: wrap
             max-width: max-content
-            margin: auto
+            padding: 10px 15px
 
+            .categories-in-categories
+              h4
+                max-width: 200px
+
+              p
+                margin: 0
+                padding: 0
 
           h4 a
             font-weight: bold
