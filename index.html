@@ -16,10 +16,45 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="https://frog.ee/img/favicon-1.ico?167092613" type="image/x-icon">
     <script src="script.js" defer></script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <title>About</title>
 </head>
 <body>
+    <button
+            type="button"
+            class="btn btn-floating btn-lg"
+            id="btn-back-to-top"
+    >
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <header>
+        <div class="top-header">
+            <div class="secondary-functions">
+                <a href="">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>SEARCH IN WAREHOUSES</span>
+                </a>
+                <div class="middle-div"></div>
+                <a href="">
+                    <i class="fa-sharp fa-solid fa-list"></i>
+                    <span>ORDER TRACKING</span>
+                </a>
+            </div>
+            <div class="switch-language dropdown-center">
+                <button class="btn dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="language-name">English</span>
+                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Русский</a></li>
+                    <li><a class="dropdown-item" href="#">Eesti</a></li>
+                    <li><a class="dropdown-item" href="#">Suomi</a></li>
+                    <li><a class="dropdown-item" href="#">Latviešu</a></li>
+                    <li><a class="dropdown-item last" href="#">Lietuvių</a></li>
+                </ul>
+            </div>
+        </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <img src="images/logo.svg" alt="...">
@@ -27,26 +62,67 @@
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <form class="d-flex" role="search" style="gap: 0" id="top-searchbar">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                    <div class="nav-button dropdown">
-                        <a href="#">
-                            <i class='fa-solid fa-basket-shopping'></i>
-                        </a>
-                        <a href="#">
-                            <i class='fa-solid fa-heart'></i>
-                        </a>
-                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class='fa fa-user'></i>
-                        </a>
+                    <div class="d-flex form-inputs">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input class="form-control" type="text" placeholder="Search">
+                    </div>
+                    <div class="switch-language-in-mobile dropdown-center">
+                        <button class="btn dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="language-name">English</span>
+                            <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                        </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">English</a></li>
+                            <li><a class="dropdown-item" href="#">Русский</a></li>
+                            <li><a class="dropdown-item" href="#">Eesti</a></li>
+                            <li><a class="dropdown-item" href="#">Suomi</a></li>
+                            <li><a class="dropdown-item" href="#">Latviešu</a></li>
+                            <li><a class="dropdown-item last" href="#">Lietuvių</a></li>
                         </ul>
+                    </div>
+                    <div class="phone-number">
+                        <i class="fa-solid fa-phone phone-icon"></i>
+                        <span class="number"><a href="+372 611 11 11">+372 611 11 11</a></span>
+                        <div class="work-days">
+                            <span>M - F:</span>
+                            <span>09-18</span>
+                        </div>
+                    </div>
+                    <div class="nav-button dropdown">
+                        <div class="user-button-container">
+                            <button type="button" class="btn position-relative">
+                                <i class="fa-solid fa-code-compare"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                    0
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </button>
+                            <div class="data-for-buttons">
+                                <span>Compare</span>
+                            </div>
+                        </div>
+                        <div class="user-button-container">
+                            <button type="button" class="btn position-relative">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                    0
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </button>
+                            <div class="data-for-buttons">
+                                <span>My Cart</span>
+                                <span>0.00€</span>
+                            </div>
+                        </div>
+                        <div class="user-button-container">
+                            <button type="button" class="btn position-relative">
+                                <i class='fa fa-user'></i>
+                            </button>
+                            <div class="data-for-buttons">
+                                <span class="user-name">Andres</span>
+                                <span>Logout</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="nav-categories">
                         <ul>
@@ -1529,18 +1605,27 @@
                             with desktop publishing software like Aldus PageMaker including
                             versions of Lorem Ipsum.
                         </p>
-                        <ul>
-                            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since
-                                the 1500s
+                        <ul class="pointed-list">
+                            <li>
+                                <span>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since
+                                    the 1500s
+                                </span>
                             </li>
-                            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since
-                                the 1500s
+                            <li>
+                                <span>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since
+                                    the 1500s
+                                </span>
                             </li>
-                            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since
-                                the 1500s
+                            <li>
+                                <span>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard dummy text ever since
+                                    the 1500s
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -1738,29 +1823,29 @@
                 </div>
             </div>
             <div class="extraInfoFooter">
-                <div class="infoFooter">
+                <div class="infoFooter companyInformation">
                     <h6>INFORMATION</h6>
-                    <p>Prices drop</p>
-                    <p>New products</p>
-                    <p>Best sales</p>
-                    <p>Sitemap</p>
-                    <p>Stores</p>
+                    <a href="">Prices drop</a>
+                    <a href="">New products</a>
+                    <a href="">Best sales</a>
+                    <a href="">Sitemap</a>
+                    <a href="">Stores</a>
                 </div>
-                <div class="companyFooter">
+                <div class="companyFooter companyInformation">
                     <h6>OUR COMPANY</h6>
-                    <p>Delivery</p>
-                    <p>Legal Notice</p>
-                    <p>About us</p>
-                    <p>Secure payment</p>
-                    <p>Contact us</p>
+                    <a href="">Delivery</a>
+                    <a href="">Legal Notice</a>
+                    <a href="">About us</a>
+                    <a href="">Secure payment</a>
+                    <a href="">Contact us</a>
                 </div>
-                <div class="accountFooter">
+                <div class="accountFooter companyInformation">
                     <h6>YOUR ACCOUNT</h6>
-                    <p>Personal info</p>
-                    <p>Orders</p>
-                    <p>Credit slips</p>
-                    <p>Addresses</p>
-                    <p>My wishlists</p>
+                    <a href="">Personal info</a>
+                    <a href="">Orders</a>
+                    <a href="">Credit slips</a>
+                    <a href="">Addresses</a>
+                    <a href="">My wishlists</a>
                 </div>
                 <div class="contactFooter">
                     <h6>CONTACT US</h6>
