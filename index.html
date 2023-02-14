@@ -20,13 +20,6 @@
     <title>About</title>
 </head>
 <body>
-    <button
-            type="button"
-            class="btn btn-floating btn-lg"
-            id="btn-back-to-top"
-    >
-        <i class="fas fa-arrow-up"></i>
-    </button>
     <header>
         <div class="top-header">
             <div class="secondary-functions">
@@ -41,7 +34,14 @@
                 </a>
             </div>
             <div class="switch-language dropdown-center">
-                <button class="btn dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a href="" class="wishlist-dom">
+                    <i class="fa-solid fa-heart"></i>
+                    <p>
+                        Wishlist
+                        <span>(0)</span>
+                    </p>
+                </a>
+                <button class="btn dropdown-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <span class="language-name">English</span>
                     <i class="fa-sharp fa-solid fa-chevron-down"></i>
                 </button>
@@ -57,16 +57,25 @@
         </div>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <img src="images/logo.svg" alt="...">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </button>
+                <img src="images/logo.svg" alt="...">
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="d-flex form-inputs">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <input class="form-control" type="text" placeholder="Search">
                     </div>
                     <div class="switch-language-in-mobile dropdown-center">
+                        <a href="" class="wishlist-dom">
+                            <i class="fa-solid fa-heart"></i>
+                            <p>
+                                Wishlist
+                                <span>(0)</span>
+                            </p>
+                        </a>
                         <button class="btn dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="language-name">English</span>
                             <i class="fa-sharp fa-solid fa-chevron-down"></i>
@@ -1795,6 +1804,13 @@
             </div>
         </div>
     </div>
+    <button
+            type="button"
+            class="btn btn-floating btn-lg"
+            id="btn-back-to-top"
+    >
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <footer>
         <div class="footer-content">
             <div class="logoFooter">

@@ -70,8 +70,22 @@ body
     right: 6%
     align-items: center
     justify-content: right
-    gap: 5px
+    gap: 15px
     width: max-content
+
+    .wishlist-dom
+      display: flex
+      align-items: center
+      gap: 5px
+      text-decoration: none
+      color: rgb(184, 184, 184)
+      height: 15px
+
+      i
+        color: $mainColor
+
+      p
+        margin-top: 15px
 
     .btn
       border: none
@@ -99,10 +113,24 @@ body
     display: flex
 
 .switch-language-in-mobile
-  margin: auto
   align-items: center
   gap: 5px
   width: max-content
+  margin: 10px auto auto
+
+  .wishlist-dom
+    display: flex
+    align-items: center
+    gap: 5px
+    text-decoration: none
+    color: rgb(184, 184, 184)
+    height: 15px
+
+    i
+      color: $mainColor
+
+    p
+      margin-top: 15px
 
   .btn
     border: none
@@ -126,10 +154,12 @@ nav
   background-color: $secondColor
 
   .container-fluid
+    position: relative
     padding: 15px
 
     .navbar-toggler
-      border-color: $lineColor
+      background-color: $mainColor
+
       i
         color: $lineColor
 
@@ -159,31 +189,31 @@ nav
         gap: 3%
         width: 75%
 
-        @media screen and (max-width: 1245px)
-          .form-inputs
-            margin-right: 50px
+        @media screen and (max-width: 1229px)
+          .form-inputs, .form-control, .form-inputs i
+            display: none
 
         .form-inputs
           position: relative
+          width: 30%
 
-        .form-inputs .form-control
-          height: 45px
-          width: 370px
-          border-radius: 20px
-          border: none
-          padding-left: 40px
-          background-color: $lineColor
+          .form-control
+            height: 45px
+            border-radius: 20px
+            border: none
+            background-color: $lineColor
+            color: $secondColor
 
-        .form-inputs .form-control:focus
-          box-shadow: none
+          .form-control:focus
+            box-shadow: none
 
-        .form-inputs i
-          position: absolute
-          left: 10px
-          top: 12px
-          font-size: 20px
+          i
+            position: absolute
+            right: 10px
+            top: 12px
+            font-size: 20px
 
-          // Categories in a small window
+      // Categories in a small window
       @media screen and (max-width: 991px)
         .nav-categories
           display: inherit
@@ -218,7 +248,6 @@ nav
               p a:hover
                 color: $mainColor
 
-
 @media screen and (min-width: 992px)
   .nav-button
     margin-right: 30px
@@ -234,7 +263,8 @@ nav
   display: flex
   width: fit-content
   align-items: center
-  gap: 15px
+  justify-content: center
+  gap: 3px 15px
 
   .user-button-container
     display: flex
@@ -242,13 +272,13 @@ nav
     justify-content: center
     gap: 10px
 
-    @media screen and (min-width: 1246px)
+    @media screen and (min-width: 1531px)
       .data-for-buttons
         display: grid
         font-weight: bold
         width: 60px
 
-    @media screen and (max-width: 1245px)
+    @media screen and (max-width: 1530px)
       .data-for-buttons
         display: none
 
@@ -273,14 +303,9 @@ nav
     font-size: 20px
 
 // The PHONE NUMBER in HEADER...
-@media screen and (min-width: 1525px)
+@media screen and (min-width: 991px)
   .phone-number
-    display: flex
-    width: 370px
-
-@media screen and (max-width: 1525px)
-  .phone-number
-    display: none
+    width: 350px
 
 @media screen and (max-width: 991px)
   .phone-number
@@ -289,13 +314,14 @@ nav
     max-width: 370px
 
 .phone-number
+  display: flex
   position: relative
   gap: 15px
   align-items: center
+  justify-content: center
   padding: 5px 10px
   border: 2px solid #4D5E79
   border-radius: 30px
-  justify-content: center
 
   .phone-icon
     position: absolute
@@ -305,7 +331,7 @@ nav
 
   .number a
     color: $mainColor
-    font-size: 25px
+    font-size: 23px
     text-decoration: none
 
   .work-days
@@ -317,35 +343,29 @@ nav
     color: rgb(160,181,213)
 
 // ==========SEARCH BAR================
-@media screen and (max-width: 991px)
-  #searchbar .form-control
-    display: inherit
-
-  #searchbar i
-    display: inherit
-
-@media screen and (min-width: 992px)
-  #searchbar .form-control
+@media screen and (min-width: 1230px)
+  #searchbar .form-control, #searchbar i
     display: none
 
-  #searchbar i
-    display: none
+@media screen and (max-width: 1230px)
+  #searchbar .form-control, #searchbar i
+    display: inherit
 
 // =====================================
 #searchbar
   position: relative
 
-#searchbar .form-control
-  height: 45px
+  .form-control
+    height: 45px
 
-#searchbar .form-control:focus
-  box-shadow: none
-  border: 1px solid #000
+  .form-control:focus
+    box-shadow: none
+    border: 1px solid #000
 
-#searchbar i
-  position: absolute
-  right: 10px
-  top: 15px
+  i
+    position: absolute
+    right: 10px
+    top: 15px
 
 // ===== MAIN CONTENT ===== //
 
@@ -479,88 +499,91 @@ nav
   .left-column
     margin-left: 30px
 
-  // ===== CATEGORIES LIST ====== //
+    // ===== CATEGORIES LIST ====== //
+    @media screen and (max-width: 1230px)
+      .categories
+        margin-top: 30px
 
-  .categories
-    background-color: #6bb42a
-    height: 35px
-    width: 230px
+    .categories
+      background-color: #6bb42a
+      height: 35px
+      width: 230px
 
-    &:hover
-      .list-of-categories
-        display: inherit
+      &:hover
+        .list-of-categories
+          display: inherit
 
-    .categories-dom
-      display: flex
-      align-items: center
-      gap: 8px
-      float: none
-      line-height: 24px
-      font-weight: 500
-      font-size: 18px
-      color: #ffffff
-      letter-spacing: 0.2px
-      margin: 0
-      padding: 9px 14px
-      width: 100%
-      height: 100%
-
-    .list-of-categories
-      display: none
-      background-color: white
-      @include categories_theme
-
-      li
-        transition: 0.5s ease-in-out
-
-        &:hover
-          background-color: rgb(236, 255, 221)
-
-      .product-category
-        position: relative
+      .categories-dom
         display: flex
+        align-items: center
+        gap: 8px
+        float: none
+        line-height: 24px
+        font-weight: 500
+        font-size: 18px
+        color: #ffffff
+        letter-spacing: 0.2px
+        margin: 0
+        padding: 9px 14px
+        width: 100%
+        height: 100%
 
-        &:hover
-          .underlist-product
-            display: inherit
+      .list-of-categories
+        display: none
+        background-color: white
+        @include categories_theme
 
-        .underlist-product
-          display: none
-          position: absolute
-          top: 0
-          left: 100%
-          width: max-content
-          max-width: 1020px
-          height: max-content
-          background-color: white
-          box-shadow: 1px 1px 5px #777
-          border: 1px solid #ccc
-          flex-wrap: wrap
-          z-index: 999
+        li
+          transition: 0.5s ease-in-out
 
-          .top-line
-            width: 100%
-            height: 15px
+          &:hover
             background-color: rgb(236, 255, 221)
-            text-indent: -9999px
 
-          .category-container
-            display: flex
-            gap: 30px
+        .product-category
+          position: relative
+          display: flex
+
+          &:hover
+            .underlist-product
+              display: inherit
+
+          .underlist-product
+            display: none
+            position: absolute
+            top: 0
+            left: 100%
+            width: max-content
+            max-width: 1020px
+            height: max-content
+            background-color: white
+            box-shadow: 1px 1px 5px #777
+            border: 1px solid #ccc
             flex-wrap: wrap
-            max-width: max-content
-            padding: 10px 15px
+            z-index: 999
 
-            .categories-in-categories
-              h4
-                max-width: 200px
+            .top-line
+              width: 100%
+              height: 15px
+              background-color: rgb(236, 255, 221)
+              text-indent: -9999px
 
-              p
-                margin: 0
-                padding: 0
+            .category-container
+              display: flex
+              gap: 30px
+              flex-wrap: wrap
+              max-width: max-content
+              padding: 10px 15px
 
-          h4 a
-            font-weight: bold
+              .categories-in-categories
+                h4
+                  max-width: 200px
+
+                p
+                  margin: 0
+                  padding: 0
+
+            h4 a
+              font-weight: bold
 
   // ======================================
 
@@ -573,7 +596,8 @@ nav
       display: grid
 
   .right-column
-    margin: 30px
+    margin-right: 30px
+    margin-top: 30px
     gap: 30px
     height: fit-content
     text-align: center
@@ -613,18 +637,15 @@ nav
           .product-name
             font-size: 15px
 
-
           .product-price
             font-size: 20px
             color: green
             font-weight: bold
 
-
     .deal-of-the-day
       display: grid
       background-color: white
       border-radius: 10px
-
 
       > h5
         padding: 10px
