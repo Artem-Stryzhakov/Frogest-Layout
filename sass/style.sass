@@ -157,6 +157,18 @@ nav
     position: relative
     padding: 15px
 
+    @media screen and (min-width: 991px)
+      .button-menu-in-header
+        display: none
+
+    @media screen and (max-width: 991px)
+      .button-menu-in-header
+        display: inherit
+        background-color: $mainColor
+
+        i
+          color: white
+
     .navbar-toggler
       background-color: $mainColor
 
@@ -194,6 +206,7 @@ nav
             display: none
 
         .form-inputs
+          display: grid
           position: relative
           width: 30%
 
@@ -203,6 +216,7 @@ nav
             border: none
             background-color: $lineColor
             color: $secondColor
+            z-index: 1
 
           .form-control:focus
             box-shadow: none
@@ -212,6 +226,16 @@ nav
             right: 10px
             top: 12px
             font-size: 20px
+
+          .serach-result
+            display: inherit
+            position: absolute
+            bottom: 0
+            width: 100%
+            background-color: $lineColor
+
+            @media screen and (max-width: 1229px)
+              display: none
 
       // Categories in a small window
       @media screen and (max-width: 991px)
@@ -233,8 +257,6 @@ nav
 
       ul
         list-style-type: none
-        padding: 0
-        margin: 0
         @include categories_theme
 
         li
@@ -248,59 +270,63 @@ nav
               p a:hover
                 color: $mainColor
 
-@media screen and (min-width: 992px)
+  @media screen and (min-width: 992px)
+    .nav-button
+      margin-right: 30px
+      float: right
+
+  @media screen and (max-width: 991px)
+    .nav-button
+      margin: 10px auto
+      flex-wrap: wrap
+      justify-content: center
+
   .nav-button
-    margin-right: 30px
-    float: right
-
-@media screen and (max-width: 991px)
-  .nav-button
-    margin: 10px auto
-    flex-wrap: wrap
-    justify-content: center
-
-.nav-button
-  display: flex
-  width: fit-content
-  align-items: center
-  justify-content: center
-  gap: 3px 15px
-
-  .user-button-container
     display: flex
+    width: fit-content
     align-items: center
     justify-content: center
-    gap: 10px
+    gap: 3px 15px
 
-    @media screen and (min-width: 1531px)
+    .user-button-container
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 10px
+
+      @media screen and (min-width: 1531px)
+        .data-for-buttons
+          display: grid
+          font-weight: bold
+          width: 60px
+
+      @media screen and (max-width: 1530px)
+        .data-for-buttons
+          display: none
+
+      @media screen and (max-width: 991px)
+        .data-for-buttons
+          display: grid
+
       .data-for-buttons
-        display: grid
-        font-weight: bold
-        width: 60px
+        color: $lineColor
+        font-size: 14px
 
-    @media screen and (max-width: 1530px)
-      .data-for-buttons
-        display: none
+    button
+      border: 1px solid $lineColor
+      border-radius: 70px
+      text-align: center
 
-    @media screen and (max-width: 991px)
-      .data-for-buttons
-        display: grid
+      &:hover
+        border: 1px solid $lineColor
+        background-color: #242e3f
 
-    .data-for-buttons
-      color: $lineColor
-      font-size: 14px
+      span
+        background-color: $mainColor
 
-  button
-    border: 1px solid $lineColor
-    border-radius: 70px
-    text-align: center
-
-    span
-      background-color: $mainColor
-
-  i
-    color: $mainColor
-    font-size: 20px
+    i
+      color: $mainColor
+      font-size: 20px
 
 // The PHONE NUMBER in HEADER...
 @media screen and (min-width: 991px)
@@ -371,6 +397,9 @@ nav
 
 .contentTitles
   @include titleStyle
+
+.employers
+  margin-top: 60px
 
 .infoContainers
   @include infopagesDisplay
@@ -585,6 +614,15 @@ nav
             h4 a
               font-weight: bold
 
+  .center-column
+    margin-right: 30px
+    margin-left: 30px
+    margin-top: 30px
+
+    .bread-crumbs
+      .current-page
+        color: $mainColor
+
   // ======================================
 
   @media screen and (max-width: 991px)
@@ -780,3 +818,120 @@ footer
     display: flex
     align-items: center
     justify-content: center
+
+// TEST NEW NAVIGATION SIDE MENU //
+
+@media screen and (max-width: 991px)
+  .button-menu
+    display: none
+
+.button-menu
+  height: max-content
+  width: max-content
+  background-color: $mainColor
+  margin-left: 100px
+
+.offcanvas-start
+  .offcanvas-header
+    background-color: $secondColor
+
+    .offcanvas-title
+      margin: auto
+      display: flex
+      justify-content: center
+
+      img
+        width: 70%
+
+    .btn-close
+      background-color: lighten($mainColor, 20)
+
+  .main-info
+    background-color: $lineColor
+    padding-bottom: 10px
+
+    .switch-language-in-mobile
+      display: flex
+      gap: 20px
+
+      .wishlist-dom
+        color: black
+
+      .btn
+        background-color: white
+
+        .language-name
+          color: black
+
+    .phone-number
+      margin: 15px auto auto
+
+    .nav-button
+      display: flex
+      gap: 10px
+      margin: 15px auto auto
+      width: max-content
+
+      .btn
+        background-color: white
+        border: 1px solid darken($lineColor, 10)
+        border-radius: 70px
+        text-align: center
+
+        i
+          color: $mainColor
+          font-size: 25px
+
+        span:not(.visually-hidden)
+          background-color: $mainColor
+          color: white
+
+  .offcanvas-body
+    margin: 0
+    padding: 0
+
+    &::-webkit-scrollbar
+      display: none
+
+    .nav-categories
+      width: 100%
+
+      ul
+        list-style-type: none
+        padding: 0
+
+        li
+          a
+            margin: 0
+            padding: 5px 10px
+            text-decoration: none
+            width: 100%
+            text-align: left
+            border-radius: 0
+            transition: 0.3s ease-in-out
+
+            &:is(.main-links):hover
+              background-color: rgb(244, 255, 236)
+
+          .under-categories
+            h4 a
+              font-weight: 400
+              font-size: 1.5em
+              letter-spacing: 1.5px
+              color: #000
+
+            p a
+              font-weight: 400
+              color: #777
+              font-size: 18px
+              padding: 10px 25px
+
+        .orangle-font a
+          color: #ee5b44
+          font-weight: bold
+
+        .Xmas-sellout a
+          color: white
+          background-color: #ee5b44
+          font-weight: bold
+

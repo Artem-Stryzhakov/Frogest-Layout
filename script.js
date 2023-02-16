@@ -1,15 +1,14 @@
-const nav_categories = document.querySelectorAll('.nav-categories ul li')
 const collapseContainer = document.querySelectorAll('.collapse .card .collapse-container')
 const underCategories = document.querySelectorAll('.under-categories')
 const categoriesType = document.querySelectorAll('.under-categories p')
 const titleLinks = document.querySelectorAll('.under-categories h4 a')
+const collapseSideMenu = document.querySelectorAll('.offcanvas-body .nav-categories .collapse .card-body')
+
+const searchBar = document.querySelector('.form-inputs .form-control')
+console.log(searchBar)
 
 //Get the button
 const mybutton = document.getElementById("btn-back-to-top");
-
-nav_categories.forEach(buttons => buttons.addEventListener('click', () => {
-    buttons.classList.toggle('focus-color')
-}))
 
 collapseContainer.forEach(collapseContainer => {
     collapseContainer.style.fontSize = '10px'
@@ -29,6 +28,10 @@ titleLinks.forEach(titleLink => {
     titleLink.style.fontWeight = 'bold'
 })
 
+collapseSideMenu.forEach(collapseItems => {
+    collapseItems.style.borderRadius = '0'
+    collapseItems.style.boxShadow = '1px 1px 5px #777'
+})
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = () => {
@@ -41,3 +44,4 @@ mybutton.addEventListener("click", () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 });
+
