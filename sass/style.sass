@@ -11,6 +11,9 @@
 body
   background-color: #e2e6ec
 
+  &::-webkit-scrollbar
+    display: none
+
 // ===== HEADER ===== //
 
 .dropdown-menu
@@ -152,6 +155,7 @@ body
 
 nav
   background-color: $secondColor
+  height: 120px
 
   .container-fluid
     position: relative
@@ -211,12 +215,12 @@ nav
           width: 30%
 
           .form-control
-            height: 45px
+            height: $SearchBarHeight
             border-radius: 20px
             border: none
             background-color: $lineColor
             color: $secondColor
-            z-index: 1
+            z-index: 999
 
           .form-control:focus
             box-shadow: none
@@ -228,11 +232,12 @@ nav
             font-size: 20px
 
           .serach-result
-            display: inherit
+            display: none
             position: absolute
-            bottom: 0
+            top: 60%
             width: 100%
             background-color: $lineColor
+            padding-top: $SearchBarHeight / 2
 
             @media screen and (max-width: 1229px)
               display: none
@@ -832,6 +837,14 @@ footer
   margin-left: 100px
 
 .offcanvas-start
+  height: calc(100% - 150px)
+  margin-top: 150px
+
+  @media screen and (max-width: 992px)
+    height: calc(100% - 120px)
+    margin-top: 120px
+    width: 100%
+
   .offcanvas-header
     background-color: $secondColor
 
@@ -845,6 +858,10 @@ footer
 
     .btn-close
       background-color: lighten($mainColor, 20)
+
+  @media screen and (min-width: 992px)
+    .main-info
+      display: none
 
   .main-info
     background-color: $lineColor
@@ -903,7 +920,8 @@ footer
         li
           a
             margin: 0
-            padding: 5px 10px
+            padding: 7px 10px
+            font-size: 18px
             text-decoration: none
             width: 100%
             text-align: left

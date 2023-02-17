@@ -3,9 +3,27 @@ const underCategories = document.querySelectorAll('.under-categories')
 const categoriesType = document.querySelectorAll('.under-categories p')
 const titleLinks = document.querySelectorAll('.under-categories h4 a')
 const collapseSideMenu = document.querySelectorAll('.offcanvas-body .nav-categories .collapse .card-body')
+const offcanvas = document.querySelector('.offcanvas-start')
 
+// SEARCH BAR VALIDATION PRODUCT //
 const searchBar = document.querySelector('.form-inputs .form-control')
-console.log(searchBar)
+
+const products = ['iphone x', 'Samsung S20']
+const productPrice = [699.99, 599.99]
+
+searchBar.addEventListener('keyup', () => {
+    for (const product of products) {
+        if (searchBar.value.toLowerCase() === product) {
+            console.log(true)
+            document.querySelector('.serach-result').style.display = 'inherit'
+            break
+        } else {
+            document.querySelector('.serach-result').style.display = 'none'
+        }
+    }
+})
+
+// ============================ //
 
 //Get the button
 const mybutton = document.getElementById("btn-back-to-top");
@@ -45,3 +63,4 @@ mybutton.addEventListener("click", () => {
     document.documentElement.scrollTop = 0;
 });
 
+offcanvas.style.width = '100%'
