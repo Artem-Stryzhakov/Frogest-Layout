@@ -71,3 +71,77 @@
   color: white
   border-radius: 10px
   font-size: 20px
+
+@mixin search-result
+  display: none
+  position: absolute
+  top: 60%
+  width: 100%
+  background-color: white
+  padding-top: $SearchBarHeight / 2.5
+  border-radius: 0 0 30px 18px
+  max-height: 700px
+  overflow-y: scroll
+  overflow-x: hidden
+  z-index: 2
+  box-shadow: 0 13px 6px -11px #d4d4d4 inset, 0 6px 12px -5px #666
+
+  &::-webkit-scrollbar
+    width: 7px
+    height: 12px
+
+  /* Track */
+  &::-webkit-scrollbar-track
+    border-radius: 10px
+
+  &::-webkit-scrollbar-button
+    height: 10px
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb
+    background: gray
+    border-radius: 10px
+    transition: 0.4s ease-in-out
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover
+    background: lighten(gray, 10)
+
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+    .ac-odd
+      line-height: 22px
+      border-color: #fff
+
+      .first
+        border-top: 1px solid #dcdcdc
+
+      a
+        display: flex
+        align-items: center
+        text-decoration: none
+        height: max-content
+        width: 100%
+        color: #555555
+        font-weight: normal
+        line-height: 22px
+        padding: 10px 5px
+        border-color: #fff
+        border-bottom: 1px solid #dcdcdc
+        box-shadow: 0 1px #ffffff
+        transition: 0.4s ease-in-out
+
+        &:hover
+          background-color: darken(white, 5)
+
+        img
+          width: 90px
+          height: 90px
+          margin-right: 15px
+
+        p
+          font-size: 15px
+          font-weight: bold

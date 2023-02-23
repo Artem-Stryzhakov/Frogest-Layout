@@ -13,6 +13,7 @@
     <!--CUSTOM CSS-->
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" href="https://frog.ee/img/favicon-1.ico?167092613" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="script.js" defer></script>
     <title>About</title>
 </head>
@@ -52,7 +53,7 @@
                 </ul>
             </div>
         </div>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg" tabindex="1">
             <div class="container-fluid">
                 <button class="btn button-menu-in-header" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     <i class="fa-solid fa-bars"></i>
@@ -62,13 +63,85 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="d-flex form-inputs">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input class="form-control" type="text" placeholder="Search">
-                        <div class="serach-result">
-                            <div class="products">
-                                <p>Iphone X pro</p>
-                                <span>699.99</span>
-                            </div>
+                        <input class="form-control" type="text" name="product" placeholder="Search">
+
+                        <div class="search-result">
+                            <ul>
+                                <li class="ac-odd">
+                                    <a href="" class="first">
+                                        <img src="" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
+
                     </div>
                     <div class="switch-language-in-mobile dropdown-center">
                         <a href="" class="wishlist-dom">
@@ -138,11 +211,93 @@
                 </div>
             </div>
         </nav>
+
+        <!--MOBILE SEARCH BAR AND SEARCH RESULTS-->
+
         <div class="d-flex form-inputs" id="searchbar">
             <input class="form-control" type="text" placeholder="Search any product...">
             <i class="fa-solid fa-magnifying-glass"></i>
+
+            <div class="search-result">
+                <ul>
+                    <li class="ac-odd">
+                        <a href="" class="first">
+                            <img src="" alt="...">
+                            <div class="name-price">
+                                <p class="product-name-seach"></p>
+                                <span class="price-search"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="ac-odd">
+                        <a href="">
+                            <img src="" alt="...">
+                            <div class="name-price">
+                                <p class="product-name-seach"></p>
+                                <span class="price-search"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="ac-odd">
+                        <a href="">
+                            <img src="" alt="...">
+                            <div class="name-price">
+                                <p class="product-name-seach"></p>
+                                <span class="price-search"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="ac-odd">
+                        <a href="">
+                            <img src="" alt="...">
+                            <div class="name-price">
+                                <p class="product-name-seach"></p>
+                                <span class="price-search"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="ac-odd">
+                        <a href="">
+                            <img src="" alt="...">
+                            <div class="name-price">
+                                <p class="product-name-seach"></p>
+                                <span class="price-search"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="ac-odd">
+                        <a href="">
+                            <img src="" alt="...">
+                            <div class="name-price">
+                                <p class="product-name-seach"></p>
+                                <span class="price-search"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="ac-odd">
+                        <a href="">
+                            <img src="" alt="...">
+                            <div class="name-price">
+                                <p class="product-name-seach"></p>
+                                <span class="price-search"></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="ac-odd">
+                        <a href="">
+                            <img src="" alt="...">
+                            <div class="name-price">
+                                <p class="product-name-seach"></p>
+                                <span class="price-search"></span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </header>
+
     <div class="offcanvas offcanvas-start"  id="offcanvasExample">
         <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasExampleLabel">
@@ -940,6 +1095,7 @@
             </div>
         </div>
     </div>
+
     <div class="column">
         <div class="left-column">
             <div class="categories">

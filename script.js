@@ -6,23 +6,50 @@ const collapseSideMenu = document.querySelectorAll('.offcanvas-body .nav-categor
 const offcanvas = document.querySelector('.offcanvas-start')
 
 // SEARCH BAR VALIDATION PRODUCT //
-const searchBar = document.querySelector('.form-inputs .form-control')
+const listOfSearchImg = document.querySelectorAll('.search-result .ac-odd a img')
+const listOfSearchName = document.querySelectorAll('.search-result .product-name-seach')
+const listOfSearchPrice = document.querySelectorAll('.search-result .price-search')
 
-const products = ['iphone x', 'Samsung S20']
-const productPrice = [699.99, 599.99]
+const listOfSearchImg_mobile = document.querySelectorAll('#searchbar .search-result a img')
+const listOfSearchName_mobile = document.querySelectorAll('#searchbar .product-name-seach')
+const listOfSearchPrice_mobile = document.querySelectorAll('#searchbar .price-search')
 
-searchBar.addEventListener('keyup', () => {
-    for (const product of products) {
-        if (searchBar.value.toLowerCase() === product) {
-            console.log(true)
-            document.querySelector('.serach-result').style.display = 'inherit'
-            break
-        } else {
-            document.querySelector('.serach-result').style.display = 'none'
-        }
+const getData = (data) => {
+    const get_data = JSON.parse(data)
+
+    for (let i = 0; i < get_data['productName'].length; i++) {
+        listOfSearchImg[i].src = get_data['pictures'][i]
+        listOfSearchName[i].innerHTML = get_data['productName'][i]
+        listOfSearchPrice[i].innerHTML = `${get_data['price'][i]} €`
+
+        listOfSearchImg_mobile[i].src = get_data['pictures'][i]
+        listOfSearchName_mobile[i].innerHTML = get_data['productName'][i]
+        listOfSearchPrice_mobile[i].innerHTML = `${get_data['price'][i]} €`
+    }
+}
+
+$(document).ready(() => {
+    $.ajax ({
+        url: "SearchbarData.php",
+        type: "GET",
+        success: getData
+    })
+
+    const commandsType = {
+        commandType: ["focus", "blur"],
+        stateType: ["grid", "none"]
+    }
+
+    for (let i = 0; i < 2; i++) {
+        $('#navbarSupportedContent .form-control').bind(commandsType.commandType[i], function () {
+            $('#navbarSupportedContent .search-result').css('display', commandsType.stateType[i])
+        })
+
+        $('#searchbar .form-control').bind(commandsType.commandType[i], function() {
+            $('#searchbar .search-result').css('display', commandsType.stateType[i])
+        })
     }
 })
-
 // ============================ //
 
 //Get the button

@@ -210,7 +210,7 @@ nav
             display: none
 
         .form-inputs
-          display: grid
+          display: inherit
           position: relative
           width: 30%
 
@@ -218,9 +218,9 @@ nav
             height: $SearchBarHeight
             border-radius: 20px
             border: none
-            background-color: $lineColor
+            background-color: white
             color: $secondColor
-            z-index: 999
+            z-index: 3
 
           .form-control:focus
             box-shadow: none
@@ -230,17 +230,14 @@ nav
             right: 10px
             top: 12px
             font-size: 20px
+            z-index: 4
 
-          .serach-result
-            display: none
-            position: absolute
-            top: 60%
-            width: 100%
-            background-color: $lineColor
-            padding-top: $SearchBarHeight / 2
-
-            @media screen and (max-width: 1229px)
+          @media screen and (max-width: 1229px)
+            .search-result
               display: none
+
+          .search-result
+            @include search-result
 
       // Categories in a small window
       @media screen and (max-width: 991px)
@@ -388,15 +385,19 @@ nav
 
   .form-control
     height: 45px
+    z-index: 3
 
   .form-control:focus
     box-shadow: none
-    border: 1px solid #000
+    border: 1px solid $mainColor
 
   i
     position: absolute
     right: 10px
     top: 15px
+
+  .search-result
+    @include search-result
 
 // ===== MAIN CONTENT ===== //
 

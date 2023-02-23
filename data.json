@@ -1,0 +1,20 @@
+{
+  "pictures": [
+    "https://d660b7b9o0mxk.cloudfront.net/_img_productos/xbox-series-s-512gb-all-digital-foto1.jpg",
+    "https://www.hitech-gamer.com/out/pictures/hi_pc_config/zoom850206faccac3f1b45dc9a2fa589d7ed_1.png",
+    "https://forgamer.ee/wp-content/uploads/2021/10/rtx-3060-ti.png",
+    "http://www.gainward.com/main/product/vga/pro/p01123/p01123_pic2_1937609a4fd054808.png",
+    "https://th.bing.com/th/id/OIP.s-jpRIWyQTNrp31Vo0IQTwHaJQ?pid=ImgDet&rs=1",
+    "https://frogcdn.b-cdn.net/5199359-thickbox_default/graphics-card-asus-nvidia-geforce-rtx-4090-24-gb-gddr6x-384-bit-pcie-40-16x-2xhdmi-3xdisplayport-rog-strix-rtx4090-24g-gam.jpg",
+    "https://falabella.scene7.com/is/image/Falabella/15659640_1",
+    "https://i.hinnavaatlus.ee/p/1200/53/c4/sony-playstation-5.png"
+  ],
+  "productName": ["Xbox series S", "Gamer PC Extreme",
+    "Asus dual GeForce RTX 3060 ti", "GeForce rtx 3070 Phoenix 'GS' V1",
+    "Boxed Gaming PC i7-6700 16gb 2gb R9 ssd & 2TB REFURBISHED",
+    "Graphics Card ASUS NVIDIA GeForce RTX 4090 24 GB GDDR6X",
+    "APPLE Apple iPhone 13 Mini 256GB", "Sony PlayStation 5"
+  ],
+
+  "price": [300, 2700, 609.99, 800, 2100, 2369, 950, 645]
+}
