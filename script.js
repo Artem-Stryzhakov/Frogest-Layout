@@ -14,6 +14,13 @@ const listOfSearchImg_mobile = document.querySelectorAll('#searchbar .search-res
 const listOfSearchName_mobile = document.querySelectorAll('#searchbar .product-name-seach')
 const listOfSearchPrice_mobile = document.querySelectorAll('#searchbar .price-search')
 
+const searchElements = {
+    searchbars: [$("#navbarSupportedContent .form-control"),
+        $("#searchbar .form-control")],
+    searchResults: [$("#navbarSupportedContent .search-result"),
+        $("#searchbar .search-result")]
+}
+
 const getData = (data) => {
     const get_data = JSON.parse(data)
 
@@ -28,28 +35,33 @@ const getData = (data) => {
     }
 }
 
-$(document).ready(() => {
-    $.ajax ({
-        url: "SearchbarData.php",
-        type: "GET",
-        success: getData
+function ajaxFunc(element, results) {
+    element.bind("focus", function () {
+        $("input[name='product']").bind("keyup", function () {
+            if ($(this).val() !== "") {
+                results.css('display', 'grid')
+                $.ajax ({
+                    url: "SearchbarData.php",
+                    type: "GET",
+                    success: getData
+                })
+            } else {
+                results.css('display', 'none')
+            }
+        })
     })
 
-    const commandsType = {
-        commandType: ["focus", "blur"],
-        stateType: ["grid", "none"]
-    }
+    element.bind("blur", function () {
+        results.css('display', 'none')
+    })
+}
 
+$(document).ready(() => {
     for (let i = 0; i < 2; i++) {
-        $('#navbarSupportedContent .form-control').bind(commandsType.commandType[i], function () {
-            $('#navbarSupportedContent .search-result').css('display', commandsType.stateType[i])
-        })
-
-        $('#searchbar .form-control').bind(commandsType.commandType[i], function() {
-            $('#searchbar .search-result').css('display', commandsType.stateType[i])
-        })
+        ajaxFunc(searchElements.searchbars[i], searchElements.searchResults[i])
     }
 })
+
 // ============================ //
 
 //Get the button
