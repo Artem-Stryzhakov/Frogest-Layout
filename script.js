@@ -10,10 +10,6 @@ const listOfSearchImg = document.querySelectorAll('.search-result .ac-odd a img'
 const listOfSearchName = document.querySelectorAll('.search-result .product-name-seach')
 const listOfSearchPrice = document.querySelectorAll('.search-result .price-search')
 
-const listOfSearchImg_mobile = document.querySelectorAll('#searchbar .search-result a img')
-const listOfSearchName_mobile = document.querySelectorAll('#searchbar .product-name-seach')
-const listOfSearchPrice_mobile = document.querySelectorAll('#searchbar .price-search')
-
 const searchElements = {
     searchbars: [$("#navbarSupportedContent .form-control"),
         $("#searchbar .form-control")],
@@ -23,42 +19,53 @@ const searchElements = {
 
 const getData = (data) => {
     const get_data = JSON.parse(data)
+    const productLength = get_data['productName'].length
 
-    for (let i = 0; i < get_data['productName'].length; i++) {
-        listOfSearchImg[i].src = get_data['pictures'][i]
-        listOfSearchName[i].innerHTML = get_data['productName'][i]
-        listOfSearchPrice[i].innerHTML = `${get_data['price'][i]} €`
-
-        listOfSearchImg_mobile[i].src = get_data['pictures'][i]
-        listOfSearchName_mobile[i].innerHTML = get_data['productName'][i]
-        listOfSearchPrice_mobile[i].innerHTML = `${get_data['price'][i]} €`
+    for (let i = 0; i < productLength * 2; i++) {
+        if (i < productLength) {
+            listOfSearchImg[i].src = get_data['pictures'][i]
+            listOfSearchName[i].innerHTML = get_data['productName'][i]
+            listOfSearchPrice[i].innerHTML = `${get_data['price'][i]} €`
+        } else {
+            listOfSearchImg[i].src = get_data['pictures'][i - productLength]
+            listOfSearchName[i].innerHTML = get_data['productName'][i - productLength]
+            listOfSearchPrice[i].innerHTML = `${get_data['price'][i - productLength]} €`
+        }
     }
 }
 
 function ajaxFunc(element, results) {
-    element.bind("focus", function () {
-        $("input[name='product']").bind("keyup", function () {
-            if ($(this).val() !== "") {
-                results.css('display', 'grid')
-                $.ajax ({
-                    url: "SearchbarData.php",
-                    type: "GET",
-                    success: getData
-                })
-            } else {
-                results.css('display', 'none')
-            }
+    if (element.val() !== "") {
+        results.css('display', 'grid')
+        $.ajax ({
+            url: "SearchbarData.php",
+            type: "GET",
+            success: getData
         })
-    })
-
-    element.bind("blur", function () {
+    } else {
         results.css('display', 'none')
-    })
+    }
 }
 
 $(document).ready(() => {
-    for (let i = 0; i < 2; i++) {
-        ajaxFunc(searchElements.searchbars[i], searchElements.searchResults[i])
+    const searchResultsCount = $('.search-result').toArray()
+
+    $("#navbarSupportedContent .form-control").on('focus', function () {
+        $("#navbarSupportedContent input[name='product']").on('keyup', function () {
+            ajaxFunc($(this), $('#navbarSupportedContent .search-result'))
+        })
+    })
+
+    $("#searchbar .form-control").on('focus', function () {
+        $("#searchbar input[name='product']").on('keyup', function () {
+            ajaxFunc($(this), $('#searchbar .search-result'))
+        })
+    })
+
+    for (let i = 0; i < searchResultsCount.length; i++) {
+        $(searchElements.searchbars[i]).on('blur', function () {
+            $(searchElements.searchResults[i]).css('display', 'none')
+        })
     }
 })
 

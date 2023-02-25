@@ -1292,9 +1292,6 @@ footer .extraFooter {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.offcanvas-start .offcanvas-header .offcanvas-title img {
-  width: 70%;
-}
 .offcanvas-start .offcanvas-header .btn-close {
   background-color: #66ce7a;
 }
