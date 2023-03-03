@@ -6,7 +6,7 @@
 *
   padding: 0
   margin: 0
-  font-family: 'Open Sans', sans-serif
+  font-family: 'Muli', sans-serif
 
 body
   background-color: #e2e6ec
@@ -15,6 +15,9 @@ body
     display: none
 
 // ==========================================
+
+.top-image
+  width: 100%
 
 #btn-back-to-top
   position: fixed
@@ -36,7 +39,7 @@ body
   position: relative
   align-items: center
   background-color: #1c293e
-  height: 30px
+  height: 40px
 
   .secondary-functions
     display: flex
@@ -149,7 +152,10 @@ body
 
 nav
   background-color: $secondColor
-  height: 120px
+  height: 100px
+
+  @media screen and (max-width: 992px)
+    height: 120px
 
   .container-fluid
     position: relative
@@ -526,7 +532,7 @@ nav
       display: inherit
 
   .left-column
-    margin-left: 30px
+    margin-left: 6%
 
     // ===== CATEGORIES LIST ====== //
     @media screen and (max-width: 1230px)
@@ -617,11 +623,58 @@ nav
   .center-column
     margin-right: 30px
     margin-left: 30px
-    margin-top: 30px
+    margin-top: 40px
+    width: 100%
 
     .bread-crumbs
       .current-page
         color: $mainColor
+
+    #carouselExampleIndicators
+      width: 100%
+
+    .carousel-indicators
+      button
+        background-color: black
+        height: 15px
+        width: 15px
+        border-radius: 100%
+
+      .active
+        background-color: lighten($mainColor, 15)
+
+    .carousel-inner
+      width: 100%
+      max-height: 430px
+      border-radius: 7px
+
+      img
+        height: 430px
+
+    .main-products-show
+      width: 100%
+      margin-top: 10px
+
+      .header-products-show
+        position: relative
+        display: flex
+        align-items: center
+        width: 100%
+        height: 65px
+
+        h1
+          color: #777777
+
+        .switch-buttons
+          position: absolute
+          right: 0
+          display: flex
+          align-items: center
+
+          button
+            font-size: 30px
+            height: 65px
+            color: #a2a2a2
 
   // ======================================
 
@@ -634,9 +687,10 @@ nav
       display: grid
 
   .right-column
-    margin-right: 30px
-    margin-top: 30px
-    gap: 30px
+    width: 250px
+    margin-right: 100px
+    margin-top: 40px
+    gap: 40px
     height: fit-content
     text-align: center
 
@@ -712,6 +766,120 @@ nav
           text-shadow: 1px 1px #fff, -1px 1px #fff, -1px -1px #fff, 1px -1px #fff, 0 5px 5px #b3b3b3
           margin-top: 10px
           margin-bottom: 15px
+
+    // ============================================== //
+    .right-product
+      display: grid
+      background-color: white
+      width: 230px
+      height: 430px
+      border-radius: 7px
+
+      .deal-title
+        margin-top: 10px
+        font-size: 20px
+        font-weight: bold
+
+      hr
+        margin-top: -15px
+        color: #8a8a8a
+
+      img
+        width: 150px
+        margin: -10px auto auto
+
+      .side-product-info
+        display: grid
+
+        .product-name
+          margin: 0
+          padding: 0
+          font-size: 15px
+          font-style: italic
+          font-weight: bold
+          letter-spacing: 0.5px
+
+        .main-price
+          color: #de0000
+          text-decoration: line-through
+          font-size: 13px
+
+        .discount-price
+          font-size: 30px
+          font-weight: bold
+          font-family: MONTSERRAT, sans-serif
+          color: rgb(45,59,81)
+          font-style: italic
+          text-shadow: 1px 1px #fff, -1px 1px #fff, -1px -1px #fff, 1px -1px #fff, 0 5px 5px #b3b3b3
+          margin-top: -10px
+
+          sup
+            vertical-align: super
+            font-size: 16px
+
+      .discount-time
+        display: flex
+        gap: 10px
+        justify-content: center
+
+        .time-containers
+          display: grid
+          justify-content: center
+          background-color: $mainColor
+          padding: 5px
+          width: 40px
+          height: 50px
+          border-radius: 10px
+
+          p
+            margin: 0
+            padding: 0
+            font-size: 15px
+            color: white
+            font-weight: 600
+
+          p:is(.validity)
+            font-size: 11px
+
+    .new-products
+      background-color: white
+      border-radius: 7px
+      width: 230px
+
+      .new-products-title
+        margin-top: 10px
+        font-size: 20px
+        font-weight: bold
+
+      .new-product-list
+        display: flex
+        gap: 7.5px
+        align-items: center
+        border-top: 1px solid #d9d9d9
+
+        img
+          width: 100px
+
+        .product-container-side
+          display: grid
+          width: fit-content
+
+          .small-ratings i:not(.rating-color)
+            color: #cecece
+
+          .rating-color
+            color: $mainColor
+
+          .product-name-side
+            max-width: 110px
+            font-size: 13px
+            text-align: left
+
+          .price-side
+            font-size: 20px
+            font-weight: bold
+            color: $mainColor
+            text-align: left
 
 // ===== FOOTER ===== //
 
