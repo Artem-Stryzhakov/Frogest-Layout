@@ -37,6 +37,8 @@ const getData = (data) => {
 function ajaxFunc(element, results) {
     if (element.val() !== "") {
         results.css('display', 'grid')
+        element.css('z-index', '4')
+        results.css('z-index', '3')
         $.ajax ({
             url: "SearchbarData.php",
             type: "GET",
@@ -44,6 +46,8 @@ function ajaxFunc(element, results) {
         })
     } else {
         results.css('display', 'none')
+        element.css('z-index', '3')
+        results.css('z-index', '0')
     }
 }
 

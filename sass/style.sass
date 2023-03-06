@@ -18,6 +18,10 @@ body
 
 .top-image
   width: 100%
+  display: inherit
+
+  @media screen and (max-width: 991px)
+    display: none
 
 #btn-back-to-top
   position: fixed
@@ -619,9 +623,10 @@ nav
                   padding: 0
                   max-width: 200px
 
-              img
-                margin: auto
-                max-width: 100%
+            img
+              margin: auto
+              max-width: 100%
+              padding: 10px
 
             h4 a
               font-weight: bold
@@ -1234,7 +1239,15 @@ footer
           color: #ee5b44
           font-weight: bold
 
-        .Xmas-sellout a
-          color: white
-          background-color: #ee5b44
-          font-weight: bold
+        .Xmas-sellout
+          a
+            color: white
+            background-color: #ee5b44
+            font-weight: bold
+
+          .category-container
+            .under-categories
+              margin-bottom: 30px
+
+              a
+                background-color: inherit
