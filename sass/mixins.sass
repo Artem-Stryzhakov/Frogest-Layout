@@ -23,7 +23,7 @@
     font-weight: bold
 
   .Xmas-sellout a
-    background-color: #ee5b44 !important
+    background-color: #ee5b44
     color: white
     font-weight: bold
 
@@ -145,3 +145,34 @@
         p
           font-size: 15px
           font-weight: bold
+
+@mixin event-for-products
+  position: absolute
+  display: flex
+  align-items: center
+  justify-content: center
+  top: 10px
+  right: 0
+  font-weight: 600
+  height: 50px
+  width: 50px
+  border-radius: 100%
+
+@mixin discount-price
+  .main-price
+    color: #de0000
+    text-decoration: line-through
+    font-size: 13px
+
+  .discount-price
+    font-size: 30px
+    font-weight: bold
+    font-family: MONTSERRAT, sans-serif
+    color: rgb(45,59,81)
+    font-style: italic
+    text-shadow: 1px 1px #fff, -1px 1px #fff, -1px -1px #fff, 1px -1px #fff, 0 5px 5px #b3b3b3
+    margin-top: -10px
+
+    sup
+      vertical-align: super
+      font-size: 16px

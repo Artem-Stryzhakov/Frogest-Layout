@@ -580,7 +580,7 @@ nav
 
           &:hover
             .underlist-product
-              display: inherit
+              display: grid
 
           .underlist-product
             display: none
@@ -588,7 +588,6 @@ nav
             top: 0
             left: 100%
             width: max-content
-            max-width: 1020px
             height: max-content
             background-color: white
             box-shadow: 1px 1px 5px #777
@@ -604,10 +603,12 @@ nav
 
             .category-container
               display: flex
-              gap: 30px
+              justify-content: center
+              gap: 20px
               flex-wrap: wrap
               max-width: max-content
               padding: 10px 15px
+              width: fit-content
 
               .categories-in-categories
                 h4
@@ -616,9 +617,23 @@ nav
                 p
                   margin: 0
                   padding: 0
+                  max-width: 200px
+
+              img
+                margin: auto
+                max-width: 100%
 
             h4 a
               font-weight: bold
+
+            &:is(.Xmas-sellout)
+              .categories-in-categories
+                a
+                  background-color: inherit
+                  color: black
+
+                p a
+                  font-weight: normal
 
   .center-column
     margin-right: 30px
@@ -675,6 +690,132 @@ nav
             font-size: 30px
             height: 65px
             color: #a2a2a2
+
+      .products-container-show
+        display: flex
+        flex-wrap: wrap
+        gap: 30px
+        margin-top: 10px
+
+        .show-product
+          margin: auto
+          background-color: white
+          height: fit-content
+          width: 260px
+          border-radius: 7px
+
+          .image-product-con
+            position: relative
+            width: fit-content
+            margin: 20px auto 15px
+
+            img
+              width: 180px
+              height: 220px
+
+            .discount
+              @include event-for-products
+              background-color: #d7aa00
+              color: white
+
+              &:is(.third)
+                top: 90px
+                z-index: 2
+
+            .hot-product
+              @include event-for-products
+              background-color: #ff5b14
+              color: white
+
+              &:is(.second)
+                top: 50px
+                z-index: 1
+
+            .new-product
+              @include event-for-products
+              background-color: green
+              color: white
+
+          .info-pr
+            width: 90%
+            margin: auto
+
+            .product-name
+              max-width: 210px
+              min-height: 75px
+              font-size: 17px
+
+            .buy-container
+              display: flex
+              align-items: center
+              position: relative
+
+              .show-price
+                display: grid
+                @include discount-price
+
+              a
+                display: flex
+                align-items: center
+                justify-content: center
+                position: absolute
+                right: 0
+                width: 45px
+                height: 45px
+                background-color: #c7c7c7
+                color: white
+                font-size: 20px
+
+                &:hover
+                  background-color: $mainColor
+
+            .extra-info-pr
+              display: grid
+
+              .parameter-pr
+                color: $mainColor
+
+                .parameter
+                  color: #797979
+
+            .wishlist-compare
+              position: relative
+              display: flex
+              align-items: center
+              margin: 7px
+              padding-top: 5px
+              padding-bottom: 5px
+              border-top: 1px solid #d9d9d9
+              border-bottom: 1px solid #d9d9d9
+
+              a
+                text-decoration: none
+                color: #797979
+
+              .compare
+                position: absolute
+                right: 0
+
+            .avaliable
+              display: flex
+              align-items: center
+
+              button
+                display: flex
+                align-items: center
+                justify-content: center
+                background-color: $mainColor
+                color: white
+                font-weight: bold
+                font-size: 14px
+                width: 80px
+                height: 27px
+
+              span
+                color: $mainColor
+                font-size: 13px
+                max-width: 150px
+                margin: auto auto auto 10px
 
   // ======================================
 
@@ -799,23 +940,7 @@ nav
           font-weight: bold
           letter-spacing: 0.5px
 
-        .main-price
-          color: #de0000
-          text-decoration: line-through
-          font-size: 13px
-
-        .discount-price
-          font-size: 30px
-          font-weight: bold
-          font-family: MONTSERRAT, sans-serif
-          color: rgb(45,59,81)
-          font-style: italic
-          text-shadow: 1px 1px #fff, -1px 1px #fff, -1px -1px #fff, 1px -1px #fff, 0 5px 5px #b3b3b3
-          margin-top: -10px
-
-          sup
-            vertical-align: super
-            font-size: 16px
+        @include discount-price
 
       .discount-time
         display: flex
@@ -856,6 +981,8 @@ nav
         gap: 7.5px
         align-items: center
         border-top: 1px solid #d9d9d9
+        padding-top: 4px
+        padding-bottom: 7px
 
         img
           width: 100px
