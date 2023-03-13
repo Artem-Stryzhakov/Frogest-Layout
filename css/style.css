@@ -25,7 +25,7 @@ body::-webkit-scrollbar {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: rgb(50, 156, 70);
+  background-color: rgb(56, 175, 78);
   color: white;
   display: none;
 }
@@ -44,6 +44,9 @@ body::-webkit-scrollbar {
 }
 .top-header {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -57,49 +60,23 @@ body::-webkit-scrollbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin-left: 40px;
-}
-.top-header .secondary-functions a {
-  text-decoration: none;
-  color: rgb(50, 156, 70);
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
-}
-.top-header .secondary-functions a:hover {
-  -webkit-filter: brightness(0.85);
-          filter: brightness(0.85);
-}
-.top-header .secondary-functions span {
-  font-size: 13px;
-}
-.top-header .secondary-functions .middle-div {
-  width: 50px;
-}
-.top-header .switch-language {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  right: 6%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  gap: 15px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  margin: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 90%;
 }
-.top-header .switch-language .wishlist-dom {
+.top-header .secondary-functions .dropdown-center button {
+  color: rgb(184, 184, 184);
+}
+.top-header .secondary-functions .dropdown-center button i {
+  margin-left: 3px;
+  color: rgb(56, 175, 78);
+}
+.top-header .secondary-functions .wishlist-dom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,27 +88,12 @@ body::-webkit-scrollbar {
   color: rgb(184, 184, 184);
   height: 15px;
 }
-.top-header .switch-language .wishlist-dom i {
-  color: rgb(50, 156, 70);
-}
-.top-header .switch-language .wishlist-dom p {
-  margin-top: 15px;
-}
-.top-header .switch-language .btn {
-  border: none;
-}
-.top-header .switch-language .btn .language-name {
-  color: rgb(184, 184, 184);
-}
-.top-header .switch-language .btn i {
+.top-header .secondary-functions .wishlist-dom i {
   margin-left: 5px;
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
 }
-.top-header .switch-language .dropdown-menu {
-  text-align: center;
-}
-.top-header .switch-language .dropdown-menu .dropdown-item:not(.last) {
-  border-bottom: 1px solid #e1e1e1;
+.top-header .secondary-functions .wishlist-dom p {
+  margin-top: 15px;
 }
 
 @media screen and (min-width: 992px) {
@@ -169,7 +131,7 @@ body::-webkit-scrollbar {
   height: 15px;
 }
 .switch-language-in-mobile .wishlist-dom i {
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
 }
 .switch-language-in-mobile .wishlist-dom p {
   margin-top: 15px;
@@ -183,7 +145,7 @@ body::-webkit-scrollbar {
 }
 .switch-language-in-mobile .btn i {
   margin-left: 5px;
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
   font-size: 18px;
 }
 .switch-language-in-mobile .btn .dropdown-menu {
@@ -214,14 +176,14 @@ nav .container-fluid {
 @media screen and (max-width: 991px) {
   nav .container-fluid .button-menu-in-header {
     display: inherit;
-    background-color: rgb(50, 156, 70);
+    background-color: rgb(56, 175, 78);
   }
   nav .container-fluid .button-menu-in-header i {
     color: white;
   }
 }
 nav .container-fluid .navbar-toggler {
-  background-color: rgb(50, 156, 70);
+  background-color: rgb(56, 175, 78);
 }
 nav .container-fluid .navbar-toggler i {
   color: #ddd;
@@ -396,7 +358,7 @@ nav .container-fluid .nav-categories {
   width: 100%;
 }
 nav .container-fluid .nav-categories .btn:hover, nav .container-fluid .nav-categories .focus-color {
-  background-color: rgb(50, 156, 70);
+  background-color: rgb(56, 175, 78);
 }
 nav .container-fluid .nav-categories ul {
   list-style-type: none;
@@ -449,12 +411,11 @@ nav .container-fluid .nav-categories ul li .collapse .card .collapse-container {
   font-size: 10px;
 }
 nav .container-fluid .nav-categories ul li .collapse .card .collapse-container .under-categories p a:hover {
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
 }
 @media screen and (min-width: 992px) {
   nav .nav-button {
     margin-right: 30px;
-    float: right;
   }
 }
 @media screen and (max-width: 991px) {
@@ -517,9 +478,23 @@ nav .nav-button .user-button-container .data-for-buttons {
   color: #ddd;
   font-size: 14px;
 }
+nav .nav-button .user-button-container .data-for-buttons .second-span {
+  font-size: 10px;
+}
 nav .nav-button button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45px;
+  height: 45px;
   border: 1px solid #ddd;
-  border-radius: 70px;
+  border-radius: 100%;
   text-align: center;
 }
 nav .nav-button button:hover {
@@ -527,10 +502,13 @@ nav .nav-button button:hover {
   background-color: #242e3f;
 }
 nav .nav-button button span {
-  background-color: rgb(50, 156, 70);
+  color: black;
+  font-weight: normal;
+  font-size: 11px;
+  background-color: rgb(56, 175, 78);
 }
 nav .nav-button i {
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
   font-size: 20px;
 }
 
@@ -567,11 +545,11 @@ nav .nav-button i {
 .phone-number .phone-icon {
   position: absolute;
   left: 15px;
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
   font-size: 25px;
 }
 .phone-number .number a {
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
   font-size: 23px;
   text-decoration: none;
 }
@@ -605,7 +583,7 @@ nav .nav-button i {
 #searchbar .form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 1px solid rgb(50, 156, 70);
+  border: 1px solid rgb(56, 175, 78);
 }
 #searchbar i {
   position: absolute;
@@ -748,7 +726,7 @@ nav .nav-button i {
   margin-bottom: 10px;
 }
 .infoContainers .description .pointed-list li {
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
 }
 .infoContainers .description .pointed-list li span {
   color: black;
@@ -802,7 +780,7 @@ nav .nav-button i {
   transition: 0.3s ease-in-out;
 }
 .main-content .leadersPictures .infoAboutPerson .info-name-role a:hover {
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
 }
 .main-content .leadersPictures .infoAboutPerson .info-name-role .name-role {
   display: -ms-grid;
@@ -847,7 +825,7 @@ nav .nav-button i {
   padding: 20px;
 }
 .infoPanel .information #email > a {
-  color: #53c869;
+  color: #66ce79;
 }
 .infoPanel iframe {
   width: 100%;
@@ -986,12 +964,15 @@ nav .nav-button i {
   border: 1px solid #ccc;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
   z-index: 999;
 }
 .column .left-column .categories .list-of-categories .product-category .underlist-product .top-line {
   width: 100%;
   height: 15px;
   background-color: rgb(236, 255, 221);
+  border-top-right-radius: 7px;
   text-indent: -9999px;
 }
 .column .left-column .categories .list-of-categories .product-category .underlist-product .category-container {
@@ -1039,12 +1020,12 @@ nav .nav-button i {
   margin-right: 30px;
   margin-left: 30px;
   margin-top: 40px;
-  width: 100%;
 }
 .column .center-column .bread-crumbs .current-page {
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
 }
 .column .center-column #carouselExampleIndicators {
+  margin: auto;
   width: 100%;
 }
 .column .center-column .carousel-indicators button {
@@ -1054,7 +1035,7 @@ nav .nav-button i {
   border-radius: 100%;
 }
 .column .center-column .carousel-indicators .active {
-  background-color: #53c869;
+  background-color: rgb(56, 175, 78);
 }
 .column .center-column .carousel-inner {
   width: 100%;
@@ -1103,16 +1084,18 @@ nav .nav-button i {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 30px;
   margin-top: 10px;
 }
 .column .center-column .main-products-show .products-container-show .show-product {
-  margin: auto;
   background-color: white;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 260px;
+  width: 250px;
   border-radius: 7px;
 }
 .column .center-column .main-products-show .products-container-show .show-product .image-product-con {
@@ -1253,14 +1236,14 @@ nav .nav-button i {
   font-size: 20px;
 }
 .column .center-column .main-products-show .products-container-show .show-product .info-pr .buy-container a:hover {
-  background-color: rgb(50, 156, 70);
+  background-color: rgb(56, 175, 78);
 }
 .column .center-column .main-products-show .products-container-show .show-product .info-pr .extra-info-pr {
   display: -ms-grid;
   display: grid;
 }
 .column .center-column .main-products-show .products-container-show .show-product .info-pr .extra-info-pr .parameter-pr {
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
 }
 .column .center-column .main-products-show .products-container-show .show-product .info-pr .extra-info-pr .parameter-pr .parameter {
   color: #797979;
@@ -1287,7 +1270,7 @@ nav .nav-button i {
   position: absolute;
   right: 0;
 }
-.column .center-column .main-products-show .products-container-show .show-product .info-pr .avaliable {
+.column .center-column .main-products-show .products-container-show .show-product .info-pr .available {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1295,7 +1278,7 @@ nav .nav-button i {
       -ms-flex-align: center;
           align-items: center;
 }
-.column .center-column .main-products-show .products-container-show .show-product .info-pr .avaliable button {
+.column .center-column .main-products-show .products-container-show .show-product .info-pr .available button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1305,15 +1288,15 @@ nav .nav-button i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgb(50, 156, 70);
+  background-color: rgb(56, 175, 78);
   color: white;
   font-weight: bold;
   font-size: 14px;
   width: 80px;
   height: 27px;
 }
-.column .center-column .main-products-show .products-container-show .show-product .info-pr .avaliable span {
-  color: rgb(50, 156, 70);
+.column .center-column .main-products-show .products-container-show .show-product .info-pr .available span {
+  color: rgb(56, 175, 78);
   font-size: 13px;
   max-width: 150px;
   margin: auto auto auto 10px;
@@ -1330,14 +1313,19 @@ nav .nav-button i {
   }
 }
 .column .right-column {
-  width: 250px;
-  margin-right: 100px;
-  margin-top: 40px;
-  gap: 40px;
+  position: sticky;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  width: 250px;
+  margin-right: 100px;
+  margin-top: 40px;
   text-align: center;
+}
+.column .right-column .right-container {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .column .right-column .right-product {
   display: -ms-grid;
@@ -1346,6 +1334,7 @@ nav .nav-button i {
   width: 230px;
   height: 430px;
   border-radius: 7px;
+  margin-bottom: 20px;
 }
 .column .right-column .right-product .deal-title {
   margin-top: 10px;
@@ -1405,7 +1394,7 @@ nav .nav-button i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: rgb(50, 156, 70);
+  background-color: rgb(56, 175, 78);
   padding: 5px;
   width: 40px;
   height: 50px;
@@ -1425,6 +1414,9 @@ nav .nav-button i {
   background-color: white;
   border-radius: 7px;
   width: 230px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .column .right-column .new-products .new-products-title {
   margin-top: 10px;
@@ -1444,7 +1436,7 @@ nav .nav-button i {
   padding-bottom: 7px;
 }
 .column .right-column .new-products .new-product-list img {
-  width: 100px;
+  width: 95px;
 }
 .column .right-column .new-products .new-product-list .product-container-side {
   display: -ms-grid;
@@ -1457,7 +1449,7 @@ nav .nav-button i {
   color: #cecece;
 }
 .column .right-column .new-products .new-product-list .product-container-side .rating-color {
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
 }
 .column .right-column .new-products .new-product-list .product-container-side .product-name-side {
   max-width: 110px;
@@ -1467,7 +1459,7 @@ nav .nav-button i {
 .column .right-column .new-products .new-product-list .product-container-side .price-side {
   font-size: 20px;
   font-weight: bold;
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
   text-align: left;
 }
 
@@ -1523,7 +1515,7 @@ footer .footer-content .logoFooter .SNlinks {
 }
 footer .footer-content .logoFooter .SNlinks a {
   text-decoration: none;
-  background-color: rgb(50, 156, 70);
+  background-color: #257534;
   color: white;
   border-radius: 10px;
   font-size: 20px;
@@ -1592,7 +1584,7 @@ footer .footer-content .extraInfoFooter .instagramFooter .instaPictures img {
 }
 footer .extraFooter {
   color: white;
-  background-color: #1b212f;
+  background-color: #242d40;
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1617,7 +1609,7 @@ footer .extraFooter {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  background-color: rgb(50, 156, 70);
+  background-color: rgb(56, 175, 78);
   margin-left: 100px;
 }
 
@@ -1644,7 +1636,7 @@ footer .extraFooter {
           justify-content: center;
 }
 .offcanvas-start .offcanvas-header .btn-close {
-  background-color: #66ce7a;
+  background-color: #79d48a;
 }
 @media screen and (min-width: 992px) {
   .offcanvas-start .main-info {
@@ -1685,16 +1677,16 @@ footer .extraFooter {
 }
 .offcanvas-start .main-info .nav-button .btn {
   background-color: white;
-  border: 1px solid #c4c4c4;
+  border: 1px solid rgb(56, 175, 78);
   border-radius: 70px;
   text-align: center;
 }
 .offcanvas-start .main-info .nav-button .btn i {
-  color: rgb(50, 156, 70);
+  color: rgb(56, 175, 78);
   font-size: 25px;
 }
 .offcanvas-start .main-info .nav-button .btn span:not(.visually-hidden) {
-  background-color: rgb(50, 156, 70);
+  background-color: rgb(56, 175, 78);
   color: white;
 }
 .offcanvas-start .offcanvas-body {

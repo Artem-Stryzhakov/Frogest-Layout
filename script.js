@@ -102,9 +102,26 @@ collapseSideMenu.forEach(collapseItems => {
 })
 
 // When the user scrolls down 20px from the top of the document, show the button
+
+let oldScrollY = window.scrollY;
+const directionText = document.querySelector('.right-column');
+
 window.onscroll = () => {
     (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) ?
         mybutton.style.display = "block" : mybutton.style.display = "none"
+
+    const numb = directionText.scrollHeight - window.innerHeight
+
+    if(oldScrollY < window.scrollY){
+        if (window.innerHeight < directionText.scrollHeight) {
+            $(directionText).css('top', `-${numb + 10}px`)
+        } else {
+            $(directionText).css('top', `10px`)
+        }
+    } else {
+        $(directionText).css('top', `10px`)
+    }
+    oldScrollY = window.scrollY;
 };
 
 // When the user clicks on the button, scroll to the top of the document
