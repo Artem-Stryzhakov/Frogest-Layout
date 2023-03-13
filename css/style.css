@@ -44,9 +44,6 @@ body::-webkit-scrollbar {
 }
 .top-header {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -94,65 +91,6 @@ body::-webkit-scrollbar {
 }
 .top-header .secondary-functions .wishlist-dom p {
   margin-top: 15px;
-}
-
-@media screen and (min-width: 992px) {
-  .switch-language-in-mobile {
-    display: none;
-  }
-}
-@media screen and (max-width: 991px) {
-  .switch-language-in-mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-.switch-language-in-mobile {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 5px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  margin: 10px auto auto;
-}
-.switch-language-in-mobile .wishlist-dom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 5px;
-  text-decoration: none;
-  color: rgb(184, 184, 184);
-  height: 15px;
-}
-.switch-language-in-mobile .wishlist-dom i {
-  color: rgb(56, 175, 78);
-}
-.switch-language-in-mobile .wishlist-dom p {
-  margin-top: 15px;
-}
-.switch-language-in-mobile .btn {
-  border: none;
-}
-.switch-language-in-mobile .btn .language-name {
-  color: rgb(184, 184, 184);
-  font-size: 18px;
-}
-.switch-language-in-mobile .btn i {
-  margin-left: 5px;
-  color: rgb(56, 175, 78);
-  font-size: 18px;
-}
-.switch-language-in-mobile .btn .dropdown-menu {
-  text-align: center;
-}
-.switch-language-in-mobile .btn .dropdown-menu .dropdown-item:not(.last) {
-  border-bottom: 1px solid #e1e1e1;
 }
 
 nav {
@@ -955,6 +893,7 @@ nav .nav-button i {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  max-width: 1020px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -979,9 +918,9 @@ nav .nav-button i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   gap: 20px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -1027,6 +966,7 @@ nav .nav-button i {
 .column .center-column #carouselExampleIndicators {
   margin: auto;
   width: 100%;
+  max-height: 430px;
 }
 .column .center-column .carousel-indicators button {
   background-color: black;
@@ -1039,11 +979,10 @@ nav .nav-button i {
 }
 .column .center-column .carousel-inner {
   width: 100%;
-  max-height: 430px;
   border-radius: 7px;
 }
 .column .center-column .carousel-inner img {
-  height: 430px;
+  width: 100%;
 }
 .column .center-column .main-products-show {
   width: 100%;
@@ -1626,15 +1565,6 @@ footer .extraFooter {
 .offcanvas-start .offcanvas-header {
   background-color: #2d3850;
 }
-.offcanvas-start .offcanvas-header .offcanvas-title {
-  margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
 .offcanvas-start .offcanvas-header .btn-close {
   background-color: #79d48a;
 }
@@ -1647,20 +1577,96 @@ footer .extraFooter {
   background-color: #ddd;
   padding-bottom: 10px;
 }
-.offcanvas-start .main-info .switch-language-in-mobile {
+.offcanvas-start .main-info .top-content-mobile {
+  margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 300px;
 }
-.offcanvas-start .main-info .switch-language-in-mobile .wishlist-dom {
+.offcanvas-start .main-info .top-content-mobile i {
+  color: rgb(56, 175, 78);
+}
+.offcanvas-start .main-info .top-content-mobile .dropdown-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: black;
+  text-decoration: none;
 }
-.offcanvas-start .main-info .switch-language-in-mobile .btn {
-  background-color: white;
+.offcanvas-start .main-info .top-content-mobile .dropdown-center p {
+  margin: auto;
 }
-.offcanvas-start .main-info .switch-language-in-mobile .btn .language-name {
+.offcanvas-start .main-info .wishlist-dom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  text-decoration: none;
   color: black;
+  height: 15px;
+  font-size: 18px;
+}
+.offcanvas-start .main-info .wishlist-dom i {
+  margin-top: 10px;
+  color: rgb(56, 175, 78);
+}
+.offcanvas-start .main-info .wishlist-dom p {
+  margin: auto;
+}
+@media screen and (min-width: 992px) {
+  .offcanvas-start .main-info .switch-language-in-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .offcanvas-start .main-info .switch-language-in-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.offcanvas-start .main-info .dropdown-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 10px auto auto;
+}
+.offcanvas-start .main-info .dropdown-center .btn {
+  border: none;
+}
+.offcanvas-start .main-info .dropdown-center .btn .btn-name {
+  font-size: 18px;
+}
+.offcanvas-start .main-info .dropdown-center .btn i {
+  margin-left: 5px;
+  color: rgb(56, 175, 78);
+  font-size: 18px;
+}
+.offcanvas-start .main-info .dropdown-center .btn .dropdown-menu {
+  text-align: center;
+}
+.offcanvas-start .main-info .dropdown-center .btn .dropdown-menu .dropdown-item:not(.last) {
+  border-bottom: 1px solid #e1e1e1;
 }
 .offcanvas-start .main-info .phone-number {
   margin: 15px auto auto;
