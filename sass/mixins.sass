@@ -45,6 +45,11 @@
       padding: 7px 13px
       transition: 0.5s ease-in-out
 
+      i
+        display: flex
+        justify-content: center
+        width: 15px
+
       &:hover:is(.border-bottom-hover)
         border-bottom-right-radius: 10px
         border-bottom-left-radius: 10px
@@ -65,12 +70,16 @@
   padding-left: 10px
   @include topCornerRadius
 
-@mixin footerButtons()
+@mixin footerButtons
+  display: flex
+  align-items: center
   text-decoration: none
-  background-color: darken($mainColor, 15)
+  background-color: darken($mainColor, 12)
   color: white
-  border-radius: 10px
-  font-size: 20px
+  border-radius: 20px
+  font-size: 23px
+  width: 50px
+  height: 50px
 
 @mixin search-result
   display: none
