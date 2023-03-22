@@ -44,25 +44,28 @@ function ajaxFunc(element, results) {
     }
 }
 
-$(document).ready(() => {
-    const searchResultsCount = $('.search-result').toArray()
+export function showProductReq() {
+    $(document).ready(() => {
+        const searchResultsCount = $('.search-result').toArray()
 
-    $("#navbarSupportedContent .form-control").on('focus', function () {
-        $("#navbarSupportedContent input[name='product']").on('keyup', function () {
-            ajaxFunc($(this), $('#navbarSupportedContent .search-result'))
+        $("#navbarSupportedContent .form-control").on('focus', function () {
+            $("#navbarSupportedContent input[name='product']").on('keyup', function () {
+                ajaxFunc($(this), $('#navbarSupportedContent .search-result'))
+            })
         })
+
+        $("#searchbar .form-control").on('focus', function () {
+            $("#searchbar input[name='product']").on('keyup', function () {
+                ajaxFunc($(this), $('#searchbar .search-result'))
+            })
+        })
+
+        for (let i = 0; i < searchResultsCount.length; i++) {
+            $(searchElements.searchbars[i]).on('blur', function () {
+                $(searchElements.searchResults[i]).css('display', 'none')
+            })
+        }
     })
+}
 
-    $("#searchbar .form-control").on('focus', function () {
-        $("#searchbar input[name='product']").on('keyup', function () {
-            ajaxFunc($(this), $('#searchbar .search-result'))
-        })
-    })
-
-    for (let i = 0; i < searchResultsCount.length; i++) {
-        $(searchElements.searchbars[i]).on('blur', function () {
-            $(searchElements.searchResults[i]).css('display', 'none')
-        })
-    }
-})
 // ============================ //
