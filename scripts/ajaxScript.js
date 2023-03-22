@@ -30,6 +30,8 @@ function ajaxFunc(element, results) {
         results.css('display', 'grid')
         element.css('z-index', '4')
         results.css('z-index', '3')
+
+        // make request to backend (PHP file)
         $.ajax ({
             url: "SearchbarData.php",
             type: "GET",
