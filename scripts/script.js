@@ -1,16 +1,14 @@
 import {showProductReq} from "./ajaxScript.js"
 
-const collapseContainer = document.querySelectorAll('.collapse .card .collapse-container')
-const underCategories = document.querySelectorAll('.under-categories')
-const categoriesType = document.querySelectorAll('.under-categories p')
-const titleLinks = document.querySelectorAll('.under-categories h4 a')
-const collapseSideMenu = document.querySelectorAll('.offcanvas-body .nav-categories .collapse .card-body')
-const offcanvas = document.querySelector('.offcanvas-start')
-
-const categories = document.querySelectorAll(".down-main-categories .display-categories")
-
-//Get the button
-const mybutton = document.querySelector("#btn-back-to-top");
+import {
+    collapseContainer,
+    underCategories,
+    categoriesType,
+    titleLinks,
+    collapseSideMenu,
+    offcanvas,
+    mybutton
+} from "./variables.js";
 
 collapseContainer.forEach(collapseContainer => {
     collapseContainer.style.fontSize = '10px'
@@ -40,6 +38,7 @@ collapseSideMenu.forEach(collapseItems => {
 let oldScrollY = window.scrollY;
 const directionText = document.querySelector('.right-column');
 
+// function for change sidebar style
 const sideBarStyle = (visibility, opacity, transition) => {
     Object.assign(document.querySelector(".side-categ-icons").style, {
         visibility: visibility,
@@ -86,10 +85,6 @@ mybutton.addEventListener("click", () => {
 //Side canvas (mobile categories)
 offcanvas.style.width = '100%'
 
-/*let scrollHeight = Math.max(
-    document.body.scrollHeight, document.documentElement.scrollHeight,
-    document.body.offsetHeight, document.documentElement.offsetHeight,
-    document.body.clientHeight, document.documentElement.clientHeight
-);*/
-
-showProductReq();
+$(document).ready(() => {
+    showProductReq();
+})
