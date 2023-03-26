@@ -10,10 +10,6 @@
 
 body
   background-color: #e2e6ec
-
-  &::-webkit-scrollbar
-    display: none
-
 // ==========================================
 
 .top-image
@@ -758,7 +754,7 @@ nav
                 color: $mainColor
 
                 .parameter
-                  color: #797979
+                  color: darken($secondColor, 10)
 
             .wishlist-compare
               position: relative
@@ -772,7 +768,7 @@ nav
 
               a
                 text-decoration: none
-                color: #797979
+                color: $secondColor
 
               .compare
                 position: absolute
@@ -849,11 +845,13 @@ nav
         list-style-type: none
         margin: 0
         padding: 0
+        z-index: 10
 
         @media screen and (max-width: 1199px)
           display: none
 
         .list-group-item-action
+          position: relative
           text-align: center
           background-color: $secondColor
           color: rgb(236, 255, 221)
@@ -865,6 +863,25 @@ nav
             background-color: rgb(236, 255, 221)
             color: $secondColor
 
+          &:hover
+            .label-side-categ
+              display: flex
+
+          .label-side-categ
+            position: absolute
+            display: none
+            align-items: center
+            left: 93%
+            top: 0
+            background-color: rgb(236, 255, 221)
+            color: $secondColor
+            font-weight: bold
+            height: 40px
+            width: max-content
+            padding: 10px
+            border-top-right-radius: 7px
+            border-bottom-right-radius: 7px
+            z-index: 2
 
       .categ-container
         @media screen and (max-width: 1199px)
@@ -912,7 +929,7 @@ nav
               justify-content: center
               gap: 15px
               background-color: rgb(236, 255, 221)
-              color: #6b6b6b
+              color: $secondColor
               text-decoration: none
               width: 100%
               height: 55px
@@ -953,7 +970,7 @@ nav
                 a
                   font-size: 13.5px
                   text-decoration: none
-                  color: #6b6b6b
+                  color: $secondColor
 
               @media screen and (max-width: 1199px)
                 display: none
@@ -980,7 +997,7 @@ nav
                 display: grid
                 align-items: center
                 text-decoration: none
-                color: #6b6b6b
+                color: $secondColor
                 font-size: 13px
                 padding: 10px
                 margin: 0
@@ -1008,11 +1025,15 @@ nav
 
   .right-column
     position: sticky
-    height: fit-content
-    width: 250px
+    top: 10px
+    height: calc(100vh - 10px)
+    width: 270px
     margin-right: 100px
     margin-top: 40px
     text-align: center
+
+    &::-webkit-scrollbar
+      display: none
 
     .right-container
       height: fit-content

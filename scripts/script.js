@@ -7,6 +7,8 @@ import {
     titleLinks,
     collapseSideMenu,
     offcanvas,
+    sideCategIcons,
+    rightColumn,
     mybutton
 } from "./variables.js";
 
@@ -33,34 +35,32 @@ collapseSideMenu.forEach(collapseItems => {
     collapseItems.style.boxShadow = '1px 1px 5px #777'
 })
 
-// When the user scrolls down 20px from the top of the document, show the button
-
-let oldScrollY = window.scrollY;
-const directionText = document.querySelector('.right-column');
-
 // function for change sidebar style
 const sideBarStyle = (visibility, opacity, transition) => {
-    Object.assign(document.querySelector(".side-categ-icons").style, {
+    return Object.assign(document.querySelector(".side-categ-icons").style, {
         visibility: visibility,
         opacity: opacity,
         transition: transition
     })
 }
+let oldScrollY = window.scrollY
+let oldRightColY = rightColumn.offsetTop
 
 window.onscroll = () => {
+    // When the user scrolls down 20px from the top of the document, show the button
     (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) ?
         mybutton.style.display = "block" : mybutton.style.display = "none"
 
-    const numb = directionText.scrollHeight - window.innerHeight
+    const numb = rightColumn.scrollHeight - window.innerHeight
 
     if(oldScrollY < window.scrollY){
-        if (window.innerHeight < directionText.scrollHeight) {
-            $(directionText).css('top', `-${numb + 10}px`)
+        if (window.innerHeight < rightColumn.scrollHeight) {
+            $(rightColumn).css('top', `-${numb + 10}px`)
         } else {
-            $(directionText).css('top', `10px`)
+            $(rightColumn).css('top', `10px`)
         }
     } else {
-        $(directionText).css('top', `10px`)
+        $(rightColumn).css('top', `10px`)
     }
     oldScrollY = window.scrollY;
 
@@ -70,11 +70,16 @@ window.onscroll = () => {
         sideBarStyle("hidden", "0", "visibility 0s 0.2s, opacity 0.2s linear")
     }
 
-    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 100) {
-        // you're at the bottom of the page
-        sideBarStyle("hidden", "0", "visibility 0s 0.2s, opacity 0.2s linear")
+    //Don't let the sidebar move over a footer
+    const checkScrollHeight = window.innerHeight + window.scrollY
+    const docHeightWithoutFooter = document.body.offsetHeight - document.querySelector('footer').offsetHeight
+
+    if (checkScrollHeight >= docHeightWithoutFooter) {
+        sideCategIcons.style.bottom = `${checkScrollHeight - docHeightWithoutFooter + 50}px`
+    } else {
+        sideCategIcons.style.bottom = "50px"
     }
-};
+}
 
 // When the user clicks on the button, scroll to the top of the document
 mybutton.addEventListener("click", () => {

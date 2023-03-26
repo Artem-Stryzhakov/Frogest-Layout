@@ -5,6 +5,8 @@ const categoriesType = document.querySelectorAll('.under-categories p')
 const titleLinks = document.querySelectorAll('.under-categories h4 a')
 const collapseSideMenu = document.querySelectorAll('.offcanvas-body .nav-categories .collapse .card-body')
 const offcanvas = document.querySelector('.offcanvas-start')
+const sideCategIcons = document.querySelector(".side-categ-icons")
+const rightColumn = document.querySelector(".right-column")
 
 //Get the back to top button
 const mybutton = document.querySelector("#btn-back-to-top");
@@ -15,14 +17,10 @@ const listOfSearchName = document.querySelectorAll('.search-result .product-name
 const listOfSearchPrice = document.querySelectorAll('.search-result .price-search')
 
 export {
-    collapseContainer,
-    underCategories,
-    categoriesType,
-    titleLinks,
-    collapseSideMenu,
-    offcanvas,
-    mybutton,
-    listOfSearchImg,
-    listOfSearchName,
-    listOfSearchPrice
+    collapseContainer, underCategories,
+    categoriesType, titleLinks,
+    collapseSideMenu, offcanvas,
+    sideCategIcons, rightColumn,
+    mybutton, listOfSearchImg,
+    listOfSearchName, listOfSearchPrice
 }
