@@ -1562,20 +1562,14 @@ nav .nav-button i {
 }
 .column .right-column {
   position: sticky;
-  top: 10px;
-  height: calc(100vh - 10px);
-  width: 270px;
-  margin-right: 100px;
-  margin-top: 40px;
-  text-align: center;
-}
-.column .right-column::-webkit-scrollbar {
-  display: none;
-}
-.column .right-column .right-container {
+  top: 0;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  width: 230px;
+  text-align: center;
+  margin-right: 100px;
+  margin-top: 40px;
 }
 .column .right-column .right-product {
   display: -ms-grid;
@@ -1584,7 +1578,7 @@ nav .nav-button i {
   width: 230px;
   height: 430px;
   border-radius: 7px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .column .right-column .right-product .deal-title {
   margin-top: 10px;

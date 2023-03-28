@@ -1,4 +1,5 @@
 import {showProductReq} from "./ajaxScript.js"
+import {sideBarStyle, rightColAnimate} from "./functions.js";
 
 import {
     collapseContainer,
@@ -35,45 +36,37 @@ collapseSideMenu.forEach(collapseItems => {
     collapseItems.style.boxShadow = '1px 1px 5px #777'
 })
 
-// function for change sidebar style
-const sideBarStyle = (visibility, opacity, transition) => {
-    return Object.assign(document.querySelector(".side-categ-icons").style, {
-        visibility: visibility,
-        opacity: opacity,
-        transition: transition
-    })
-}
 let oldScrollY = window.scrollY
-let oldRightColY = rightColumn.offsetTop
 
 window.onscroll = () => {
+    const numb = rightColumn.scrollHeight - window.innerHeight
+    //Don't let the sidebar move over a footer
+    const checkScrollHeight = window.innerHeight + window.scrollY;
+    const docHeightWithoutFooter = document.body.offsetHeight - document.querySelector('footer').offsetHeight;
+
     // When the user scrolls down 20px from the top of the document, show the button
     (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) ?
         mybutton.style.display = "block" : mybutton.style.display = "none"
 
-    const numb = rightColumn.scrollHeight - window.innerHeight
-
-    if(oldScrollY < window.scrollY){
+    // Animate Right column ===========================
+    if (oldScrollY < window.scrollY){
         if (window.innerHeight < rightColumn.scrollHeight) {
-            $(rightColumn).css('top', `-${numb + 10}px`)
-        } else {
-            $(rightColumn).css('top', `10px`)
+            (window.scrollY > 229) ? rightColAnimate("-", numb + 10, 500) : null;
+            (checkScrollHeight > docHeightWithoutFooter - 200) ? rightColAnimate("", 0, 0) : null
         }
     } else {
-        $(rightColumn).css('top', `10px`)
+        (window.innerHeight < rightColumn.scrollHeight) ? rightColAnimate("", 0, 500) : null
     }
     oldScrollY = window.scrollY;
 
+    // Show sidebar where is necessary
     if (document.querySelector(".down-main-categories").offsetTop < (window.pageYOffset + window.innerHeight / 2.4)) {
         sideBarStyle("visible", "1", "opacity 0.2s linear")
     } else {
         sideBarStyle("hidden", "0", "visibility 0s 0.2s, opacity 0.2s linear")
     }
 
-    //Don't let the sidebar move over a footer
-    const checkScrollHeight = window.innerHeight + window.scrollY
-    const docHeightWithoutFooter = document.body.offsetHeight - document.querySelector('footer').offsetHeight
-
+    // Stop sidebar before footer
     if (checkScrollHeight >= docHeightWithoutFooter) {
         sideCategIcons.style.bottom = `${checkScrollHeight - docHeightWithoutFooter + 50}px`
     } else {
