@@ -1054,7 +1054,7 @@ nav .nav-button i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 30px;
+  gap: 1.5%;
   margin-top: 10px;
 }
 .column .center-column .main-products-show .products-container-show .show-product {
@@ -1062,19 +1062,16 @@ nav .nav-button i {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 250px;
   border-radius: 7px;
 }
 .column .center-column .main-products-show .products-container-show .show-product .image-product-con {
   position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   margin: 20px auto 15px;
+  width: 90%;
 }
 .column .center-column .main-products-show .products-container-show .show-product .image-product-con img {
-  width: 180px;
-  height: 220px;
+  width: 100%;
+  margin: auto;
 }
 .column .center-column .main-products-show .products-container-show .show-product .image-product-con .discount {
   position: absolute;
@@ -1157,6 +1154,8 @@ nav .nav-button i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
