@@ -52,7 +52,7 @@ window.onscroll = () => {
     if (oldScrollY < window.scrollY){
         if (window.innerHeight < rightColumn.scrollHeight) {
             (window.scrollY > 229) ? rightColAnimate("-", numb + 10, 500) : null;
-            (checkScrollHeight > docHeightWithoutFooter - 200) ? rightColAnimate("", 0, 0) : null
+            (checkScrollHeight > docHeightWithoutFooter - 250) ? rightColAnimate("", 0, 0) : null
         }
     } else {
         (window.innerHeight < rightColumn.scrollHeight) ? rightColAnimate("", 0, 500) : null
