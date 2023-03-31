@@ -1,6 +1,6 @@
-import {showProductReq} from "./ajaxScript.js"
+import showProductReq from "./ajaxScript.js"
 import {sideBarStyle, rightColAnimate} from "./functions.js";
-import {slickTrack} from './slick-slider.js'
+import slickSlider from './slick-slider.js'
 
 import {
     collapseContainer,
@@ -86,5 +86,5 @@ offcanvas.style.width = '100%'
 
 $(document).ready(() => {
     showProductReq();
-    slickTrack()
+    slickSlider()
 })

@@ -1,6 +1,5 @@
-// https://fontawesome.com/icons/clock?s=solid&f=classic
-// https://prepros.io
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap')
+@import url('https://fonts.cdnfonts.com/css/muli')
 @import './mixins'
 
 *
@@ -626,7 +625,7 @@ nav
         height: 65px
 
         h1
-          color: #777777
+          color: $secondColor
 
         .switch-buttons
           display: flex
@@ -636,7 +635,7 @@ nav
           button
             font-size: 30px
             height: 65px
-            color: #a2a2a2
+            color: $secondColor
 
       .products-container-show
         display: flex
@@ -696,6 +695,7 @@ nav
               max-width: 210px
               min-height: 75px
               font-size: 17px
+              color: $secondColor
 
             .buy-container
               display: flex
@@ -728,7 +728,7 @@ nav
                 color: $mainColor
 
                 .parameter
-                  color: darken($secondColor, 10)
+                  color: $secondColor
 
             .wishlist-compare
               position: relative
@@ -778,7 +778,7 @@ nav
         position: relative
         display: flex
         vertical-align: middle
-        color: #707070
+        color: $secondColor
 
         .switch-buttons
           position: absolute
@@ -794,7 +794,7 @@ nav
             height: 50px
             width: 45px
             font-size: 40px
-            color: #707070
+            color: $secondColor
 
       #carouselTopDeal
         .carousel-inner
@@ -1014,6 +1014,7 @@ nav
       height: 430px
       border-radius: 7px
       margin-bottom: 40px
+      color: $secondColor
 
       .deal-title
         margin-top: 10px
@@ -1058,12 +1059,12 @@ nav
           p
             margin: 0
             padding: 0
-            font-size: 15px
+            font-size: 16px
             color: white
-            font-weight: 600
+            font-weight: 700
 
           p:is(.validity)
-            font-size: 11px
+            font-size: 12px
 
     .new-products
       background-color: white
@@ -1101,6 +1102,7 @@ nav
             max-width: 110px
             font-size: 13px
             text-align: left
+            color: $secondColor
 
           .price-side
             font-size: 20px
@@ -1398,3 +1400,18 @@ footer
 
               a
                 background-color: inherit
+
+
+.slick-slider
+  -webkit-user-select: text
+  -khtml-user-select: text
+  -moz-user-select: text
+  -ms-user-select: text
+  user-select: text
+
+.slick-list.draggable
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none

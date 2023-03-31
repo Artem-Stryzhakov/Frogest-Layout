@@ -1,9 +1,11 @@
-export function slickTrack() {
+function slickSlider() {
     $('.products-container-show').slick({
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
         draggable: false,
+        autoplay: true,
+        autoplaySpeed: 7000,
         prevArrow:document.querySelector(".switch-buttons #previous"),
         nextArrow: document.querySelector(".switch-buttons #next"),
         responsive:[
@@ -25,3 +27,5 @@ export function slickTrack() {
         ],
     });
 }
+
+export default slickSlider

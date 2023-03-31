@@ -44,7 +44,7 @@ function ajaxFunc(element, results) {
     }
 }
 
-export function showProductReq() {
+function showProductReq() {
     const searchResultsCount = $('.search-result').toArray()
 
     $("#navbarSupportedContent .form-control").on('focus', function () {
@@ -66,3 +66,4 @@ export function showProductReq() {
     }
 }
 // ============================ //
+export default showProductReq
