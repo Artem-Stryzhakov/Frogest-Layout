@@ -612,6 +612,15 @@ nav
       img
         width: 100%
 
+    // ==================================== //
+
+    // Enable copy in Top Deals products //
+    .slick-slider
+      -webkit-user-select: text
+      -khtml-user-select: text
+      -moz-user-select: text
+      -ms-user-select: text
+      user-select: text
 
     .main-products-show
       width: 100%
@@ -653,6 +662,7 @@ nav
           border-radius: 7px
           margin-left: 5px
           margin-right: 5px
+          padding-bottom: 7px
 
           .image-product-con
             position: relative
@@ -743,6 +753,12 @@ nav
               a
                 text-decoration: none
                 color: $secondColor
+
+              .wishlist
+                a:hover
+                  i
+                    color: $mainColor
+
 
               .compare
                 position: absolute
@@ -1400,18 +1416,3 @@ footer
 
               a
                 background-color: inherit
-
-
-.slick-slider
-  -webkit-user-select: text
-  -khtml-user-select: text
-  -moz-user-select: text
-  -ms-user-select: text
-  user-select: text
-
-.slick-list.draggable
-  -webkit-user-select: none
-  -khtml-user-select: none
-  -moz-user-select: none
-  -ms-user-select: none
-  user-select: none
