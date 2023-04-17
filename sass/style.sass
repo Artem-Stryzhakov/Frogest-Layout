@@ -225,7 +225,7 @@ nav
         .data-for-buttons
           display: none
 
-      @media screen and (max-width: 991px)
+      @media screen and (max-width: 992px)
         .data-for-buttons
           display: grid
 
@@ -233,43 +233,23 @@ nav
         color: $lineColor
         font-size: 14px
 
-        .second-span
+        .cart-total
           font-size: 10px
 
-    button
-      display: flex
-      justify-content: center
-      align-items: center
-      width: 45px
-      height: 45px
-      border: 1px solid $lineColor
-      border-radius: 100%
-      text-align: center
-
-      &:hover
-        border: 1px solid $lineColor
-        background-color: #242e3f
-
-      span
-        color: black
-        font-weight: normal
-        font-size: 11px
-        background-color: $mainColor
-
-    i
-      color: $mainColor
-      font-size: 20px
+    // some style for navbar icons (desktop)
+    @include navbar-icons
 
 // The PHONE NUMBER in HEADER...
-@media screen and (min-width: 991px)
+@media screen and (min-width: 992px)
   .phone-number
     width: 350px
 
-@media screen and (max-width: 991px)
+@media screen and (max-width: 992px)
   .phone-number
     display: flex
     margin: 20px auto 20px
     max-width: 370px
+    padding: 10px
 
 .phone-number
   display: flex
@@ -328,6 +308,20 @@ nav
 
   .search-result
     @include search-result
+
+
+// Display basket in mobile ============
+.mobile-basket
+  display: none
+  align-items: center
+  justify-content: center
+  gap: 10px
+
+  @media screen and (max-width: 991px)
+    display: flex
+
+  // some style for navbar icon (mobile)
+  @include navbar-icons
 
 // ===== MAIN CONTENT ===== //
 
@@ -453,7 +447,7 @@ nav
   display: flex
   justify-content: center
 
-  @media screen and (max-width: 991px)
+  @media screen and (max-width: 992px)
     .left-column
       display: none
 
@@ -622,8 +616,8 @@ nav
       -ms-user-select: text
       user-select: text
 
-    .main-products-show
-      width: 100%
+    .product-show-container
+      max-width: 100%
       margin-top: 10px
 
       .header-products-show
@@ -650,9 +644,7 @@ nav
         display: flex
         justify-content: center
         margin-top: 10px
-
-        @media screen and (max-width: 992px)
-          flex-wrap: wrap
+        overflow: inherit
 
         .show-product
           background-color: white
@@ -811,15 +803,7 @@ nav
             width: 45px
             font-size: 40px
             color: $secondColor
-
-      #carouselTopDeal
-        .carousel-inner
-          min-height: 650px
-          max-height: max-content
-
-          .carousel-item
-            min-height: 700px
-            max-height: max-content
+            z-index: 0
 
     .down-main-categories
       margin-top: 100px
@@ -831,13 +815,12 @@ nav
         visibility: hidden
         position: fixed
         left: 25px
-        bottom: 50px
         list-style-type: none
         margin: 0
         padding: 0
         z-index: 10
 
-        @media screen and (max-width: 1199px)
+        @media screen and (max-width: 1399px)
           display: none
 
         .list-group-item-action
@@ -874,7 +857,7 @@ nav
             z-index: 2
 
       .categ-container
-        @media screen and (max-width: 1199px)
+        @media screen and (max-width: 1399px)
           display: flex
           justify-content: center
           flex-wrap: wrap
@@ -890,7 +873,7 @@ nav
         border-radius: 7px
         margin-bottom: 20px
 
-        @media screen and (max-width: 1199px)
+        @media screen and (max-width: 1399px)
           width: fit-content
           margin-bottom: 5px
 
@@ -909,7 +892,7 @@ nav
             max-width: min-content
             border-bottom-left-radius: 7px
 
-            @media screen and (max-width: 1199px)
+            @media screen and (max-width: 1399px)
               height: 55px
 
             .mini-header
@@ -928,7 +911,7 @@ nav
               margin-bottom: 20px
               border-bottom-right-radius: 4px
 
-              @media screen and (max-width: 1199px)
+              @media screen and (max-width: 1399px)
                 width: 200px
 
               i
@@ -948,7 +931,7 @@ nav
                 background-color: black
                 transform: rotate(45deg)
 
-                @media screen and (max-width: 1199px)
+                @media screen and (max-width: 1399px)
                   display: none
 
             .categoriz
@@ -962,17 +945,17 @@ nav
                   text-decoration: none
                   color: $secondColor
 
-              @media screen and (max-width: 1199px)
+              @media screen and (max-width: 1399px)
                 display: none
 
             img
-              @media screen and (max-width: 1199px)
+              @media screen and (max-width: 1399px)
                 display: none
 
           .main-ct
             display: grid
 
-            @media screen and (max-width: 1199px)
+            @media screen and (max-width: 1399px)
               display: none
 
             .right-dom
@@ -1005,7 +988,7 @@ nav
 
   // ======================================
 
-  @media screen and (max-width: 991px)
+  @media screen and (max-width: 992px)
     .right-column
       display: none
 
@@ -1416,3 +1399,29 @@ footer
 
               a
                 background-color: inherit
+
+// Create add product to basket animation
+
+.main-products-show
+  position: relative
+
+.product-move
+  position: absolute
+  opacity: 0.3
+  width: 200px
+  height: 200px
+  border-radius: 50%
+  z-index: 1000
+  animation: addToBasket 1s forwards
+
+@keyframes backForward
+  20%
+    transform: translateX(4px)
+  40%
+    transform: translateX(-4px)
+  60%
+    transform: translateX(4px)
+  80%
+    transform: translateX(-4px)
+  100%
+    transform: translateX(0)

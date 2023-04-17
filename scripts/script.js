@@ -1,6 +1,7 @@
 import showProductReq from "./ajaxScript.js"
 import {sideBarStyle, rightColAnimate} from "./functions.js";
 import slickSlider from './slick-slider.js'
+import moveToBasket from "./animationBasket.js";
 
 import {
     collapseContainer,
@@ -52,26 +53,26 @@ window.onscroll = () => {
     // Animate Right column ===========================
     if (oldScrollY < window.scrollY){
         if (window.innerHeight < rightColumn.scrollHeight) {
-            (window.scrollY > 229) ? rightColAnimate("-", numb + 10, 500) : null;
+            (window.scrollY > 229) ? rightColAnimate("-", numb + 10, 800) : null;
             (checkScrollHeight > docHeightWithoutFooter - 250) ? rightColAnimate("", 0, 0) : null
         }
     } else {
-        (window.innerHeight < rightColumn.scrollHeight) ? rightColAnimate("", 0, 500) : null
+        (window.innerHeight < rightColumn.scrollHeight) ? rightColAnimate("", 0, 800) : null
     }
     oldScrollY = window.scrollY;
 
     // Show sidebar where is necessary
-    if (document.querySelector(".down-main-categories").offsetTop < (window.pageYOffset + window.innerHeight / 2.4)) {
+    if (document.querySelector(".down-main-categories").offsetTop < (window.pageYOffset + window.innerHeight / 2.7)) {
         sideBarStyle("visible", "1", "opacity 0.2s linear")
     } else {
         sideBarStyle("hidden", "0", "visibility 0s 0.2s, opacity 0.2s linear")
     }
 
     // Stop sidebar before footer
-    if (checkScrollHeight >= docHeightWithoutFooter) {
+    if (checkScrollHeight >= docHeightWithoutFooter + 50) {
         sideCategIcons.style.bottom = `${checkScrollHeight - docHeightWithoutFooter + 50}px`
     } else {
-        sideCategIcons.style.bottom = "50px"
+        sideCategIcons.style.bottom = "100px"
     }
 }
 
@@ -84,7 +85,9 @@ mybutton.addEventListener("click", () => {
 //Side canvas (mobile categories)
 offcanvas.style.width = '100%'
 
-$(document).ready(() => {
+document.addEventListener('DOMContentLoaded', () => {
     showProductReq();
     slickSlider()
 })
+
+moveToBasket()

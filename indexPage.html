@@ -22,9 +22,6 @@
     <link rel="shortcut icon" href="https://frog.ee/img/favicon-1.ico?167092613" type="image/x-icon">
     <!--Custom JS-->
     <script type="module" src="scripts/script.js"></script>
-
-    <!--Font Montserrat-->
-
     <title>Frog.ee</title>
 </head>
 <body>
@@ -176,6 +173,19 @@
                             </div>
                         </div>
                         <div class="nav-button dropdown">
+                            <div class="user-button-container basket-put">
+                                <button type="button" class="btn position-relative to-basket">
+                                    <i class="fa-solid fa-basket-shopping"></i>
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count-product">
+                                            0
+                                            <span class="visually-hidden">unread messages</span>
+                                        </span>
+                                </button>
+                                <div class="data-for-buttons">
+                                    <span>My Cart</span>
+                                    <span class="cart-total">0.00€</span>
+                                </div>
+                            </div>
                             <div class="user-button-container">
                                 <button type="button" class="btn position-relative">
                                     <i class="fa-solid fa-arrow-right-arrow-left"></i>
@@ -190,19 +200,6 @@
                             </div>
                             <div class="user-button-container">
                                 <button type="button" class="btn position-relative">
-                                    <i class="fa-solid fa-basket-shopping"></i>
-                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                                        0
-                                        <span class="visually-hidden">unread messages</span>
-                                    </span>
-                                </button>
-                                <div class="data-for-buttons">
-                                    <span>My Cart</span>
-                                    <span class="second-span">0.00€</span>
-                                </div>
-                            </div>
-                            <div class="user-button-container">
-                                <button type="button" class="btn position-relative">
                                     <i class='fa fa-user'></i>
                                 </button>
                                 <div class="data-for-buttons">
@@ -211,6 +208,15 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="mobile-basket">
+                        <button type="button" class="btn position-relative to-basket">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                0
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </button>
                     </div>
                 </div>
             </nav>
@@ -364,15 +370,6 @@
                 <div class="user-button-container">
                     <button type="button" class="btn position-relative">
                         <i class="fa-solid fa-code-compare"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                                0
-                                <span class="visually-hidden">unread messages</span>
-                            </span>
-                    </button>
-                </div>
-                <div class="user-button-container">
-                    <button type="button" class="btn position-relative">
-                        <i class="fa-solid fa-basket-shopping"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
                                 0
                                 <span class="visually-hidden">unread messages</span>
@@ -1963,7 +1960,6 @@
                         </button>
                     </div>
                 </div>
-
                 <div class="main-products-show">
                     <div class="products-container-show">
                         <div class="show-product">
@@ -1978,7 +1974,7 @@
                                         <span class="main-price">1590,90 €</span>
                                         <span class="discount-price">1250.<sup>50</sup></span>
                                     </div>
-                                    <a href="" class="btn">
+                                    <a href="" class="btn add-to-basket">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                     </a>
                                 </div>
@@ -2036,7 +2032,7 @@
                                         <span class="main-price">1590,90 €</span>
                                         <span class="discount-price">1250.<sup>50</sup></span>
                                     </div>
-                                    <a href="" class="btn">
+                                    <a href="" class="btn add-to-basket">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                     </a>
                                 </div>
@@ -2094,7 +2090,7 @@
                                         <span class="main-price">1590,90 €</span>
                                         <span class="discount-price">1250.<sup>50</sup></span>
                                     </div>
-                                    <a href="" class="btn">
+                                    <a href="" class="btn add-to-basket">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                     </a>
                                 </div>
@@ -2154,7 +2150,7 @@
                                         <span class="main-price">1590,90 €</span>
                                         <span class="discount-price">1250.<sup>50</sup></span>
                                     </div>
-                                    <a href="" class="btn">
+                                    <a href="" class="btn add-to-basket">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                     </a>
                                 </div>
@@ -2214,7 +2210,7 @@
                                         <span class="main-price">1590,90 €</span>
                                         <span class="discount-price">1250.<sup>50</sup></span>
                                     </div>
-                                    <a href="" class="btn">
+                                    <a href="" class="btn add-to-basket">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                     </a>
                                 </div>
@@ -2290,7 +2286,6 @@
                                 TV, audio, video
                             </div>
                         </a>
-
                         <a class="list-group-item list-group-item-action" href="#category_5">
                             <i class="fa-solid fa-camera"></i>
                             <div class="label-side-categ">
@@ -2315,7 +2310,6 @@
                                 Building and Construction
                             </div>
                         </a>
-
                         <a class="list-group-item list-group-item-action" href="#category_9">
                             <i class="fas fa-dumbbell"></i>
                             <div class="label-side-categ">
@@ -2340,7 +2334,6 @@
                                 Furniture
                             </div>
                         </a>
-
                         <a class="list-group-item list-group-item-action" href="#category_13">
                             <i class="fa-solid fa-shirt"></i>
                             <div class="label-side-categ">

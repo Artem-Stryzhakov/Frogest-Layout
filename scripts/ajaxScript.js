@@ -25,11 +25,11 @@ const getData = (data) => {
     }
 }
 
-function ajaxFunc(element, results) {
-    if (element.val() !== "") {
+function ajaxFunc(searchbar, results) {
+    if (searchbar.val() !== "") {
         results.css('display', 'grid')
-        element.css('z-index', '4')
-        results.css('z-index', '3')
+        searchbar.css('z-index', '11')
+        results.css('z-index', '10')
 
         // make request to backend (PHP file)
         $.ajax ({
@@ -39,7 +39,7 @@ function ajaxFunc(element, results) {
         })
     } else {
         results.css('display', 'none')
-        element.css('z-index', '3')
+        searchbar.css('z-index', '3')
         results.css('z-index', '0')
     }
 }
