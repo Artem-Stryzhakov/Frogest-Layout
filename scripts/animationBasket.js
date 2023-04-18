@@ -1,8 +1,20 @@
 const cardsProduct = document.querySelectorAll('.add-to-basket')
-const icon = document.querySelector('.to-basket')
+const icon = document.querySelectorAll('.to-basket')
+
+const productsContainer = document.querySelector('.products-container-show')
+
+const animationTime = Number(productsContainer.dataset.animationTime)
+const animationDelay = {
+    enterBasket: () => animationTime * 1000 - 300,
+    activateBack: () => animationTime * 1000 + 500
+}
 
 const style = document.createElement('style')
 style.type = 'text/css'
+
+function mobileBasketAnimation() {
+    return (window.innerWidth > 991) ? icon[0] : icon[1]
+}
 
 function moveToBasket() {
     cardsProduct.forEach(btn => btn.addEventListener('click', (event) => {
@@ -26,19 +38,19 @@ function moveToBasket() {
         const productImgCoor = productImg.getBoundingClientRect()
 
         document.querySelector('.products-container-show').insertAdjacentElement('beforebegin', picture)
-        //getDOMImage.insertAdjacentElement('beforebegin', picture)
 
-        const animationCoordinatesX = icon.getBoundingClientRect().x - productImgCoor.x
-        const animationCoordinatesY = icon.getBoundingClientRect().y - productImgCoor.y
-
-        console.log(`X: ${picture.getBoundingClientRect().x}`)
-        console.log(`Y: ${picture.getBoundingClientRect().y}`)
+        const animationCoordinatesX = mobileBasketAnimation().getBoundingClientRect().x - productImgCoor.x
+        const animationCoordinatesY = mobileBasketAnimation().getBoundingClientRect().y - productImgCoor.y
 
         const slickPosition = document.querySelector('.products-container-show').getBoundingClientRect()
 
         picture.style.left = `${productImgCoor.x - slickPosition.x}px`
 
         style.innerHTML = `
+        .product-move {
+            animation: addToBasket ${animationTime}s forwards
+        }
+        
         @keyframes addToBasket {
             60% {
                 transform: translate(
@@ -59,24 +71,27 @@ function moveToBasket() {
         document.querySelector('body').appendChild(style)
 
         setTimeout(() => {
-            const counterP = document.querySelector('.count-product').innerHTML
+            const countProduct = mobileBasketAnimation().querySelector('.count-product')
+            const counterP = countProduct.textContent
             const count = parseInt(counterP) + 1
-            document.querySelector('.count-product').innerHTML = count
-            //document.querySelector('.data-for-buttons .cart-total') +=
+
+            document.querySelector('.count-product.desktop').innerHTML = count
+            document.querySelector('.count-product.mobile').innerHTML = count
+
             style.innerHTML += `
             .basket-put {
                 animation: backForward 0.4s forwards;
             }
             `
-        }, 700)
+        }, animationDelay.enterBasket())
+
         setTimeout(() => {
             node.innerHTML = `
             <i class="fa-solid fa-cart-shopping"></i>
             `
             node.style.pointerEvents = 'inherit'
-            //node.style.background = '#c7c7c7'
             picture.remove()
-        }, 1500)
+        }, animationDelay.activateBack())
     }))
 }
 

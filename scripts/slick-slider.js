@@ -7,7 +7,6 @@ function slickSlider() {
         useCSS:true,
         prevArrow:document.querySelector(".switch-buttons #previous"),
         nextArrow: document.querySelector(".switch-buttons #next"),
-
         responsive:[
             {breakpoint:1420,settings:{
                     slidesToShow: 3,
