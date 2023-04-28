@@ -459,6 +459,11 @@ nav
     margin-left: 6%
     max-height: 836px
 
+    &:is(.productPage)
+      position: absolute
+      left: 95px
+      margin-left: 0
+
     // ===== CATEGORIES LIST ====== //
     @media screen and (max-width: 1230px)
       .categories
@@ -577,6 +582,10 @@ nav
     width: 60%
     height: auto
 
+    &:is(.productPage)
+      width: 90%
+      margin-top: 50px
+
     @media screen and (max-width: 992px)
       width: 100%
 
@@ -640,142 +649,17 @@ nav
             height: 65px
             color: $secondColor
 
-      .products-container-show
-        display: flex
-        justify-content: center
-        margin-top: 10px
-        overflow: inherit
+      .main-products-show
+        position: relative
+        background: #6bb42a
 
-        .show-product
-          background-color: white
-          height: fit-content
-          min-width: 200px
-          width: 20%
-          border-radius: 7px
-          margin-left: 5px
-          margin-right: 5px
-          padding-bottom: 7px
+        .products-container-show
+          display: flex
+          justify-content: center
+          //width: 100%
+          margin-top: 10px
 
-          .image-product-con
-            position: relative
-            width: fit-content
-            margin: 20px auto 15px
-
-            img
-              width: 180px
-              height: 200px
-              margin: auto
-
-            .discount
-              @include event-for-products
-              background-color: #d7aa00
-              color: white
-
-              &:is(.third)
-                top: 90px
-                z-index: 2
-
-            .hot-product
-              @include event-for-products
-              background-color: #ff5b14
-              color: white
-
-              &:is(.second)
-                top: 50px
-                z-index: 1
-
-            .new-product
-              @include event-for-products
-              background-color: green
-              color: white
-
-          .info-pr
-            width: 90%
-            margin: auto
-
-            .product-name
-              max-width: 210px
-              min-height: 75px
-              font-size: 17px
-              color: $secondColor
-
-            .buy-container
-              display: flex
-              align-items: center
-              position: relative
-
-              .show-price
-                display: grid
-                @include discount-price
-
-              a
-                display: flex
-                align-items: center
-                justify-content: center
-                position: absolute
-                right: 0
-                width: 45px
-                height: 45px
-                background-color: #c7c7c7
-                color: white
-                font-size: 20px
-
-                &:hover
-                  background-color: $mainColor
-
-            .extra-info-pr
-              display: grid
-
-              .parameter-pr
-                color: $mainColor
-
-                .parameter
-                  color: $secondColor
-
-            .wishlist-compare
-              position: relative
-              display: flex
-              align-items: center
-              margin: 7px
-              padding-top: 5px
-              padding-bottom: 5px
-              border-top: 1px solid #d9d9d9
-              border-bottom: 1px solid #d9d9d9
-
-              a
-                text-decoration: none
-                color: $secondColor
-
-              .wishlist
-                a:hover
-                  i
-                    color: $mainColor
-
-
-              .compare
-                position: absolute
-                right: 0
-
-            .available
-              display: flex
-              align-items: center
-
-              button
-                display: flex
-                align-items: center
-                justify-content: center
-                background-color: $mainColor
-                color: white
-                font-weight: bold
-                font-size: 14px
-                width: 80px
-                height: 27px
-
-              span
-                color: $mainColor
-                font-size: 13px
-                max-width: 150px
-                margin: auto auto auto 10px
+          @include show-products-in-slider
 
     // TEST SHOWS PRODUCTS CAROUSEL //
 
@@ -1402,9 +1286,6 @@ footer
 
 // Create add product to basket animation
 
-.main-products-show
-  position: relative
-
 .product-move
   position: absolute
   opacity: 0.3
@@ -1424,3 +1305,405 @@ footer
     transform: translateX(-4px)
   100%
     transform: translateX(0)
+
+.main-image-move
+  position: absolute
+  opacity: 0.3
+  width: 100%
+  height: 100%
+  border-radius: 50%
+  top: 0
+  left: 0
+  z-index: 1000
+
+// Styles for product page
+
+.showing-product-container
+  display: flex
+  flex-direction: column
+  //justify-content: space-between
+  gap: 50px
+  background-color: white
+  padding: 50px
+  border-radius: 7px
+
+  .main-product
+    display: flex
+
+    @media screen and (max-width: 991px)
+      flex-direction: column
+      gap: 50px
+
+  .images-product
+    display: flex
+    flex-direction: row
+    gap: 10px
+    width: 100%
+
+    @media screen and (max-width: 991px)
+      flex-direction: column-reverse
+
+    ul
+      margin: 0
+      padding: 0
+      list-style-type: none
+      height: fit-content
+
+      @media screen and (max-width: 991px)
+        display: flex
+        margin: auto
+
+      li
+        display: flex
+        justify-content: center
+        margin-bottom: 15px
+
+        img
+          //box-sizing: content-box
+          width: 65%
+          max-height: 115px
+          border-radius: 7px
+          cursor: pointer
+
+          &:hover
+            border: $mainColor solid 1px
+
+          @media screen and (max-width: 991px)
+            width: 80%
+
+    .main-product-image
+      position: relative
+      height: fit-content
+
+      img
+        width: 100%
+        max-height: 500px
+
+      span
+        @include event-for-products
+        height: 42px
+        width: 42px
+        font-size: 13px
+        background-color: $mainColor
+        color: white
+
+  .product-menu
+    width: 100%
+
+    .information-for-product
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      width: 100%
+      height: max-content
+      padding: 5px
+      border-bottom: 1px solid $mainColor
+
+      @media screen and (max-width: 991px)
+        flex-direction: column
+
+      .product-name-price
+        .product-name
+          max-width: 450px
+          font-weight: bold
+          margin-bottom: 20px
+
+        .price
+          display: flex
+          flex-direction: column
+
+          .slash-pc
+            font-size: 17px
+            font-weight: normal
+
+          @include discount-price
+
+      .extra-info-container
+        font-weight: bold
+        font-size: 13px
+        text-align: right
+
+        @media screen and (max-width: 991px)
+          margin-top: 20px
+          text-align: left
+
+        p
+          margin: 0
+          padding: 0
+
+        .productID
+          color: $mainColor
+
+        .condition, .MPN, .EAN
+          font-weight: normal
+
+        .exists-or-not
+          color: $mainColor
+          margin-top: 20px
+
+        .time-text
+          font-weight: normal
+
+          .count-pc
+            color: $mainColor
+            font-weight: bold
+            font-size: 14px
+
+    .bottom-product-menu
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      margin-top: 25px
+
+      @media screen and (max-width: 1299px)
+        flex-direction: column
+        justify-content: center
+
+      .choose-color-quantity
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        gap: 50px
+
+        @media screen and (max-width: 1299px)
+          width: 100%
+          margin-bottom: 15px
+
+        .choose-color
+          p
+            font-size: 14px
+            color: #c2c2c2
+
+          .colors
+            button
+              width: 40px
+              height: 40px
+              padding: 2px
+              box-sizing: content-box
+              border-radius: 5px
+              border: 0.5px solid #e0e0e0
+              background-color: white
+
+              .color-container
+                margin: auto
+                width: 30px
+                height: 30px
+                border: 0.5px solid #e0e0e0
+
+                //&:is(.color-1)
+                  background-color: #00008d
+
+                //&:is(.color-2)
+                  background-color: gold
+
+                //&:is(.color-3)
+                  background-color: #a9a9a9
+
+                //&:is(.color-4)
+                  background-color: #b43d00
+
+        .quantity-container
+          background-color: rgb(236, 255, 221)
+          width: 100%
+          padding: 30px 15px
+          border-radius: 5px
+          box-sizing: content-box
+
+          @media screen and (max-width: 1299px)
+            box-sizing: border-box
+
+          p
+            font-size: 14px
+            color: #c2c2c2
+            margin-bottom: 10px
+
+          .quantity-menu
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            gap: 15px
+
+            .pick-quantity
+              display: flex
+              justify-content: space-evenly
+              gap: 10px
+              align-items: center
+              background-color: white
+              padding: 10px
+              width: 130px
+              height: 50px
+              border: 1px solid $mainColor
+              border-radius: 30px
+
+              button
+                height: fit-content
+                width: fit-content
+                padding: 5px
+                border: none
+                background: transparent
+                font-size: 13px
+
+                &:is(.plus)
+                  color: $mainColor
+
+
+            button
+              display: flex
+              justify-content: center
+              align-items: center
+              border-radius: 50%
+              border: 1px solid $mainColor
+              width: 50px
+              height: 50px
+              font-size: 14px
+
+              &:is(.like)
+                background-color: $mainColor
+                color: white
+
+                &:hover
+                  background-color: lighten($mainColor, 10)
+
+              &:is(.compare)
+                background-color: white
+                color: $secondColor
+
+        .add-to-cart
+          background-color: $mainColor
+          border: 1px solid $mainColor
+          border-radius: 30px
+          color: white
+          font-size: 13px
+          width: 100%
+          height: 50px
+          margin-top: 20px
+          font-weight: bold
+
+          i
+            margin-right: 4px
+
+          &:hover
+            background-color: lighten($mainColor, 10)
+
+
+      .form-for-product
+        display: flex
+        flex-direction: column
+        background-color: #efefef
+        padding: 20px
+        width: 50%
+        border-radius: 5px
+
+        @media screen and (max-width: 1299px)
+          width: 100%
+
+        p
+          font-size: 18px
+
+        .checkbox-container
+          margin-bottom: 5px
+
+          .form-check-input:checked
+            background-color: green
+            border: $mainColor 1px solid
+
+          .form-check-input:checked:focus
+            box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25)
+
+          .form-check-input:focus
+            box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25)
+
+          .form-check-input:active
+            background-color: #C8FFC8
+
+          label
+            margin-left: 5px
+            max-width: 85%
+
+        .form-floating
+          margin: 10px 0
+
+          label
+            color: #cbcbcb
+
+        .termsService
+          color: $mainColor
+          text-decoration: none
+
+        .submit-container
+          display: flex
+          justify-content: end
+          margin-top: 5px
+
+          .add-task
+            background-color: $mainColor
+            color: white
+            width: fit-content
+            font-size: 14px
+            font-weight: bold
+            padding: 15px
+            border-radius: 30px
+
+            &:hover
+              background-color: lighten($mainColor, 10)
+
+  .more-information
+    .nav
+      margin: auto
+      width: fit-content
+      display: flex
+      gap: 15px
+
+      .nav-item
+
+        button
+          border-radius: 30px
+          color: $secondColor
+
+          &.active
+            background-color: #efefef
+            color: $secondColor
+            border: $mainColor solid 1px
+
+
+    .tab-content
+      .tab-pane
+        background-color: #efefef
+        border: $mainColor solid 1px
+        border-radius: 5px
+        padding: 20px 10px
+
+// SELECTED PRODUCTS FOR CUSTOMER
+.selected-for-you
+  display: flex
+  flex-direction: column
+
+
+  .top-container-slider
+    display: flex
+    justify-content: space-between
+
+    h1
+      color: $secondColor
+
+    .switch-buttons
+      display: flex
+
+      button
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: transparent
+        color: $secondColor
+        border: none
+        width: 40px
+        height: 40px
+        font-size: 40px
+
+  .selected-products-show
+    display: flex
+    justify-content: center
+    overflow: inherit
+    margin-top: 25px
+
+    @include show-products-in-slider

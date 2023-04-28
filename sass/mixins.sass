@@ -44,6 +44,7 @@
       padding: 7px 13px
       transition: 0.5s ease-in-out
       color: $secondColor
+      z-index: 1000
 
       i
         display: flex
@@ -212,3 +213,136 @@
   i
     color: $mainColor
     font-size: 20px
+
+
+@mixin show-products-in-slider
+  .show-product
+    background-color: white
+    height: fit-content
+    min-width: 200px
+    width: 20%
+    border-radius: 7px
+    margin-left: 10px
+    margin-right: 10px
+    padding-bottom: 7px
+
+    .image-product-con
+      position: relative
+      width: fit-content
+      margin: 20px auto 15px
+
+      img
+        width: 180px
+        height: 200px
+        margin: auto
+
+      .discount
+        @include event-for-products
+        background-color: #d7aa00
+        color: white
+
+        &:is(.third)
+          top: 90px
+          z-index: 2
+
+      .hot-product
+        @include event-for-products
+        background-color: #ff5b14
+        color: white
+
+        &:is(.second)
+          top: 50px
+          z-index: 1
+
+      .new-product
+        @include event-for-products
+        background-color: green
+        color: white
+
+    .info-pr
+      width: 90%
+      margin: auto
+
+      .product-name
+        max-width: 210px
+        min-height: 75px
+        font-size: 17px
+        color: $secondColor
+
+      .buy-container
+        display: flex
+        align-items: center
+        position: relative
+
+        .show-price
+          display: grid
+          @include discount-price
+
+        a
+          display: flex
+          align-items: center
+          justify-content: center
+          position: absolute
+          right: 0
+          width: 45px
+          height: 45px
+          background-color: #c7c7c7
+          color: white
+          font-size: 20px
+
+          &:hover
+            background-color: $mainColor
+
+      .extra-info-pr
+        display: grid
+
+        .parameter-pr
+          color: $mainColor
+
+          .parameter
+            color: $secondColor
+
+      .wishlist-compare
+        position: relative
+        display: flex
+        align-items: center
+        margin: 7px
+        padding-top: 5px
+        padding-bottom: 5px
+        border-top: 1px solid #d9d9d9
+        border-bottom: 1px solid #d9d9d9
+
+        a
+          text-decoration: none
+          color: $secondColor
+
+        .wishlist
+          a:hover
+            i
+              color: $mainColor
+
+
+        .compare
+          position: absolute
+          right: 0
+
+      .available
+        display: flex
+        align-items: center
+
+        button
+          display: flex
+          align-items: center
+          justify-content: center
+          background-color: $mainColor
+          color: white
+          font-weight: bold
+          font-size: 14px
+          width: 80px
+          height: 27px
+
+        span
+          color: $mainColor
+          font-size: 13px
+          max-width: 150px
+          margin: auto auto auto 10px

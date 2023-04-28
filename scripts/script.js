@@ -1,7 +1,7 @@
 import showProductReq from "./ajaxScript.js"
 import {sideBarStyle, rightColAnimate} from "./functions.js";
-import slickSlider from './slick-slider.js'
-import moveToBasket from "./animationBasket.js";
+import {selectedSlider} from './slick-slider.js'
+import {moveSelectedProduct} from "./animationBasket.js";
 
 import {
     collapseContainer,
@@ -14,6 +14,9 @@ import {
     rightColumn,
     mybutton
 } from "./variables.js";
+
+//Side canvas (mobile categories)
+offcanvas.style.width = '100%'
 
 collapseContainer.forEach(collapseContainer => {
     collapseContainer.style.fontSize = '10px'
@@ -41,39 +44,41 @@ collapseSideMenu.forEach(collapseItems => {
 let oldScrollY = window.scrollY
 
 window.onscroll = () => {
-    const numb = rightColumn.scrollHeight - window.innerHeight
-    //Don't let the sidebar move over a footer
-    const checkScrollHeight = window.innerHeight + window.scrollY;
-    const docHeightWithoutFooter = document.body.offsetHeight - document.querySelector('footer').offsetHeight;
-
     // When the user scrolls down 20px from the top of the document, show the button
     (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) ?
         mybutton.style.display = "block" : mybutton.style.display = "none"
 
-    // Animate Right column ===========================
-    if (oldScrollY < window.scrollY){
-        if (window.innerHeight < rightColumn.scrollHeight) {
-            (window.scrollY > 229) ? rightColAnimate("-", numb + 10, 800) : null;
-            (checkScrollHeight > docHeightWithoutFooter - 250) ? rightColAnimate("", 0, 0) : null
+    try {
+        const numb = rightColumn.scrollHeight - window.innerHeight
+        //Don't let the sidebar move over a footer
+        const checkScrollHeight = window.innerHeight + window.scrollY;
+        const docHeightWithoutFooter = document.body.offsetHeight - document.querySelector('footer').offsetHeight;
+
+        // Animate Right column ===========================
+        if (oldScrollY < window.scrollY){
+            if (window.innerHeight < rightColumn.scrollHeight) {
+                (window.scrollY > 229) ? rightColAnimate("-", numb + 10, 800) : null;
+                (checkScrollHeight > docHeightWithoutFooter - 250) ? rightColAnimate("", 0, 0) : null
+            }
+        } else {
+            (window.innerHeight < rightColumn.scrollHeight) ? rightColAnimate("", 0, 800) : null
         }
-    } else {
-        (window.innerHeight < rightColumn.scrollHeight) ? rightColAnimate("", 0, 800) : null
-    }
-    oldScrollY = window.scrollY;
+        oldScrollY = window.scrollY;
 
-    // Show sidebar where is necessary
-    if (document.querySelector(".down-main-categories").offsetTop < (window.pageYOffset + window.innerHeight / 2.7)) {
-        sideBarStyle("visible", "1", "opacity 0.2s linear")
-    } else {
-        sideBarStyle("hidden", "0", "visibility 0s 0.2s, opacity 0.2s linear")
-    }
+        // Show sidebar where is necessary
+        if (document.querySelector(".down-main-categories").offsetTop < (window.pageYOffset + window.innerHeight / 2.7)) {
+            sideBarStyle("visible", "1", "opacity 0.2s linear")
+        } else {
+            sideBarStyle("hidden", "0", "visibility 0s 0.2s, opacity 0.2s linear")
+        }
 
-    // Stop sidebar before footer
-    if (checkScrollHeight >= docHeightWithoutFooter + 50) {
-        sideCategIcons.style.bottom = `${checkScrollHeight - docHeightWithoutFooter + 50}px`
-    } else {
-        sideCategIcons.style.bottom = "100px"
-    }
+        // Stop sidebar before footer
+        if (checkScrollHeight >= docHeightWithoutFooter + 50) {
+            sideCategIcons.style.bottom = `${checkScrollHeight - docHeightWithoutFooter + 50}px`
+        } else {
+            sideCategIcons.style.bottom = "100px"
+        }
+    } catch (e) {}
 }
 
 // When the user clicks on the button, scroll to the top of the document
@@ -82,12 +87,56 @@ mybutton.addEventListener("click", () => {
     document.documentElement.scrollTop = 0;
 });
 
-//Side canvas (mobile categories)
-offcanvas.style.width = '100%'
+// ================ Script for product page ==================== //
+const style = document.createElement('style')
+style.type = 'text/css'
+
+const productImage = document.querySelectorAll('.choiceImageProduct')
+const icon = document.querySelectorAll('.to-basket')
+
+const colorButtons = document.querySelectorAll('.colors .color-container')
+colorButtons.forEach(button => button.style.background = button.dataset.color)
+
+let quantityCount = document.querySelector('.pick-quantity .quantity')
+
+const decreaseQuantity = document.querySelector('.pick-quantity .minus')
+const increaseQuantity = document.querySelector('.pick-quantity .plus')
+
+const addToCart = document.querySelector('.add-to-cart')
+
+productImage.forEach(image => image.addEventListener('click', (event) => {
+    const mainPictureProduct = document.querySelector('.main-product-image img')
+    mainPictureProduct.src = event.target.src
+}))
+
+const quantityFunc = {
+    minusQuality: function () {
+        quantityCount.textContent = parseInt(quantityCount.textContent) - 1
+        if (parseInt(quantityCount.textContent) < 2) {
+            decreaseQuantity.disabled = true
+            decreaseQuantity.style.color = 'lightGray'
+        }
+    },
+    plusQuality: function () {
+        quantityCount.textContent = parseInt(quantityCount.textContent) + 1
+        if (parseInt(quantityCount.textContent) > 1) {
+            decreaseQuantity.disabled = false
+            decreaseQuantity.style.color = 'rgb(56, 175, 78)'
+        }
+    }
+}
+
+try {
+    decreaseQuantity.addEventListener('click', quantityFunc.minusQuality)
+    increaseQuantity.addEventListener('click', quantityFunc.plusQuality)
+
+    selectedSlider()
+
+    addToCart.addEventListener('click', moveSelectedProduct)
+} catch (e) {}
+
+// ============================================================ //
 
 document.addEventListener('DOMContentLoaded', () => {
     showProductReq();
-    slickSlider()
 })
-
-moveToBasket()

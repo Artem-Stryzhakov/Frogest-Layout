@@ -22,7 +22,7 @@
     <link rel="shortcut icon" href="https://frog.ee/img/favicon-1.ico?167092613" type="image/x-icon">
     <!--Custom JS-->
     <script type="module" src="scripts/script.js"></script>
-    <title>...</title>
+    <title>Product Page</title>
 </head>
 <body>
     <header>
@@ -1158,7 +1158,7 @@
         </div>
     </div>
     <div class="column">
-        <div class="left-column">
+        <div class="left-column productPage">
             <div class="categories">
                 <div class="categories-dom">
                     <i class="fa fa-bars" aria-hidden="true"></i>
@@ -1919,28 +1919,569 @@
         </div>
         <div class="center-column productPage">
             <div class="showing-product-container">
-                <div class="images-product">
-                    <ul>
-                        <li>
-                            <img src="images/products/macbook1.png" alt="macbook1" class="choiceImageProduct">
-                        </li>
-                        <li>
-                            <img src="images/products/macbook2.png" alt="macbook2" class="choiceImageProduct">
-                        </li>
-                        <li>
-                            <img src="images/products/macbook3.png" alt="macbook3" class="choiceImageProduct">
-                        </li>
-                        <li>
-                            <img src="images/products/macbook4.png" alt="macbook4" class="choiceImageProduct">
-                        </li>
-                    </ul>
-                    <div class="main-product-image">
-                        <img src="images/products/macbook1.png" alt="macbook1">
-                        <span>New</span>
+                <div class="main-product">
+                    <div class="images-product">
+                        <ul>
+                            <li>
+                                <img src="images/products/macbook1.png" alt="macbook1" class="choiceImageProduct">
+                            </li>
+                            <li>
+                                <img src="images/products/macbook2.png" alt="macbook2" class="choiceImageProduct">
+                            </li>
+                            <li>
+                                <img src="images/products/macbook3.png" alt="macbook3" class="choiceImageProduct">
+                            </li>
+                            <li>
+                                <img src="images/products/macbook4.png" alt="macbook4" class="choiceImageProduct">
+                            </li>
+                        </ul>
+                        <div class="main-product-image">
+                            <img src="images/products/macbook1.png" alt="macbook1">
+                            <span>New</span>
+                        </div>
+                    </div>
+                    <div class="product-menu">
+                        <div class="information-for-product">
+                            <div class="product-name-price">
+                                <h4 class="product-name">Apple MacBook Air 13 (2022), M2 8C/8C, 8 ГБ, 256 ГБ, RUS, черный - Ноутбук</h4>
+                                <div class="price">
+                                    <span class="main-price">1590,90 €</span>
+                                    <span class="discount-price">1239.<sup>50</sup><span class="slash-pc">/pc</span></span>
+                                </div>
+                            </div>
+                            <div class="extra-info-container">
+                                <p>Product ID:
+                                    <span class="productID">261311</span>
+                                    | Condition:
+                                    <span class="condition">New</span>
+                                </p>
+                                <p>MPN:
+                                    <span class="MPN">2235544426565</span>
+                                </p>
+                                <p>EAN:
+                                    <span class="EAN">0723755137486</span>
+                                </p>
+
+                                <p class="exists-or-not">KOHAL</p>
+                                <p class="time-text">
+                                    <i class="fa-regular fa-clock"></i>
+                                    Vilmsi Esitus (Tallinn J.Vilmsi 41),
+                                    <span class="count-pc">5 pc</span>
+                                </p>
+                                <p class="time-text">
+                                    <i class="fa-regular fa-clock"></i>
+                                    Vilmsi Esitus (Tallinn J.Vilmsi 41),
+                                    <span class="count-pc">3 pc</span>
+                                </p>
+                                <p class="time-text">
+                                    <i class="fa-regular fa-clock"></i>
+                                    Tamija laos,
+                                    <span class="count-pc">4 pc</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="bottom-product-menu">
+                            <div class="choose-color-quantity col-5">
+                                <div class="choose-color">
+                                    <p>Color:</p>
+                                    <div class="colors">
+                                        <button>
+                                            <div class="color-container color-1" data-color="#00008d"></div>
+                                        </button>
+                                        <button>
+                                            <div class="color-container color-2" data-color="gold"></div>
+                                        </button>
+                                        <button>
+                                            <div class="color-container color-3" data-color="#a9a9a9"></div>
+                                        </button>
+                                        <button>
+                                            <div class="color-container color-4" data-color="#b43d00"></div>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="quantity-container">
+                                    <p>Quality:</p>
+                                    <div class="quantity-menu">
+                                        <div class="pick-quantity">
+                                            <button class="minus" disabled>
+                                                <i class="fa-solid fa-minus"></i>
+                                            </button>
+                                            <span class="quantity">1</span>
+                                            <button class="plus">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </button>
+                                        </div>
+                                        <button class="btn like">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                        <button class="btn compare">
+                                            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                        </button>
+                                    </div>
+                                    <button class="btn add-to-cart">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                        ADD TO CART
+                                    </button>
+                                </div>
+                            </div>
+                            <form action="" class="form-for-product col-6">
+                                <p>ARE INTERESTED IN THIS PRODUCT?</p>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="firstCheckbox" class="form-check-input" disabled>
+                                    <label for="firstCheckbox" class="form-check-label">
+                                        Report when product is in stock
+                                    </label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="secondCheckbox" class="form-check-input">
+                                    <label for="secondCheckbox" class="form-check-label">
+                                        Let me know when the price drops down
+                                    </label>
+                                </div>
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="thirdCheckbox" class="form-check-input">
+                                    <label for="thirdCheckbox" class="form-check-label">
+                                        Ask a question
+                                    </label>
+                                </div>
+
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="enterEmail" placeholder="name@example.com">
+                                    <label for="enterEmail">E-mail for a reply</label>
+                                </div>
+
+                                <div class="checkbox-container">
+                                    <input type="checkbox" id="agreement" class="form-check-input">
+                                    <label for="agreement" class="form-check-label">
+                                        I agree to the terms of service and will adhere to them unconditionally
+                                        <span>
+                                            <a href="" class="termsService">
+                                                (Read the Terms of Service)
+                                            </a>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="submit-container">
+                                    <button class="btn add-task">ADD TASK</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div class="information-for-product">
+                <div class="more-information">
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-description-tab" data-bs-toggle="pill" data-bs-target="#pills-description" type="button" role="tab" aria-controls="pills-description" aria-selected="true">DESCRIPTION</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-shipping-tab" data-bs-toggle="pill" data-bs-target="#pills-shipping" type="button" role="tab" aria-controls="pills-shipping" aria-selected="false">SHIPPING</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-warranty-tab" data-bs-toggle="pill" data-bs-target="#pills-warranty" type="button" role="tab" aria-controls="pills-warranty" aria-selected="false">WARRANTY</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-lease-tab" data-bs-toggle="pill" data-bs-target="#pills-lease" type="button" role="tab" aria-controls="pills-lease" aria-selected="false">LEASE</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-reviews-tab" data-bs-toggle="pill" data-bs-target="#pills-reviews" type="button" role="tab" aria-controls="pills-reviews" aria-selected="false">REVIEWS (2)</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-internal-tab" data-bs-toggle="pill" data-bs-target="#pills-internal" type="button" role="tab" aria-controls="pills-internal" aria-selected="false">INTERNAL DATA</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab" tabindex="0">
+                            <h1>DESCRIPTION TAB</h1>
+                        </div>
+                        <div class="tab-pane fade" id="pills-shipping" role="tabpanel" aria-labelledby="pills-shipping-tab" tabindex="0">
+                            <h1>SHIPPING TAB</h1>
+                        </div>
+                        <div class="tab-pane fade" id="pills-warranty" role="tabpanel" aria-labelledby="pills-warranty-tab" tabindex="0">
+                            <h1>WARRANTY TAB</h1>
+                        </div>
+                        <div class="tab-pane fade" id="pills-lease" role="tabpanel" aria-labelledby="pills-lease-tab" tabindex="0">
+                            <h1>LEASE TAB</h1>
+                        </div>
+                        <div class="tab-pane fade" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab" tabindex="0">
+                            <h1>REVIEWS TAB</h1>
+                        </div>
+                        <div class="tab-pane fade" id="pills-internal" role="tabpanel" aria-labelledby="pills-internal-tab" tabindex="0">
+                            <h1>INTERNAL TAB</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="container selected-for-you w-85 mt-5">
+                <div class="top-container-slider">
+                    <h1>SELECTED JUST FOR YOU</h1>
+                    <div class="switch-buttons">
+                        <button id="previous-selected" class="carousel-control" type="button">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button id="next-selected" class="carousel-control" type="button">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="main-products-show">
+                    <div class="selected-products-show" data-animation-time="1">
+                        <div class="show-product">
+                            <div class="image-product-con">
+                                <img src="https://th.bing.com/th/id/OIP.K7vUNYQYVxs8um6EvTbbXAHaHa?pid=ImgDet&rs=1" alt="...">
+                                <span class="discount">-20%</span>
+                            </div>
+                            <div class="info-pr">
+                                <p class="product-name">Dell Latitude 5400 14 "Laptop with 3-Yer Pro... Win 10 Pro"</p>
+                                <div class="buy-container">
+                                    <div class="show-price">
+                                        <span class="main-price">1590,90 €</span>
+                                        <span class="discount-price">1250.<sup>50</sup></span>
+                                    </div>
+                                    <a href="" class="btn add-to-basket">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </a>
+                                </div>
+                                <div class="extra-info-pr">
+                                                <span class="parameter-pr">
+                                                    Ekraani suurus:
+                                                    <span class="parameter">0.78 "</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Aku maht:
+                                                    <span class="parameter">110 mAh</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Laadimisviis:
+                                                    <span class="parameter">POGO Pin</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Erikaitse:
+                                                    <span class="parameter">Niiskuskindel</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Funksioonid:
+                                                    <span class="parameter">Kell, Kuupaev, Kone marguanne, Labitud</span>
+                                                </span>
+                                </div>
+                                <div class="wishlist-compare">
+                                                <span class="wishlist">
+                                                    <a href="">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                        Wishlist
+                                                    </a>
+                                                </span>
+                                    <span class="compare">
+                                                    <a href="">
+                                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                        Compare
+                                                    </a>
+                                                </span>
+                                </div>
+                                <div class="available">
+                                    <button type="button" class="btn">Available</button>
+                                    <span>Delivery 4-8 working days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-product">
+                            <div class="image-product-con">
+                                <img src="https://fanaticosdelhardware.com/wp-content/uploads/2017/02/Cooler-Master-MasterCase-Pro-6-FDH-e1486470860526.jpg" alt="...">
+                                <span class="hot-product">Hot</span>
+                            </div>
+                            <div class="info-pr">
+                                <p class="product-name">Dell Latitude 5400 14 "Laptop with 3-Yer Pro... Win 10 Pro"</p>
+                                <div class="buy-container">
+                                    <div class="show-price">
+                                        <span class="main-price">1590,90 €</span>
+                                        <span class="discount-price">1250.<sup>50</sup></span>
+                                    </div>
+                                    <a href="" class="btn add-to-basket">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </a>
+                                </div>
+                                <div class="extra-info-pr">
+                                                <span class="parameter-pr">
+                                                    Ekraani suurus:
+                                                    <span class="parameter">0.78 "</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Aku maht:
+                                                    <span class="parameter">110 mAh</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Laadimisviis:
+                                                    <span class="parameter">POGO Pin</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Erikaitse:
+                                                    <span class="parameter">Niiskuskindel</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Funksioonid:
+                                                    <span class="parameter">Kell, Kuupaev, Kone marguanne, Labitud</span>
+                                                </span>
+                                </div>
+                                <div class="wishlist-compare">
+                                                <span class="wishlist">
+                                                    <a href="">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                        Wishlist
+                                                    </a>
+                                                </span>
+                                    <span class="compare">
+                                                    <a href="">
+                                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                        Compare
+                                                    </a>
+                                                </span>
+                                </div>
+                                <div class="available">
+                                    <button type="button" class="btn">Available</button>
+                                    <span>Delivery 4-8 working days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-product">
+                            <div class="image-product-con">
+                                <img src="https://i.ebayimg.com/00/s/OTAwWDkwMA==/z/x60AAOSwzulgm3ft/$_58.JPG" alt="...">
+                                <span class="new-product">New</span>
+                            </div>
+                            <div class="info-pr">
+                                <p class="product-name">Dell Latitude 5400 14 "Laptop with 3-Yer Pro... Win 10 Pro"</p>
+                                <div class="buy-container">
+                                    <div class="show-price">
+                                        <span class="main-price">1590,90 €</span>
+                                        <span class="discount-price">1250.<sup>50</sup></span>
+                                    </div>
+                                    <a href="" class="btn add-to-basket">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </a>
+                                </div>
+                                <div class="extra-info-pr">
+                                                <span class="parameter-pr">
+                                                    Ekraani suurus:
+                                                    <span class="parameter">0.78 "</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Aku maht:
+                                                    <span class="parameter">110 mAh</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Laadimisviis:
+                                                    <span class="parameter">POGO Pin</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Erikaitse:
+                                                    <span class="parameter">Niiskuskindel</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Funksioonid:
+                                                    <span class="parameter">Kell, Kuupaev, Kone marguanne, Labitud</span>
+                                                </span>
+                                </div>
+                                <div class="wishlist-compare">
+                                                <span class="wishlist">
+                                                    <a href="">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                        Wishlist
+                                                    </a>
+                                                </span>
+                                    <span class="compare">
+                                                    <a href="">
+                                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                        Compare
+                                                    </a>
+                                                </span>
+                                </div>
+                                <div class="available">
+                                    <button type="button" class="btn">Available</button>
+                                    <span>Delivery 4-8 working days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-product">
+                            <div class="image-product-con">
+                                <img src="https://th.bing.com/th/id/R.c461f92a5fd463b92d0164246100f86d?rik=9OG7u8aUwjAvNQ&pid=ImgRaw&r=0" alt="...">
+                                <span class="new-product">New</span>
+                                <span class="hot-product second">Hot</span>
+                                <span class="discount third">-20%</span>
+                            </div>
+                            <div class="info-pr">
+                                <p class="product-name">Dell Latitude 5400 14 "Laptop with 3-Yer Pro... Win 10 Pro"</p>
+                                <div class="buy-container">
+                                    <div class="show-price">
+                                        <span class="main-price">1590,90 €</span>
+                                        <span class="discount-price">1250.<sup>50</sup></span>
+                                    </div>
+                                    <a href="" class="btn add-to-basket">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </a>
+                                </div>
+                                <div class="extra-info-pr">
+                                                <span class="parameter-pr">
+                                                    Ekraani suurus:
+                                                    <span class="parameter">0.78 "</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Aku maht:
+                                                    <span class="parameter">110 mAh</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Laadimisviis:
+                                                    <span class="parameter">POGO Pin</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Erikaitse:
+                                                    <span class="parameter">Niiskuskindel</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Funksioonid:
+                                                    <span class="parameter">Kell, Kuupaev, Kone marguanne, Labitud</span>
+                                                </span>
+                                </div>
+                                <div class="wishlist-compare">
+                                                <span class="wishlist">
+                                                    <a href="">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                        Wishlist
+                                                    </a>
+                                                </span>
+                                    <span class="compare">
+                                                    <a href="">
+                                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                        Compare
+                                                    </a>
+                                                </span>
+                                </div>
+                                <div class="available">
+                                    <button type="button" class="btn">Available</button>
+                                    <span>Delivery 4-8 working days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-product">
+                            <div class="image-product-con">
+                                <img src="images/frog.png" alt="...">
+                                <span class="new-product">New</span>
+                                <span class="hot-product second">Hot</span>
+                                <span class="discount third">-20%</span>
+                            </div>
+                            <div class="info-pr">
+                                <p class="product-name">Dell Latitude 5400 14 "Laptop with 3-Yer Pro... Win 10 Pro"</p>
+                                <div class="buy-container">
+                                    <div class="show-price">
+                                        <span class="main-price">1590,90 €</span>
+                                        <span class="discount-price">1250.<sup>50</sup></span>
+                                    </div>
+                                    <a href="" class="btn add-to-basket">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </a>
+                                </div>
+                                <div class="extra-info-pr">
+                                                <span class="parameter-pr">
+                                                    Ekraani suurus:
+                                                    <span class="parameter">0.78 "</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Aku maht:
+                                                    <span class="parameter">110 mAh</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Laadimisviis:
+                                                    <span class="parameter">POGO Pin</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Erikaitse:
+                                                    <span class="parameter">Niiskuskindel</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Funksioonid:
+                                                    <span class="parameter">Kell, Kuupaev, Kone marguanne, Labitud</span>
+                                                </span>
+                                </div>
+                                <div class="wishlist-compare">
+                                                <span class="wishlist">
+                                                    <a href="">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                        Wishlist
+                                                    </a>
+                                                </span>
+                                    <span class="compare">
+                                                    <a href="">
+                                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                        Compare
+                                                    </a>
+                                                </span>
+                                </div>
+                                <div class="available">
+                                    <button type="button" class="btn">Available</button>
+                                    <span>Delivery 4-8 working days</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="show-product">
+                            <div class="image-product-con">
+                                <img src="images/pic-discount.png" alt="...">
+                                <span class="new-product">New</span>
+                                <span class="hot-product second">Hot</span>
+                                <span class="discount third">-20%</span>
+                            </div>
+                            <div class="info-pr">
+                                <p class="product-name">Dell Latitude 5400 14 "Laptop with 3-Yer Pro... Win 10 Pro"</p>
+                                <div class="buy-container">
+                                    <div class="show-price">
+                                        <span class="main-price">1590,90 €</span>
+                                        <span class="discount-price">1250.<sup>50</sup></span>
+                                    </div>
+                                    <a href="" class="btn add-to-basket">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </a>
+                                </div>
+                                <div class="extra-info-pr">
+                                                <span class="parameter-pr">
+                                                    Ekraani suurus:
+                                                    <span class="parameter">0.78 "</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Aku maht:
+                                                    <span class="parameter">110 mAh</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Laadimisviis:
+                                                    <span class="parameter">POGO Pin</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Erikaitse:
+                                                    <span class="parameter">Niiskuskindel</span>
+                                                </span>
+                                    <span class="parameter-pr">
+                                                    Funksioonid:
+                                                    <span class="parameter">Kell, Kuupaev, Kone marguanne, Labitud</span>
+                                                </span>
+                                </div>
+                                <div class="wishlist-compare">
+                                                <span class="wishlist">
+                                                    <a href="">
+                                                        <i class="fa-regular fa-heart"></i>
+                                                        Wishlist
+                                                    </a>
+                                                </span>
+                                    <span class="compare">
+                                                    <a href="">
+                                                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                                        Compare
+                                                    </a>
+                                                </span>
+                                </div>
+                                <div class="available">
+                                    <button type="button" class="btn">Available</button>
+                                    <span>Delivery 4-8 working days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
