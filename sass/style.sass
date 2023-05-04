@@ -461,13 +461,18 @@ nav
 
     &:is(.productPage)
       position: absolute
-      left: 95px
+      left: 5%
       margin-left: 0
+      z-index: 1000
 
     // ===== CATEGORIES LIST ====== //
     @media screen and (max-width: 1230px)
-      .categories
+      .categories:not(.productPage)
         margin-top: 30px
+
+      &.productPage:is(.productPage)
+        margin-top: -15px
+
 
     .categories
       background-color: #6bb42a
@@ -495,6 +500,8 @@ nav
 
       .list-of-categories
         background-color: white
+        border: 1px solid lightgray
+
         @include categories_theme
 
         &:not(.main-page)
@@ -651,7 +658,6 @@ nav
 
       .main-products-show
         position: relative
-        background: #6bb42a
 
         .products-container-show
           display: flex
@@ -1339,6 +1345,7 @@ footer
     flex-direction: row
     gap: 10px
     width: 100%
+    margin-right: 20px
 
     @media screen and (max-width: 991px)
       flex-direction: column-reverse
@@ -1655,6 +1662,8 @@ footer
       gap: 15px
 
       .nav-item
+        position: relative
+        z-index: 3
 
         button
           border-radius: 30px
@@ -1666,18 +1675,34 @@ footer
             border: $mainColor solid 1px
 
 
+          @media screen and (min-width: 1050px)
+            &.active::after
+              content: ""
+              width: 1px
+              height: 17px
+              background: $mainColor
+              position: absolute
+              bottom: -17px
+              left: 50%
+              display: block
+
+
     .tab-content
+      position: relative
+      z-index: 3
+
       .tab-pane
         background-color: #efefef
         border: $mainColor solid 1px
         border-radius: 5px
         padding: 20px 10px
 
+
 // SELECTED PRODUCTS FOR CUSTOMER
 .selected-for-you
+  position: relative
   display: flex
   flex-direction: column
-
 
   .top-container-slider
     display: flex

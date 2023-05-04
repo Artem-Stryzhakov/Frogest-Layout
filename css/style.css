@@ -853,12 +853,16 @@ nav .nav-button i {
 }
 .column .left-column:is(.productPage) {
   position: absolute;
-  left: 95px;
+  left: 5%;
   margin-left: 0;
+  z-index: 1000;
 }
 @media screen and (max-width: 1230px) {
-  .column .left-column .categories {
+  .column .left-column .categories:not(.productPage) {
     margin-top: 30px;
+  }
+  .column .left-column.productPage:is(.productPage) {
+    margin-top: -15px;
   }
 }
 .column .left-column .categories {
@@ -890,6 +894,7 @@ nav .nav-button i {
 }
 .column .left-column .categories .list-of-categories {
   background-color: white;
+  border: 1px solid lightgray;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -1115,7 +1120,6 @@ nav .nav-button i {
 }
 .column .center-column .product-show-container .main-products-show {
   position: relative;
-  background: #6bb42a;
 }
 .column .center-column .product-show-container .main-products-show .products-container-show {
   display: -webkit-box;
@@ -2235,6 +2239,7 @@ footer .extraFooter {
           flex-direction: row;
   gap: 10px;
   width: 100%;
+  margin-right: 20px;
 }
 @media screen and (max-width: 991px) {
   .showing-product-container .images-product {
@@ -2671,6 +2676,10 @@ footer .extraFooter {
   display: flex;
   gap: 15px;
 }
+.showing-product-container .more-information .nav .nav-item {
+  position: relative;
+  z-index: 3;
+}
 .showing-product-container .more-information .nav .nav-item button {
   border-radius: 30px;
   color: #2d3850;
@@ -2680,6 +2689,22 @@ footer .extraFooter {
   color: #2d3850;
   border: rgb(56, 175, 78) solid 1px;
 }
+@media screen and (min-width: 1050px) {
+  .showing-product-container .more-information .nav .nav-item button.active::after {
+    content: "";
+    width: 1px;
+    height: 17px;
+    background: rgb(56, 175, 78);
+    position: absolute;
+    bottom: -17px;
+    left: 50%;
+    display: block;
+  }
+}
+.showing-product-container .more-information .tab-content {
+  position: relative;
+  z-index: 3;
+}
 .showing-product-container .more-information .tab-content .tab-pane {
   background-color: #efefef;
   border: rgb(56, 175, 78) solid 1px;
@@ -2688,6 +2713,7 @@ footer .extraFooter {
 }
 
 .selected-for-you {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -1,4 +1,3 @@
-const cardsProduct = document.querySelectorAll('.add-to-basket')
 const icon = document.querySelectorAll('.to-basket')
 
 // const productsContainer = document.querySelector('.products-container-show')
@@ -16,9 +15,7 @@ function mobileBasketAnimation() {
     return (window.innerWidth > 991) ? icon[0] : icon[1]
 }
 
-cardsProduct.forEach(btn => btn.addEventListener('click', (event) => {
-    event.preventDefault()
-
+function slickSliderAnimationProduct(mainContainer, timing) {
     const node = (event.target.tagName.toLowerCase() === 'a') ?
         event.target : event.srcElement.parentElement
 
@@ -36,20 +33,20 @@ cardsProduct.forEach(btn => btn.addEventListener('click', (event) => {
 
     const productImgCoor = productImg.getBoundingClientRect()
 
-    document.querySelector('.products-container-show').insertAdjacentElement('beforebegin', picture)
+    document.querySelector(mainContainer).insertAdjacentElement('beforebegin', picture)
 
     const animationCoordinatesX = mobileBasketAnimation().getBoundingClientRect().x - productImgCoor.x
     const animationCoordinatesY = mobileBasketAnimation().getBoundingClientRect().y - productImgCoor.y
 
-    const slickPosition = document.querySelector('.products-container-show').getBoundingClientRect()
+    const slickPosition = document.querySelector(mainContainer).getBoundingClientRect()
 
     picture.style.left = `${productImgCoor.x - slickPosition.x}px`
 
     style.innerHTML = `
     .product-move {
-        animation: addToBasket 1s forwards
+        animation: addToBasket ${timing}s forwards
     }
-    
+
     @keyframes addToBasket {
         60% {
             transform: translate(
@@ -86,13 +83,12 @@ cardsProduct.forEach(btn => btn.addEventListener('click', (event) => {
 
     setTimeout(() => {
         node.innerHTML = `
-        <i class="fa-solid fa-cart-shopping"></i>
-        `
+    <i class="fa-solid fa-cart-shopping"></i>
+    `
         node.style.pointerEvents = 'inherit'
         picture.remove()
     }, 1500)
-}))
-
+}
 
 function moveSelectedProduct(event) {
     const mainImageContainer = document.querySelector('.main-product-image')
@@ -163,5 +159,6 @@ function interactionButton(target, DOMelement, boolean) {
 }
 
 export {
-    moveSelectedProduct
+    moveSelectedProduct,
+    slickSliderAnimationProduct
 }

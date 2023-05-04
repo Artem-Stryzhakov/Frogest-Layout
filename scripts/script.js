@@ -1,7 +1,6 @@
 import showProductReq from "./ajaxScript.js"
 import {sideBarStyle, rightColAnimate} from "./functions.js";
-import {selectedSlider} from './slick-slider.js'
-import {moveSelectedProduct} from "./animationBasket.js";
+import {moveSelectedProduct, slickSliderAnimationProduct} from "./animationBasket.js";
 
 import {
     collapseContainer,
@@ -88,6 +87,8 @@ mybutton.addEventListener("click", () => {
 });
 
 // ================ Script for product page ==================== //
+
+
 const style = document.createElement('style')
 style.type = 'text/css'
 
@@ -130,8 +131,6 @@ try {
     decreaseQuantity.addEventListener('click', quantityFunc.minusQuality)
     increaseQuantity.addEventListener('click', quantityFunc.plusQuality)
 
-    selectedSlider()
-
     addToCart.addEventListener('click', moveSelectedProduct)
 } catch (e) {}
 
@@ -140,3 +139,26 @@ try {
 document.addEventListener('DOMContentLoaded', () => {
     showProductReq();
 })
+
+const cardsProduct = document.querySelectorAll('.add-to-basket')
+
+if (document.querySelector('.add-to-basket').closest('.selected-products-show')) {
+    cardsProduct.forEach(btn => btn.addEventListener('click', (event) => {
+        event.preventDefault()
+        slickSliderAnimationProduct('.selected-products-show', 2);
+    }))
+} else if (document.querySelector('.add-to-basket').closest('.products-container-show')) {
+    cardsProduct.forEach(btn => btn.addEventListener('click', (event) => {
+        event.preventDefault()
+
+        slickSliderAnimationProduct('.products-container-show', 1);
+    }))
+}
+
+const buttonsD = document.querySelectorAll('.nav-item button')
+
+// buttonsD.forEach(btn => btn.addEventListener('click', (event) => {
+//     const getParent = event.target.offsetParent
+//     const verticalLine = getParent.querySelector('.vertical-line')
+//     console.log(verticalLine)
+// }))
