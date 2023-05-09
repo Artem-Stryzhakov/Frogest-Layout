@@ -9,19 +9,19 @@ window.addEventListener('DOMContentLoaded', () => {
             prevArrow:document.querySelector(".switch-buttons #previous"),
             nextArrow: document.querySelector(".switch-buttons #next"),
             responsive:[
-                {breakpoint:1420,settings:{
+                {breakpoint:1530,settings:{
                         slidesToShow: 3,
                     }},
-                {breakpoint:1075,settings:{
+                {breakpoint:1175,settings:{
                         slidesToShow: 2,
                     }},
                 {breakpoint:992,settings:{
                         slidesToShow: 3,
                     }},
-                {breakpoint:650,settings:{
+                {breakpoint:700,settings:{
                         slidesToShow: 2,
                     }},
-                {breakpoint: 500, settings: {
+                {breakpoint:500, settings: {
                         slidesToShow: 1
                     }}
             ]

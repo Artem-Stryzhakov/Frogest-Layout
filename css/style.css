@@ -156,7 +156,7 @@ body {
     color: white;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 335px) {
   .navbar .container-fluid .button-menu-in-header {
     width: 35px;
     height: 25px;
