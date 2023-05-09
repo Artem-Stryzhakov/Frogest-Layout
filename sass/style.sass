@@ -70,16 +70,35 @@ body
 
       p
         margin-top: 15px
-nav
+
+.navbar
+  position: sticky
+  top: 0
   background-color: $secondColor
   height: 100px
+  z-index: 100
 
   @media screen and (max-width: 992px)
     height: 120px
 
   .container-fluid
+    display: flex
+    flex-wrap: nowrap
     position: relative
     padding: 15px
+
+    img
+      @media screen and (max-width: 500px)
+        width: 200px
+
+      @media screen and (max-width: 450px)
+        width: 150px
+
+      @media screen and (max-width: 380px)
+        width: 120px
+
+      @media screen and (max-width: 290px)
+        width: 105px
 
     @media screen and (min-width: 991px)
       .button-menu-in-header
@@ -87,11 +106,19 @@ nav
 
     @media screen and (max-width: 991px)
       .button-menu-in-header
-        display: inherit
+        display: flex
+        justify-content: center
+        align-items: center
         background-color: $mainColor
 
         i
           color: white
+
+    @media screen and (max-width: 320px)
+      .button-menu-in-header
+        width: 35px
+        height: 25px
+        margin-right: 5px
 
     .navbar-toggler
       background-color: $mainColor
@@ -99,11 +126,7 @@ nav
       i
         color: $lineColor
 
-    @media screen and (max-width: 991px)
-      img
-        margin: auto
-        width: 50%
-        max-width: 350px
+    @media screen and (max-width: 992px)
 
       #navbarSupportedContent
         position: relative
@@ -311,14 +334,21 @@ nav
 
 
 // Display basket in mobile ============
-.mobile-basket
-  display: none
-  align-items: center
+.nav-button-mobile
+  display: flex
+  flex-wrap: wrap
   justify-content: center
+  width: fit-content
   gap: 10px
 
-  @media screen and (max-width: 991px)
-    display: flex
+  .mobile-basket
+    display: none
+    align-items: center
+    justify-content: center
+    gap: 10px
+
+    @media screen and (max-width: 992px)
+      display: flex
 
   // some style for navbar icon (mobile)
   @include navbar-icons
@@ -463,7 +493,7 @@ nav
       position: absolute
       left: 5%
       margin-left: 0
-      z-index: 1000
+      z-index: 19
 
     // ===== CATEGORIES LIST ====== //
     @media screen and (max-width: 1230px)
@@ -538,7 +568,7 @@ nav
             flex-wrap: wrap
             border-top-right-radius: 7px
             border-bottom-right-radius: 7px
-            z-index: 999
+            z-index: 10
 
             .top-line
               width: 100%
@@ -710,7 +740,7 @@ nav
         padding: 0
         z-index: 10
 
-        @media screen and (max-width: 1399px)
+        @media screen and (max-width: 992px)
           display: none
 
         .list-group-item-action
@@ -719,8 +749,8 @@ nav
           background-color: $secondColor
           color: rgb(236, 255, 221)
           border: none
-          margin-top: 0.5px
-          margin-bottom: 0.5px
+          margin-top: 0.7px
+          margin-bottom: 0.7px
 
           &:is(.active), &:hover
             background-color: rgb(236, 255, 221)
@@ -747,7 +777,7 @@ nav
             z-index: 2
 
       .categ-container
-        @media screen and (max-width: 1399px)
+        @media screen and (max-width: 992px)
           display: flex
           justify-content: center
           flex-wrap: wrap
@@ -763,7 +793,14 @@ nav
         border-radius: 7px
         margin-bottom: 20px
 
-        @media screen and (max-width: 1399px)
+        @media screen and (max-width: 1439px)
+          width: calc(90% + 185px)
+          margin-bottom: 20px
+
+        @media screen and (max-width: 1150px)
+          width: calc(80% + 185px)
+
+        @media screen and (max-width: 992px)
           width: fit-content
           margin-bottom: 5px
 
@@ -782,7 +819,7 @@ nav
             max-width: min-content
             border-bottom-left-radius: 7px
 
-            @media screen and (max-width: 1399px)
+            @media screen and (max-width: 992px)
               height: 55px
 
             .mini-header
@@ -801,7 +838,7 @@ nav
               margin-bottom: 20px
               border-bottom-right-radius: 4px
 
-              @media screen and (max-width: 1399px)
+              @media screen and (max-width: 992px)
                 width: 200px
 
               i
@@ -821,7 +858,7 @@ nav
                 background-color: black
                 transform: rotate(45deg)
 
-                @media screen and (max-width: 1399px)
+                @media screen and (max-width: 992px)
                   display: none
 
             .categoriz
@@ -835,17 +872,17 @@ nav
                   text-decoration: none
                   color: $secondColor
 
-              @media screen and (max-width: 1399px)
+              @media screen and (max-width: 992px)
                 display: none
 
             img
-              @media screen and (max-width: 1399px)
+              @media screen and (max-width: 992px)
                 display: none
 
           .main-ct
             display: grid
 
-            @media screen and (max-width: 1399px)
+            @media screen and (max-width: 992px)
               display: none
 
             .right-dom
