@@ -23,6 +23,16 @@
 </head>
 <body>
     <div class="top-header">
+        <div class="firstly-functions">
+            <div class="search-ware">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="" class="text-uppercase">Search in warehouses</a>
+            </div>
+            <div class="order-tracking">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <a href="" class="text-uppercase">Order tracking</a>
+            </div>
+        </div>
         <div class="secondary-functions">
             <div class="place-issue dropdown-center">
                 <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -167,6 +177,19 @@
                     </div>
                 </div>
                 <div class="nav-button dropdown">
+                    <div class="user-button-container basket-put">
+                        <button type="button" class="btn position-relative to-basket">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count-product desktop">
+                                        0
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
+                        </button>
+                        <div class="data-for-buttons">
+                            <span>My Cart</span>
+                            <span class="cart-total">0.00€</span>
+                        </div>
+                    </div>
                     <div class="user-button-container">
                         <button type="button" class="btn position-relative">
                             <i class="fa-solid fa-arrow-right-arrow-left"></i>
@@ -181,19 +204,6 @@
                     </div>
                     <div class="user-button-container">
                         <button type="button" class="btn position-relative">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                                    0
-                                    <span class="visually-hidden">unread messages</span>
-                                </span>
-                        </button>
-                        <div class="data-for-buttons">
-                            <span>My Cart</span>
-                            <span class="second-span">0.00€</span>
-                        </div>
-                    </div>
-                    <div class="user-button-container">
-                        <button type="button" class="btn position-relative">
                             <i class='fa fa-user'></i>
                         </button>
                         <div class="data-for-buttons">
@@ -201,6 +211,31 @@
                             <span class="second-span">Logout</span>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="nav-button-mobile">
+                <div class="mobile-basket basket-put">
+                    <button type="button" class="btn position-relative to-basket">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count-product mobile">
+                            0
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </button>
+                </div>
+                <div class="mobile-basket">
+                    <button type="button" class="btn position-relative">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                    0
+                                    <span class="visually-hidden">unread messages</span>
+                            </span>
+                    </button>
+                </div>
+                <div class="mobile-basket">
+                    <button type="button" class="btn position-relative">
+                        <i class='fa fa-user'></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -289,7 +324,6 @@
             </ul>
         </div>
     </div>
-
     <div class="offcanvas offcanvas-start"  id="offcanvasExample">
         <div class="offcanvas-header">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -349,20 +383,15 @@
                     <span>09-18</span>
                 </div>
             </div>
-            <div class="nav-button">
-                <div class="user-button-container">
-                    <button type="button" class="btn position-relative">
-                        <i class="fa-solid fa-code-compare"></i>
-                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                                0
-                                <span class="visually-hidden">unread messages</span>
-                            </span>
-                    </button>
+
+            <div class="firstly-functions-mobile">
+                <div class="search-ware">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="" class="text-uppercase">Search in warehouses</a>
                 </div>
-                <div class="user-button-container">
-                    <button type="button" class="btn position-relative">
-                        <i class='fa fa-user'></i>
-                    </button>
+                <div class="order-tracking">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                    <a href="" class="text-uppercase">Order tracking</a>
                 </div>
             </div>
         </div>
@@ -376,7 +405,7 @@
                         </a>
                     </li>
                     <li class="Xmas-sellout border-bottom-none">
-                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample0" role="button" aria-expanded="false" aria-controls="collapseExample0">
+                        <a class="btn none_hover" data-bs-toggle="collapse" href="#collapseExample0" role="button" aria-expanded="false" aria-controls="collapseExample0">
                             <i class='fa-solid fa-tag'></i>
                             LAOMUUK
                         </a>

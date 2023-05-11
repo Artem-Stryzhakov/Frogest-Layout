@@ -9,6 +9,7 @@
 
 body
   background-color: #e2e6ec
+  width: 100%
 // ==========================================
 
 .top-image
@@ -36,17 +37,48 @@ body
 
 .top-header
   position: relative
+  justify-content: space-between
   align-items: center
   background-color: #1c293e
   height: 40px
 
+  .firstly-functions
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 5%
+    width: 38%
+
+    .search-ware, .order-tracking
+      display: flex
+      justify-content: center
+      align-items: center
+      gap: 7px
+
+    a
+      color: $mainColor
+      text-decoration: none
+      margin: 0
+      padding: 0
+
+      @media screen and (max-width: 1100px)
+        font-size: 13px
+
+    i
+      color: $mainColor
+
+      @media screen and (max-width: 1100px)
+        font-size: 13px
+
   .secondary-functions
     display: flex
     align-items: center
-    justify-content: right
-    margin: auto
     height: max-content
-    width: 90%
+    width: max-content
+    margin-right: 85px
+
+    @media screen and (max-width: 1100px)
+      margin-right: 45px
 
     .dropdown-center
       button
@@ -1193,6 +1225,7 @@ footer
         align-items: center
         color: black
         text-decoration: none
+        margin: 0
 
         p
           margin: auto
@@ -1205,6 +1238,7 @@ footer
       color: black
       height: 15px
       font-size: 18px
+      margin: 0
 
       i
         margin-top: 10px
@@ -1247,27 +1281,20 @@ footer
             border-bottom: 1px solid #e1e1e1
 
     .phone-number
-      margin: 15px auto auto
+      margin: 2px auto auto
 
-    .nav-button
+    .firstly-functions-mobile
       display: flex
-      gap: 10px
-      margin: 15px auto auto
-      width: max-content
+      flex-direction: column
+      margin: 7px auto auto
+      width: fit-content
 
-      .btn
-        background-color: white
-        border: 1px solid $mainColor
-        border-radius: 70px
-        text-align: center
+      a
+        text-decoration: none
+        color: $mainColor
 
-        i
-          color: $mainColor
-          font-size: 25px
-
-        span:not(.visually-hidden)
-          background-color: $mainColor
-          color: white
+      i
+        color: $mainColor
 
   .offcanvas-body
     margin: 0
@@ -1296,6 +1323,7 @@ footer
 
             &:is(.main-links):hover
               background-color: rgb(244, 255, 236)
+
 
           .under-categories
             h4 a
@@ -1415,6 +1443,9 @@ footer
           @media screen and (max-width: 991px)
             width: 80%
 
+          @media screen and (max-width: 350px)
+            width: 100%
+
     .main-product-image
       position: relative
       height: fit-content
@@ -1422,6 +1453,9 @@ footer
       img
         width: 100%
         max-height: 500px
+
+        @media screen and (max-width: 992px)
+          max-height: inherit
 
       span
         @include event-for-products

@@ -9,6 +9,7 @@
 
 body {
   background-color: #e2e6ec;
+  width: 100%;
 }
 
 .top-image {
@@ -44,11 +45,58 @@ body {
 }
 .top-header {
   position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   background-color: #1c293e;
   height: 40px;
+}
+.top-header .firstly-functions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5%;
+  width: 38%;
+}
+.top-header .firstly-functions .search-ware, .top-header .firstly-functions .order-tracking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7px;
+}
+.top-header .firstly-functions a {
+  color: rgb(56, 175, 78);
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 1100px) {
+  .top-header .firstly-functions a {
+    font-size: 13px;
+  }
+}
+.top-header .firstly-functions i {
+  color: rgb(56, 175, 78);
+}
+@media screen and (max-width: 1100px) {
+  .top-header .firstly-functions i {
+    font-size: 13px;
+  }
 }
 .top-header .secondary-functions {
   display: -webkit-box;
@@ -57,14 +105,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  margin: auto;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  width: 90%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-right: 85px;
+}
+@media screen and (max-width: 1100px) {
+  .top-header .secondary-functions {
+    margin-right: 45px;
+  }
 }
 .top-header .secondary-functions .dropdown-center button {
   color: rgb(184, 184, 184);
@@ -2084,6 +2136,7 @@ footer .extraFooter {
           align-items: center;
   color: black;
   text-decoration: none;
+  margin: 0;
 }
 .offcanvas-start .main-info .top-content-mobile .dropdown-center p {
   margin: auto;
@@ -2100,6 +2153,7 @@ footer .extraFooter {
   color: black;
   height: 15px;
   font-size: 18px;
+  margin: 0;
 }
 .offcanvas-start .main-info .wishlist-dom i {
   margin-top: 10px;
@@ -2148,31 +2202,27 @@ footer .extraFooter {
   border-bottom: 1px solid #e1e1e1;
 }
 .offcanvas-start .main-info .phone-number {
-  margin: 15px auto auto;
+  margin: 2px auto auto;
 }
-.offcanvas-start .main-info .nav-button {
+.offcanvas-start .main-info .firstly-functions-mobile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 10px;
-  margin: 15px auto auto;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 7px auto auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-.offcanvas-start .main-info .nav-button .btn {
-  background-color: white;
-  border: 1px solid rgb(56, 175, 78);
-  border-radius: 70px;
-  text-align: center;
-}
-.offcanvas-start .main-info .nav-button .btn i {
+.offcanvas-start .main-info .firstly-functions-mobile a {
+  text-decoration: none;
   color: rgb(56, 175, 78);
-  font-size: 25px;
 }
-.offcanvas-start .main-info .nav-button .btn span:not(.visually-hidden) {
-  background-color: rgb(56, 175, 78);
-  color: white;
+.offcanvas-start .main-info .firstly-functions-mobile i {
+  color: rgb(56, 175, 78);
 }
 .offcanvas-start .offcanvas-body {
   margin: 0;
@@ -2381,6 +2431,11 @@ footer .extraFooter {
     width: 80%;
   }
 }
+@media screen and (max-width: 350px) {
+  .showing-product-container .images-product ul li img {
+    width: 100%;
+  }
+}
 .showing-product-container .images-product .main-product-image {
   position: relative;
   height: -webkit-fit-content;
@@ -2390,6 +2445,11 @@ footer .extraFooter {
 .showing-product-container .images-product .main-product-image img {
   width: 100%;
   max-height: 500px;
+}
+@media screen and (max-width: 992px) {
+  .showing-product-container .images-product .main-product-image img {
+    max-height: inherit;
+  }
 }
 .showing-product-container .images-product .main-product-image span {
   position: absolute;
