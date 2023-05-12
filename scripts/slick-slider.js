@@ -1,18 +1,21 @@
+const objectElements = {
+    infinite: false,
+    slidesToScroll: 1,
+    autoplaySpeed: 7000,
+    prevArrow:document.querySelector(".switch-buttons #previous"),
+    nextArrow: document.querySelector(".switch-buttons #next")
+}
+
 window.addEventListener('DOMContentLoaded', () => {
     try {
         $('.products-container-show').slick({
-            infinite: false,
             slidesToShow: 4,
-            slidesToScroll: 1,
-            autoplaySpeed: 7000,
-            useCSS:true,
-            prevArrow:document.querySelector(".switch-buttons #previous"),
-            nextArrow: document.querySelector(".switch-buttons #next"),
+            ...objectElements,
             responsive:[
                 {breakpoint:1530,settings:{
                         slidesToShow: 3,
                     }},
-                {breakpoint:1175,settings:{
+                {breakpoint:1240,settings:{
                         slidesToShow: 2,
                     }},
                 {breakpoint:992,settings:{
@@ -30,13 +33,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     try {
         $('.selected-products-show').slick({
-            infinite: false,
             slidesToShow: 5,
-            slidesToScroll: 1,
-            autoplaySpeed: 7000,
-            useCSS:true,
-            prevArrow:document.querySelector(".switch-buttons #previous-selected"),
-            nextArrow: document.querySelector(".switch-buttons #next-selected"),
+            ...objectElements,
             responsive:[
                 {breakpoint:1420,settings:{
                         slidesToShow: 4,
@@ -47,10 +45,10 @@ window.addEventListener('DOMContentLoaded', () => {
                 {breakpoint:992,settings:{
                         slidesToShow: 3,
                     }},
-                {breakpoint:650,settings:{
+                {breakpoint:810,settings:{
                         slidesToShow: 2,
                     }},
-                {breakpoint: 500, settings: {
+                {breakpoint: 560, settings: {
                         slidesToShow: 1
                     }}
             ]

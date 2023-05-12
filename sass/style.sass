@@ -508,6 +508,8 @@ body
 .column
   display: flex
   justify-content: center
+  margin-left: 1%
+  margin-right: 1%
 
   @media screen and (max-width: 992px)
     .left-column
@@ -518,7 +520,7 @@ body
       display: inherit
 
   .left-column
-    margin-left: 6%
+    width: 230px
     max-height: 836px
 
     &:is(.productPage)
@@ -648,7 +650,7 @@ body
     margin-right: 30px
     margin-left: 30px
     margin-top: 40px
-    width: 60%
+    width: calc(100% - 520px)
     height: auto
 
     &:is(.productPage)
@@ -820,16 +822,16 @@ body
         flex-direction: column
         justify-content: left
         float: right
-        width: calc(100% + 185px)
+        width: calc(95% + 185px)
         background-color: white
         border-radius: 7px
         margin-bottom: 20px
 
-        @media screen and (max-width: 1439px)
+        //@media screen and (max-width: 1439px)
           width: calc(90% + 185px)
           margin-bottom: 20px
 
-        @media screen and (max-width: 1150px)
+        //@media screen and (max-width: 1150px)
           width: calc(80% + 185px)
 
         @media screen and (max-width: 992px)
@@ -961,7 +963,6 @@ body
     height: fit-content
     width: 230px
     text-align: center
-    margin-right: 100px
     margin-top: 40px
 
     // ============================================== //
