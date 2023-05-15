@@ -650,7 +650,7 @@ body
     margin-right: 30px
     margin-left: 30px
     margin-top: 40px
-    width: calc(100% - 520px)
+    width: calc(100% - 570px)
     height: auto
 
     &:is(.productPage)
@@ -730,6 +730,30 @@ body
           margin-top: 10px
 
           @include show-products-in-slider
+
+          .show-product
+            transition: 0.3s ease
+
+            .image-product-con
+              img
+                transition: 0.3s ease
+
+            &:hover
+              -webkit-box-shadow: 2px 2px 88px -2px rgba(0,0,0,0.27)
+              -moz-box-shadow: 2px 2px 88px -2px rgba(0,0,0,0.27)
+              box-shadow: 2px 2px 88px -2px rgba(0,0,0,0.27)
+
+              .image-product-con
+                img
+                  transform: scale(1.05)
+
+              .wishlist-compare
+                a i
+                  color: white
+                  background: $mainColor
+                  padding: 5px
+                  box-sizing: border-box
+                  border-radius: 50%
 
     // TEST SHOWS PRODUCTS CAROUSEL //
 
@@ -1188,75 +1212,14 @@ footer
   margin-left: 100px
 
 .offcanvas-start
-  height: calc(100% - 150px)
-  margin-top: 150px
-
-  @media screen and (max-width: 992px)
-    height: calc(100% - 120px)
-    margin-top: 120px
 
   .offcanvas-header
     background-color: $secondColor
 
     .btn-close
-      background-color: lighten($mainColor, 20)
-
-  @media screen and (min-width: 992px)
-    .main-info
-      display: none
-
-  .main-info
-    background-color: $lineColor
-    padding-bottom: 10px
-
-    .top-content-mobile
-      margin: auto
-      display: flex
-      flex-wrap: wrap
-      justify-content: center
-      align-items: center
-      max-width: 300px
-
-      i
-        color: $mainColor
-
-      .dropdown-center
-        display: flex
-        gap: 7px
-        align-items: center
-        color: black
-        text-decoration: none
-        margin: 0
-
-        p
-          margin: auto
-
-    .wishlist-dom
-      display: flex
-      align-items: center
-      gap: 5px
-      text-decoration: none
-      color: black
-      height: 15px
-      font-size: 18px
-      margin: 0
-
-      i
-        margin-top: 10px
-        color: $mainColor
-
-      p
-        margin: auto
-
-
-    // DROPDOWN SWITCH LANGUAGE FOR MOBILE VERSION //
-    @media screen and (min-width: 992px)
-      .switch-language-in-mobile
-        display: none
-
-    @media screen and (max-width: 991px)
-      .switch-language-in-mobile
-        display: flex
+      background-color: #00ff30
+      min-width: 25px
+      margin-right: 1px
 
     .dropdown-center
       align-items: center
@@ -1269,6 +1232,7 @@ footer
 
         .btn-name
           font-size: 18px
+          color: white
 
         i
           margin-left: 5px
@@ -1281,21 +1245,57 @@ footer
           .dropdown-item:not(.last)
             border-bottom: 1px solid #e1e1e1
 
-    .phone-number
-      margin: 2px auto auto
+  @media screen and (min-width: 992px)
+    .main-info
+      display: none
 
-    .firstly-functions-mobile
+  .main-info
+    background-color: $lineColor
+    padding: 30px 0
+
+    .main-info-in
       display: flex
       flex-direction: column
-      margin: 7px auto auto
-      width: fit-content
+      gap: 15px
+      margin-left: 20px
+      font-weight: 600
 
-      a
-        text-decoration: none
-        color: $mainColor
+      .icons
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 30px
+        padding: 0 10px
+        margin-right: 10px
 
-      i
-        color: $mainColor
+      .wishlist-dom
+        a
+          display: flex
+          align-items: center
+          text-decoration: none
+          color: $secondColor
+          height: 25px
+
+          i
+            color: $mainColor
+
+      .phone-number_mobile
+        display: flex
+
+        i
+          color: $mainColor
+        a
+          text-decoration: none
+          color: $secondColor
+
+      .search-ware, .order-tracking
+        display: flex
+
+        a
+          text-decoration: none
+          color: $secondColor
+        i
+          color: $mainColor
 
   .offcanvas-body
     margin: 0

@@ -295,12 +295,9 @@
           right: 0
           width: 45px
           height: 45px
-          background-color: #c7c7c7
           color: white
           font-size: 20px
-
-          &:hover
-            background-color: $mainColor
+          background-color: $mainColor
 
       .extra-info-pr
         display: grid
@@ -314,26 +311,18 @@
       .wishlist-compare
         position: relative
         display: flex
+        justify-content: space-between
         align-items: center
         margin: 7px
         padding-top: 5px
         padding-bottom: 5px
-        border-top: 1px solid #d9d9d9
-        border-bottom: 1px solid #d9d9d9
 
         a
           text-decoration: none
           color: $secondColor
 
-        .wishlist
-          a:hover
-            i
-              color: $mainColor
-
-
         .compare
-          position: absolute
-          right: 0
+          margin-right: 10px
 
       .available
         display: flex
