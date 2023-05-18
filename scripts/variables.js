@@ -16,11 +16,22 @@ const listOfSearchImg = document.querySelectorAll('.search-result .ac-odd a img'
 const listOfSearchName = document.querySelectorAll('.search-result .product-name-seach')
 const listOfSearchPrice = document.querySelectorAll('.search-result .price-search')
 
+// Product Page variables
+let quantityCount = document.querySelector('.pick-quantity .quantity')
+const decreaseQuantity = document.querySelector('.pick-quantity .minus')
+const increaseQuantity = document.querySelector('.pick-quantity .plus')
+const addToCart = document.querySelector('.add-to-cart')
+
+// Add to basket button
+const cardsProduct = document.querySelectorAll('.add-to-basket')
+
 export {
     collapseContainer, underCategories,
     categoriesType, titleLinks,
     collapseSideMenu, offcanvas,
     sideCategIcons, rightColumn,
     mybutton, listOfSearchImg,
-    listOfSearchName, listOfSearchPrice
+    listOfSearchName, listOfSearchPrice,
+    quantityCount, decreaseQuantity,
+    increaseQuantity, addToCart, cardsProduct
 }

@@ -1,4 +1,4 @@
-import {listOfSearchImg, listOfSearchName, listOfSearchPrice} from "./variables.js";
+import {listOfSearchImg, listOfSearchName, listOfSearchPrice} from "../variables.js";
 
 // SEARCH BAR VALIDATION PRODUCT //
 const searchElements = {

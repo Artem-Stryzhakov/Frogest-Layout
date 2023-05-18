@@ -327,75 +327,83 @@
     <div class="offcanvas offcanvas-start"  id="offcanvasExample">
         <div class="offcanvas-header">
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="main-info">
-            <div class="top-content-mobile">
-                <div class="place-issue dropdown-center">
-                    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="btn-name">Places of Issue</span>
-                        <i class="fa-sharp fa-solid fa-chevron-down"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Action two</a></li>
-                        <li><a class="dropdown-item" href="#">Action three</a></li>
-                    </ul>
-                </div>
-                <a href="" class="wishlist-dom">
-                    <i class="fa-solid fa-heart"></i>
-                    <p>
-                        Wishlist
-                        <span>(0)</span>
-                    </p>
-                </a>
-                <div class="switch-currency dropdown-center">
-                    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="btn-name">EUR</span>
-                        <i class="fa-sharp fa-solid fa-chevron-down"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">EUR</a></li>
-                        <li><a class="dropdown-item" href="#">DOL</a></li>
-                        <li><a class="dropdown-item" href="#">RUB</a></li>
-                    </ul>
-                </div>
-                <div class="switch-language-in-mobile dropdown-center">
-                    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="btn-name">English</span>
-                        <i class="fa-sharp fa-solid fa-chevron-down"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">English</a></li>
-                        <li><a class="dropdown-item" href="#">Русский</a></li>
-                        <li><a class="dropdown-item" href="#">Eesti</a></li>
-                        <li><a class="dropdown-item" href="#">Suomi</a></li>
-                        <li><a class="dropdown-item" href="#">Latviešu</a></li>
-                        <li><a class="dropdown-item last" href="#">Lietuvių</a></li>
-                    </ul>
-                </div>
+
+            <div class="switch-language-in-mobile dropdown-center">
+                <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="btn-name">English</span>
+                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Русский</a></li>
+                    <li><a class="dropdown-item" href="#">Eesti</a></li>
+                    <li><a class="dropdown-item" href="#">Suomi</a></li>
+                    <li><a class="dropdown-item" href="#">Latviešu</a></li>
+                    <li><a class="dropdown-item last" href="#">Lietuvių</a></li>
+                </ul>
             </div>
 
-            <div class="phone-number">
-                <i class="fa-solid fa-phone phone-icon"></i>
-                <span class="number"><a href="tel:+3726111111">+372 611 11 11</a></span>
-                <div class="work-days">
-                    <span>M - F:</span>
-                    <span>09-18</span>
-                </div>
+            <div class="switch-currency dropdown-center">
+                <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="btn-name">EUR</span>
+                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">EUR</a></li>
+                    <li><a class="dropdown-item" href="#">DOL</a></li>
+                    <li><a class="dropdown-item" href="#">RUB</a></li>
+                </ul>
             </div>
 
-            <div class="firstly-functions-mobile">
-                <div class="search-ware">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <a href="" class="text-uppercase">Search in warehouses</a>
-                </div>
-                <div class="order-tracking">
-                    <i class="fa-solid fa-clipboard-list"></i>
-                    <a href="" class="text-uppercase">Order tracking</a>
-                </div>
+            <div class="place-issue dropdown-center">
+                <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="btn-name">Places of Issue</span>
+                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Action two</a></li>
+                    <li><a class="dropdown-item" href="#">Action three</a></li>
+                </ul>
             </div>
         </div>
         <div class="offcanvas-body">
+            <div class="main-info">
+                <div class="main-info-in">
+                    <div class="search-ware">
+                        <div class="icons">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <a href="">Search in warehouses</a>
+                    </div>
+                    <div class="order-tracking">
+                        <div class="icons">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                        </div>
+                        <a href="">Order tracking</a>
+                    </div>
+
+                    <div class="wishlist-dom">
+                        <a href="">
+                            <div class="icons">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+
+                            Wishlist
+                            <span>(0)</span>
+                        </a>
+                    </div>
+
+                    <div class="phone-number_mobile">
+                        <div class="icons">
+                            <i class="fa-solid fa-phone phone-icon"></i>
+                        </div>
+                        <span class="number">
+                        <a href="tel:+3726111111">+372 611 11 11</a>
+                    </span>
+                    </div>
+                </div>
+            </div>
             <div class="nav-categories">
                 <ul>
                     <li class="orangle-font border-bottom-none">

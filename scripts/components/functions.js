@@ -1,4 +1,4 @@
-import {rightColumn} from "./variables.js";
+import {rightColumn} from "../variables.js";
 
 const sideBarStyle = (visibility, opacity, transition) => {
     return Object.assign(document.querySelector(".side-categ-icons").style, {
