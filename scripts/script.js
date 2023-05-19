@@ -10,11 +10,10 @@ import {
     mybutton
 } from "./variables.js";
 
-window.onscroll = () => {
-    // When the user scrolls down 20px from the top of the document, show the button
+window.addEventListener('scroll', () => {
     (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) ?
         mybutton.style.display = "block" : mybutton.style.display = "none"
-}
+})
 
 //Side canvas (mobile categories)
 offcanvas.style.width = '100%'

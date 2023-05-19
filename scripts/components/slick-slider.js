@@ -14,8 +14,11 @@ function slickSliderTopDeals() {
             {breakpoint:1530,settings:{
                     slidesToShow: 3,
                 }},
-            {breakpoint:1240,settings:{
+            {breakpoint:1270,settings:{
                     slidesToShow: 2,
+                }},
+            {breakpoint: 1050, settings: {
+                slidesToShow: 1
                 }},
             {breakpoint:992,settings:{
                     slidesToShow: 3,

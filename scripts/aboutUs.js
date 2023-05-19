@@ -1,5 +1,5 @@
 import {rightColumnScroll} from "./components/UI/rightColumn.js";
 
-window.onscroll = () => {
+window.addEventListener('scroll', () => {
     rightColumnScroll()
-}
+})
