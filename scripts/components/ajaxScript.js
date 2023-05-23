@@ -3,9 +3,9 @@ import {listOfSearchImg, listOfSearchName, listOfSearchPrice} from "../variables
 // SEARCH BAR VALIDATION PRODUCT //
 const searchElements = {
     searchbars: [$("#navbarSupportedContent .form-control"),
-        $("#searchbar .form-control")],
+        $(".searchbar-mobile .form-control")],
     searchResults: [$("#navbarSupportedContent .search-result"),
-        $("#searchbar .search-result")]
+        $(".searchbar-mobile .search-result")]
 }
 
 const getData = (data) => {
@@ -53,9 +53,9 @@ function showProductReq() {
         })
     })
 
-    $("#searchbar .form-control").on('focus', function () {
-        $("#searchbar input[name='product']").on('keyup', function () {
-            ajaxFunc($(this), $('#searchbar .search-result'))
+    $(".searchbar-mobile .form-control").on('focus', function () {
+        $(".searchbar-mobile input[name='product']").on('keyup', function () {
+            ajaxFunc($(this), $('.searchbar-mobile .search-result'))
         })
     })
 

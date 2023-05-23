@@ -107,145 +107,180 @@ body
   position: sticky
   top: 0
   background-color: $secondColor
-  height: 100px
+  height: fit-content
+  padding: 20px 0
   z-index: 100
-
-  @media screen and (max-width: 992px)
-    height: 120px
 
   .container-fluid
     display: flex
-    flex-wrap: nowrap
-    position: relative
-    padding: 15px
+    flex-direction: column
 
-    img
-      @media screen and (max-width: 500px)
-        width: 200px
+    .container-underfluid
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 0
+      position: relative
+      width: 100%
 
-      @media screen and (max-width: 450px)
-        width: 150px
+      img
+        @media screen and (max-width: 500px)
+          width: 200px
 
-      @media screen and (max-width: 380px)
-        width: 120px
+        @media screen and (max-width: 450px)
+          width: 150px
 
-      @media screen and (max-width: 290px)
-        width: 105px
+        @media screen and (max-width: 380px)
+          width: 120px
 
-    @media screen and (min-width: 991px)
-      .button-menu-in-header
-        display: none
+        @media screen and (max-width: 290px)
+          width: 105px
 
-    @media screen and (max-width: 991px)
-      .button-menu-in-header
-        display: flex
-        justify-content: center
-        align-items: center
+      @media screen and (min-width: 991px)
+        .button-menu-in-header
+          display: none
+
+      @media screen and (max-width: 991px)
+        .button-menu-in-header
+          display: flex
+          justify-content: center
+          align-items: center
+          background-color: $mainColor
+
+          i
+            color: white
+
+      @media screen and (max-width: 335px)
+        .button-menu-in-header
+          width: 35px
+          height: 25px
+          margin-right: 5px
+
+      .navbar-toggler
         background-color: $mainColor
 
         i
-          color: white
+          color: $lineColor
 
-    @media screen and (max-width: 335px)
-      .button-menu-in-header
-        width: 35px
-        height: 25px
-        margin-right: 5px
+      @media screen and (max-width: 992px)
 
-    .navbar-toggler
-      background-color: $mainColor
-
-      i
-        color: $lineColor
-
-    @media screen and (max-width: 992px)
-
-      #navbarSupportedContent
-        position: relative
-
-        .form-inputs
-          input[type='text'], i
-            display: none
-
-    @media screen and (min-width: 992px)
-      img
-        max-width: 270px
-        margin-left: 3%
-
-      #navbarSupportedContent
-        position: absolute
-        right: 2.5%
-        display: flex
-        justify-content: right
-        gap: 3%
-        width: 75%
-
-        @media screen and (max-width: 1229px)
-          .form-inputs, .form-control, .form-inputs i
-            display: none
-
-        .form-inputs
-          display: inherit
+        #navbarSupportedContent
           position: relative
-          width: 30%
 
-          .form-control
-            height: $SearchBarHeight
-            border-radius: 20px
-            border: none
-            background-color: white
-            color: $secondColor
-            z-index: 3
-
-          .form-control:focus
-            box-shadow: none
-
-          i
-            position: absolute
-            right: 10px
-            top: 12px
-            font-size: 20px
-            z-index: 4
-
-          @media screen and (max-width: 1229px)
-            .search-result
+          .form-inputs
+            input[type='text'], i
               display: none
 
-          .search-result
-            @include search-result
-
-      // Categories in a small window
-      @media screen and (max-width: 991px)
-        .nav-categories
-          display: inherit
-
       @media screen and (min-width: 992px)
-        .nav-categories
-          display: none
+        img
+          max-width: 270px
+          margin-left: 3%
 
-    .nav-categories
-      border: 1px solid white
-      border-radius: 20px
-      margin-top: 20px
-      width: 100%
+        #navbarSupportedContent
+          position: absolute
+          right: 2.5%
+          display: flex
+          justify-content: right
+          gap: 3%
+          width: 75%
 
-      .btn:hover, .focus-color // .focus-color используется в js файле
-        background-color: $mainColor
+          @media screen and (max-width: 1230px)
+            .form-inputs, .form-control, .form-inputs i
+              display: none
 
-      ul
-        list-style-type: none
-        @include categories_theme
+          .form-inputs
+            display: inherit
+            position: relative
+            width: 30%
 
-        li
-          .main-links
-            color: white
+            .form-control
+              height: $SearchBarHeight
+              border-radius: 20px
+              border: none
+              background-color: white
+              color: $secondColor
+              z-index: 3
 
-          .collapse .card .collapse-container
-            font-size: 10px
+            .form-control:focus
+              box-shadow: none
 
-            .under-categories
-              p a:hover
-                color: $mainColor
+            i
+              position: absolute
+              right: 10px
+              top: 12px
+              font-size: 20px
+              z-index: 4
+
+            .search-result
+              @include search-result
+
+        // Categories in a small window
+        @media screen and (max-width: 991px)
+          .nav-categories
+            display: inherit
+
+        @media screen and (min-width: 992px)
+          .nav-categories
+            display: none
+
+      .nav-categories
+        border: 1px solid white
+        border-radius: 20px
+        margin-top: 20px
+        width: 100%
+
+        .btn:hover, .focus-color // .focus-color используется в js файле
+          background-color: $mainColor
+
+        ul
+          list-style-type: none
+          @include categories_theme
+
+          li
+            .main-links
+              color: white
+
+            .collapse .card .collapse-container
+              font-size: 10px
+
+              .under-categories
+                p a:hover
+                  color: $mainColor
+
+    .searchbar-mobile
+      display: none
+      position: relative
+      width: 50%
+      margin-top: 15px
+
+      @media screen and (max-width: 1230px)
+        display: inherit
+
+      @media screen and (max-width: 650px)
+        width: 70%
+
+      @media screen and (max-width: 400px)
+        width: 100%
+
+      .form-control
+        height: 45px
+        border: none
+        border-radius: 20px
+        z-index: 3
+
+      .form-control:focus
+        box-shadow: none
+        border: none
+
+      i
+        position: absolute
+        right: 10px
+        top: 12px
+        font-size: 20px
+        z-index: 4
+
+      .search-result
+        @include search-result
 
   @media screen and (min-width: 992px)
     .nav-button
@@ -294,18 +329,6 @@ body
     // some style for navbar icons (desktop)
     @include navbar-icons
 
-// The PHONE NUMBER in HEADER...
-@media screen and (min-width: 992px)
-  .phone-number
-    width: 350px
-
-@media screen and (max-width: 992px)
-  .phone-number
-    display: flex
-    margin: 20px auto 20px
-    max-width: 370px
-    padding: 10px
-
 .phone-number
   display: flex
   position: relative
@@ -315,6 +338,20 @@ body
   padding: 5px 10px
   border: 2px solid #4D5E79
   border-radius: 30px
+
+  // The PHONE NUMBER in HEADER...
+  @media screen and (min-width: 992px)
+    width: 350px
+
+  @media screen and (max-width: 992px)
+    display: flex
+    margin: 20px auto 20px
+    max-width: 370px
+    padding: 10px
+
+  @media screen and (max-width: 1230px)
+    width: 100%
+    margin-right: 100px
 
   .phone-icon
     position: absolute
@@ -334,35 +371,6 @@ body
     font-size: 14px
     font-weight: bold
     color: rgb(160,181,213)
-
-// ==========SEARCH BAR================
-@media screen and (min-width: 1230px)
-  #searchbar .form-control, #searchbar i
-    display: none
-
-@media screen and (max-width: 1230px)
-  #searchbar .form-control, #searchbar i
-    display: inherit
-
-// =====================================
-#searchbar
-  position: relative
-
-  .form-control
-    height: 45px
-    z-index: 3
-
-  .form-control:focus
-    box-shadow: none
-    border: 1px solid $mainColor
-
-  i
-    position: absolute
-    right: 10px
-    top: 15px
-
-  .search-result
-    @include search-result
 
 
 // Display basket in mobile ============
