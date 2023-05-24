@@ -80,7 +80,7 @@ body {
   gap: 7px;
 }
 .top-header .firstly-functions a {
-  color: rgb(56, 175, 78);
+  color: #ddd;
   text-decoration: none;
   margin: 0;
   padding: 0;
@@ -91,7 +91,7 @@ body {
   }
 }
 .top-header .firstly-functions i {
-  color: rgb(56, 175, 78);
+  color: white;
 }
 @media screen and (max-width: 1100px) {
   .top-header .firstly-functions i {
@@ -123,9 +123,9 @@ body {
 }
 .top-header .secondary-functions .dropdown-center button i {
   margin-left: 3px;
-  color: rgb(56, 175, 78);
+  color: white;
 }
-.top-header .secondary-functions .wishlist-dom {
+.top-header .secondary-functions .compare-dom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,11 +137,11 @@ body {
   color: rgb(184, 184, 184);
   height: 15px;
 }
-.top-header .secondary-functions .wishlist-dom i {
+.top-header .secondary-functions .compare-dom i {
   margin-left: 5px;
-  color: rgb(56, 175, 78);
+  color: white;
 }
-.top-header .secondary-functions .wishlist-dom p {
+.top-header .secondary-functions .compare-dom p {
   margin-top: 15px;
 }
 
@@ -214,7 +214,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: rgb(56, 175, 78);
+    background-color: transparent;
+    border: 1px solid white;
   }
   .navbar .container-fluid .container-underfluid .button-menu-in-header i {
     color: white;
@@ -684,7 +685,7 @@ body {
   }
 }
 .navbar .nav-button i {
-  color: rgb(56, 175, 78);
+  color: white;
   font-size: 20px;
 }
 @media screen and (max-width: 450px) {
@@ -697,17 +698,43 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
-  gap: 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5px 10px;
-  border: 2px solid #4D5E79;
+  padding: 3px 10px;
+  border: 1.5px solid white;
   border-radius: 30px;
+}
+.phone-number .main-phoneInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 100%;
+  gap: 15px;
+}
+.phone-number .main-phoneInfo .phone-icon {
+  color: white;
+  font-size: 25px;
+}
+.phone-number .main-phoneInfo .number a {
+  color: white;
+  font-size: 23px;
+  text-decoration: none;
 }
 @media screen and (min-width: 992px) {
   .phone-number {
@@ -730,23 +757,11 @@ body {
     margin-right: 100px;
   }
 }
-.phone-number .phone-icon {
-  position: absolute;
-  left: 15px;
-  color: rgb(56, 175, 78);
-  font-size: 25px;
-}
-.phone-number .number a {
-  color: rgb(56, 175, 78);
-  font-size: 23px;
-  text-decoration: none;
-}
 .phone-number .work-days {
-  position: absolute;
-  right: 15px;
-  display: -ms-grid;
-  display: grid;
-  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 11px;
   font-weight: bold;
   color: rgb(160, 181, 213);
 }
@@ -820,7 +835,7 @@ body {
   }
 }
 .nav-button-mobile i {
-  color: rgb(56, 175, 78);
+  color: white;
   font-size: 20px;
 }
 @media screen and (max-width: 450px) {
@@ -2240,7 +2255,7 @@ footer .extraFooter {
   padding: 0 10px;
   margin-right: 10px;
 }
-.offcanvas-start .main-info .main-info-in .wishlist-dom a {
+.offcanvas-start .main-info .main-info-in .compare-dom a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2251,7 +2266,7 @@ footer .extraFooter {
   color: #2d3850;
   height: 25px;
 }
-.offcanvas-start .main-info .main-info-in .wishlist-dom a i {
+.offcanvas-start .main-info .main-info-in .compare-dom a i {
   color: rgb(56, 175, 78);
 }
 .offcanvas-start .main-info .main-info-in .phone-number_mobile {
