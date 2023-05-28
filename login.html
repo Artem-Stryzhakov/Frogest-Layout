@@ -1,0 +1,2136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!--FONTAWSOME ICONS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!--Carousel Top Deals-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="https://frog.ee/img/favicon-1.ico?167092613" type="image/x-icon">
+
+    <script type="module" src="scripts/script.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <div class="top-header">
+        <div class="firstly-functions">
+            <div class="search-ware">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <a href="" class="text-uppercase">Search in warehouses</a>
+            </div>
+            <div class="order-tracking">
+                <i class="fa-solid fa-clipboard-list"></i>
+                <a href="" class="text-uppercase">Order tracking</a>
+            </div>
+        </div>
+        <div class="secondary-functions">
+            <div class="place-issue dropdown-center">
+                <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Places of Issue
+                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Action two</a></li>
+                    <li><a class="dropdown-item" href="#">Action three</a></li>
+                </ul>
+            </div>
+            <a href="" class="compare-dom">
+                <i class="fa-solid fa-heart"></i>
+                <p>
+                    Wishlist
+                    <span>(0)</span>
+                </p>
+            </a>
+            <div class="switch-currency dropdown-center">
+                <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span>EUR</span>
+                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">EUR</a></li>
+                    <li><a class="dropdown-item" href="#">DOL</a></li>
+                    <li><a class="dropdown-item" href="#">RUB</a></li>
+                </ul>
+            </div>
+            <div class="switch-language dropdown-center">
+                <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="language-name">English</span>
+                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Русский</a></li>
+                    <li><a class="dropdown-item" href="#">Eesti</a></li>
+                    <li><a class="dropdown-item" href="#">Suomi</a></li>
+                    <li><a class="dropdown-item" href="#">Latviešu</a></li>
+                    <li><a class="dropdown-item last" href="#">Lietuvių</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="container-underfluid">
+                <button class="btn button-menu-in-header" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <img src="images/logo.svg" alt="...">
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex form-inputs">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" class="form-control"  name="product" placeholder="Search">
+
+                        <div class="search-result">
+                            <ul>
+                                <li class="ac-odd">
+                                    <a href="" class="first">
+                                        <img src="images/frog.png" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="images/frog.png" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="images/frog.png" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="images/frog.png" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="images/frog.png" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="images/frog.png" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="images/frog.png" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="ac-odd">
+                                    <a href="">
+                                        <img src="images/frog.png" alt="...">
+                                        <div class="name-price">
+                                            <p class="product-name-seach"></p>
+                                            <span class="price-search"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="phone-number">
+                        <div class="main-phoneInfo">
+                            <i class="fa-solid fa-phone phone-icon"></i>
+                            <span class="number"><a href="tel:+3726111111">+372 611 11 11</a></span>
+                        </div>
+                        <div class="work-days">
+                            <span>M - F:</span>
+                            <span>09-18</span>
+                        </div>
+                    </div>
+                    <div class="nav-button dropdown">
+                        <div class="user-button-container basket-put">
+                            <button type="button" class="btn position-relative to-basket">
+                                <i class="fa-solid fa-basket-shopping"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count-product desktop">
+                                        0
+                                        <span class="visually-hidden">unread messages</span>
+                                    </span>
+                            </button>
+                            <div class="data-for-buttons">
+                                <span>My Cart</span>
+                                <span class="cart-total">0.00€</span>
+                            </div>
+                        </div>
+                        <div class="user-button-container">
+                            <button type="button" class="btn position-relative">
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                    0
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </button>
+                            <div class="data-for-buttons">
+                                <span>Compare</span>
+                            </div>
+                        </div>
+                        <div class="user-button-container dropdown-center">
+                            <button type="button" class="btn position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class='fa fa-user'></i>
+                            </button>
+                            <div class="data-for-buttons">
+                                <span class="user-name">Andres</span>
+                                <span class="second-span">Logout</span>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="" class="btn facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    Facebook
+                                </a>
+                                <a href="" class="btn google">
+                                    <i class="fa-brands fa-google-plus"></i>
+                                    Google
+                                </a>
+                                <a href="" class="btn payPal">
+                                    <img src="images/payPal.png" alt="payPal">
+                                </a>
+                                <a href="" class="btn login">LOGIN</a>
+
+                                <div class="line"></div>
+
+                                <p class="not-reg">Not registered?</p>
+                                <a href="" class="btn signup">SIGNUP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-button-mobile">
+                    <div class="mobile-basket basket-put">
+                        <button type="button" class="btn position-relative to-basket">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count-product mobile">
+                            0
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                        </button>
+                    </div>
+                    <div class="mobile-basket">
+                        <button type="button" class="btn position-relative">
+                            <i class="fa-solid fa-heart"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
+                                    0
+                                    <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="mobile-basket dropdown-center">
+                        <button type="button" class="btn position-relative" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class='fa fa-user'></i>
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="" class="btn facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                Facebook
+                            </a>
+                            <a href="" class="btn google">
+                                <i class="fa-brands fa-google-plus"></i>
+                                Google
+                            </a>
+                            <a href="" class="btn payPal">
+                                <img src="images/payPal.png" alt="payPal">
+                            </a>
+                            <a href="" class="btn login">LOGIN</a>
+
+                            <div class="line"></div>
+
+                            <p class="not-reg">Not registered?</p>
+                            <a href="" class="btn signup">SIGNUP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--MOBILE SEARCH BAR AND SEARCH RESULTS-->
+            <div class="searchbar-mobile form-inputs">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="form-control" type="text" name="product" placeholder="Search">
+
+                <div class="search-result">
+                    <ul>
+                        <li class="ac-odd">
+                            <a href="" class="first">
+                                <img src="images/frog.png" alt="...">
+                                <div class="name-price">
+                                    <p class="product-name-seach"></p>
+                                    <span class="price-search"></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ac-odd">
+                            <a href="">
+                                <img src="images/frog.png" alt="...">
+                                <div class="name-price">
+                                    <p class="product-name-seach"></p>
+                                    <span class="price-search"></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ac-odd">
+                            <a href="">
+                                <img src="images/frog.png" alt="...">
+                                <div class="name-price">
+                                    <p class="product-name-seach"></p>
+                                    <span class="price-search"></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ac-odd">
+                            <a href="">
+                                <img src="images/frog.png" alt="...">
+                                <div class="name-price">
+                                    <p class="product-name-seach"></p>
+                                    <span class="price-search"></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ac-odd">
+                            <a href="">
+                                <img src="images/frog.png" alt="...">
+                                <div class="name-price">
+                                    <p class="product-name-seach"></p>
+                                    <span class="price-search"></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ac-odd">
+                            <a href="">
+                                <img src="images/frog.png" alt="...">
+                                <div class="name-price">
+                                    <p class="product-name-seach"></p>
+                                    <span class="price-search"></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ac-odd">
+                            <a href="">
+                                <img src="images/frog.png" alt="...">
+                                <div class="name-price">
+                                    <p class="product-name-seach"></p>
+                                    <span class="price-search"></span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="ac-odd">
+                            <a href="">
+                                <img src="images/frog.png" alt="...">
+                                <div class="name-price">
+                                    <p class="product-name-seach"></p>
+                                    <span class="price-search"></span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start"  id="offcanvasExample">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+            <div class="switch-language-in-mobile dropdown-center">
+                <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="btn-name">English</span>
+                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">Русский</a></li>
+                    <li><a class="dropdown-item" href="#">Eesti</a></li>
+                    <li><a class="dropdown-item" href="#">Suomi</a></li>
+                    <li><a class="dropdown-item" href="#">Latviešu</a></li>
+                    <li><a class="dropdown-item last" href="#">Lietuvių</a></li>
+                </ul>
+            </div>
+
+            <div class="switch-currency dropdown-center">
+                <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="btn-name">EUR</span>
+                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">EUR</a></li>
+                    <li><a class="dropdown-item" href="#">DOL</a></li>
+                    <li><a class="dropdown-item" href="#">RUB</a></li>
+                </ul>
+            </div>
+
+            <div class="place-issue dropdown-center">
+                <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="btn-name">Places of Issue</span>
+                    <i class="fa-sharp fa-solid fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Action two</a></li>
+                    <li><a class="dropdown-item" href="#">Action three</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="offcanvas-body">
+            <div class="main-info">
+                <div class="main-info-in">
+                    <div class="search-ware">
+                        <div class="icons">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <a href="">Search in warehouses</a>
+                    </div>
+                    <div class="order-tracking">
+                        <div class="icons">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                        </div>
+                        <a href="">Order tracking</a>
+                    </div>
+
+                    <div class="compare-dom">
+                        <a href="">
+                            <div class="icons">
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                            </div>
+
+                            Compare
+                            <span> (0)</span>
+                        </a>
+                    </div>
+
+                    <div class="phone-number_mobile">
+                        <div class="icons">
+                            <i class="fa-solid fa-phone phone-icon"></i>
+                        </div>
+                        <span class="number">
+                            <a href="tel:+3726111111">+372 611 11 11</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-categories">
+                <ul>
+                    <li class="orangle-font border-bottom-none">
+                        <a href="" class="btn">
+                            <i class='fa-solid fa-fire-flame-curved'></i>
+                            TOP-50 Best Sellers
+                        </a>
+                    </li>
+                    <li class="Xmas-sellout border-bottom-none">
+                        <a class="btn none_hover" data-bs-toggle="collapse" href="#collapseExample0" role="button" aria-expanded="false" aria-controls="collapseExample0">
+                            <i class='fa-solid fa-tag'></i>
+                            LAOMUUK
+                        </a>
+                        <div class="collapse" id="collapseExample0">
+                            <div class="card card-body">
+                                <div class="category-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="">CATEGORIES 1</a></h4>
+
+                                        <p><a href="">Telefonid, tahvelarvutid, Apple pood</a></p>
+                                        <p><a href="">Arvutid</a></p>
+                                        <p><a href="">Video ja Audio</a></p>
+                                        <p><a href="">Ilu ja Tervis</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="">CATEGORIES 2</a></h4>
+
+                                        <p><a href="">Telefonid, tahvelarvutid, Apple pood</a></p>
+                                        <p><a href="">Arvutid</a></p>
+                                        <p><a href="">Video ja Audio</a></p>
+                                        <p><a href="">Ilu ja Tervis</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="">CATEGORIES 3</a></h4>
+
+                                        <p><a href="">Telefonid, tahvelarvutid, Apple pood</a></p>
+                                        <p><a href="">Arvutid</a></p>
+                                        <p><a href="">Video ja Audio</a></p>
+                                        <p><a href="">Ilu ja Tervis</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="">CATEGORIES 4</a></h4>
+
+                                        <p><a href="">Telefonid, tahvelarvutid, Apple pood</a></p>
+                                        <p><a href="">Arvutid</a></p>
+                                        <p><a href="">Video ja Audio</a></p>
+                                        <p><a href="">Ilu ja Tervis</a></p>
+                                    </div>
+                                </div>
+                                <img src="images/img_for_category.png" alt="...">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="orangle-font">
+                        <a href="" class="btn">
+                            <i class='fa-solid fa-cart-shopping'></i>
+                            Sell-out
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                            <i class='fas fa-mobile-alt'></i>
+                            Phones
+                        </a>
+                        <div class="collapse" id="collapseExample1">
+                            <div class="card card-body">
+
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">SMARTPHONES AND -WATCHES</a></h4>
+
+                                        <p><a href="">Smartphone</a></p>
+                                        <p><a href="">Mobile Phones</a></p>
+                                        <p><a href="">Cordless phones</a></p>
+                                        <p><a href="">Smart watches</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">ACCESSORIES FOR MOBILES</a></h4>
+
+                                        <p><a href="">Protective covers</a></p>
+                                        <p><a href="">Protective films</a></p>
+                                        <p><a href="">Changing device</a></p>
+                                        <p><a href="">Phone Battery</a></p>
+                                        <p><a href="">Hands-free</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">TABLETS AND E-READERS</a></h4>
+
+                                        <p><a href="">Tablets PC</a></p>
+                                        <p><a href="">E-Book</a></p>
+                                        <p><a href="">Charging device</a></p>
+                                        <p><a href="">Phone Battery</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                            <i class='fa-solid fa-microchip'></i>
+                            It technologies
+                        </a>
+                        <div class="collapse" id="collapseExample2">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bold">COMPUTERS</a></h4>
+
+                                        <p><a href="">Desktop PCs</a></p>
+                                        <p><a href="">Laptops and accessories</a></p>
+                                        <p><a href="">Tablets PC</a></p>
+                                        <p><a href="">E-Book</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bold">COMPUTER PERIPHERALS</a></h4>
+
+                                        <p><a href="">Monitor accessories</a></p>
+                                        <p><a href="">Printers</a></p>
+                                        <p><a href="">External Hard Drives</a></p>
+                                        <p><a href="">Memory Sticks</a></p>
+                                        <p><a href="">Networking Products</a></p>
+                                        <p><a href="">Multimedia</a></p>
+                                        <p><a href="">Computer Mouses</a></p>
+                                        <p><a href="">Keyboards</a></p>
+                                        <p><a href="">Web Cameras</a></p>
+                                        <p><a href="">Scanners</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bold">FOR OFFICE</a></h4>
+
+                                        <p><a href="">Office appliances</a></p>
+                                        <p><a href="">Laminators</a></p>
+                                        <p><a href="">Paper shredders</a></p>
+                                        <p><a href="">Devices for bar codes</a></p>
+                                        <p><a href="">Smart-Home</a></p>
+                                        <p><a href="">Computer speakers</a></p>
+                                        <p><a href="">Raspberry PI</a></p>
+                                        <p><a href="">Cables and rubs</a></p>
+                                        <p><a href="">Cables and extension cords</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">PC COMPONENTS</a></h4>
+
+                                        <p><a href="">Cases</a></p>
+                                        <p><a href="">CPU</a></p>
+                                        <p><a href="">HDD</a></p>
+                                        <p><a href="">Motherboards</a></p>
+                                        <p><a href="">PSU</a></p>
+                                        <p><a href="">RAM</a></p>
+                                        <p><a href="">Sound cards</a></p>
+                                        <p><a href="">Cooler</a></p>
+                                        <p><a href="">Wi-Fi accessories</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+                            <i class='fa fa-birthday-cake'></i>
+                            Entertainment
+                        </a>
+                        <div class="collapse" id="collapseExample3">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex">
+                                    <div class="under-categories">
+                                        <p><a href="" class="font-weight-bolder">FIREWORKS 18+</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
+                            <i class='fa fa-tv'></i>
+                            TV, audio, video
+                        </a>
+                        <div class="collapse" id="collapseExample4">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">TV, ACCESSORIES</a></h4>
+
+                                        <p><a href="">Television Sets</a></p>
+                                        <p><a href="">TV accessories</a></p>
+                                        <p><a href="">Mountings</a></p>
+                                        <p><a href="">Accessories</a></p>
+                                        <p><a href="">Kartina.tv</a></p>
+                                        <p><a href="">Digi boxes for smart-TV</a></p>
+                                        <p><a href="">Smart Sticks</a></p>
+                                        <p><a href="">Antennas and accessories</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">AUDIO</a></h4>
+
+                                        <p><a href="">Stereo Systems</a></p>
+                                        <p><a href="">Home theater systems</a></p>
+                                        <p><a href="">Loudspeakers</a></p>
+                                        <p><a href="">Headphones</a></p>
+                                        <p><a href="">Subwoofers</a></p>
+                                        <p><a href="">Soundbar speakers</a></p>
+                                        <p><a href="">Musical centers</a></p>
+                                        <p><a href="">Receivers</a></p>
+                                        <p><a href="">Amplifer</a></p>
+                                        <p><a href="">MP3 Players</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">VIDEO</a></h4>
+
+                                        <p><a href="">Video Projectors</a></p>
+                                        <p><a href="">DVD Players</a></p>
+                                        <p><a href="">Film</a></p>
+                                        <p><a href="">MP4 players</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5">
+                            <i class='fa-solid fa-camera'></i>
+                            Photo and Video
+                        </a>
+                        <div class="collapse" id="collapseExample5">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">CAMERAS</a></h4>
+
+                                        <p><a href="">Digital Cameras</a></p>
+                                        <p><a href="">DSLR</a></p>
+                                        <p><a href="">Compact camera</a></p>
+                                        <p><a href="">Video Cameras</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">BAGS, TRIPODS, FILTERS</a></h4>
+
+                                        <p><a href="">Memory cards</a></p>
+                                        <p><a href="">Filters</a></p>
+                                        <p><a href="">Stands</a></p>
+                                        <p><a href="">Digital Frames</a></p>
+                                        <p><a href="">Camera Case</a></p>
+                                        <p><a href="">Others</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">LENSES AND FLASHES</a></h4>
+
+                                        <p><a href="">Lenses</a></p>
+                                        <p><a href="">Flash</a></p>
+                                        <p><a href="">Lenses Accessories</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">BATTERIES, CHARGERS AND ACCESSORIES</a></h4>
+
+                                        <p><a href="">Battery</a></p>
+                                        <p><a href="">Digital Frames</a></p>
+                                        <p><a href="">Battery and chargers</a></p>
+                                        <p><a href="">Photographic paper</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">LIGHT AND PROFESSIONAL EQUIPMENT</a></h4>
+
+                                        <p><a href="">Studio Lighting, Flash & Light Meter</a></p>
+                                        <p><a href="">Stands</a></p>
+                                        <p><a href="">Others</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample6" role="button" aria-expanded="false" aria-controls="collapseExample6">
+                            <i class='fa-solid fa-guitar'></i>
+                            Musical Instruments
+                        </a>
+                        <div class="collapse" id="collapseExample6">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">MUSICAL INSTRUMENTS</a></h4>
+
+                                        <p><a href="">Acoustic guitars</a></p>
+                                        <p><a href="">Electric guitars</a></p>
+                                        <p><a href=""></a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">BATTERIES, CHARGERS AND ACCESSORIES</a></h4>
+
+                                        <p><a href="">Battery</a></p>
+                                        <p><a href="">Digital Frames</a></p>
+                                        <p><a href="">Battery and chargers</a></p>
+                                        <p><a href="">Photographic paper</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">LIGHT AND PROFESSIONAL EQUIPMENT</a></h4>
+
+                                        <p><a href="">Studio Lighting, Flash & Light Meter</a></p>
+                                        <p><a href="">Stands</a></p>
+                                        <p><a href="">Others</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a  class="btn main-links" data-bs-toggle="collapse" href="#collapseExample7" role="button" aria-expanded="false" aria-controls="collapseExample7">
+                            <i class='fa fa-home'></i>
+                            Home Appliance
+                        </a>
+                        <div class="collapse" id="collapseExample7">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">LARGE HOME APPLIANCES</a></h4>
+
+                                        <p><a href="">Refrigerators</a></p>
+                                        <p><a href="">Side-by Side Refrigerators</a></p>
+                                        <p><a href="">Portable dishwasher</a></p>
+                                        <p><a href="">Washing Machines</a></p>
+                                        <p><a href="">Clothes dryers</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">SMALL HOUSEHOLD APPLIANCES</a></h4>
+
+                                        <p><a href="">Vacuum cleaner</a></p>
+                                        <p><a href="">Robot vacuum cleaner</a></p>
+                                        <p><a href="">Pressure washer</a></p>
+                                        <p><a href="">Hand vacuum cleaner</a></p>
+                                        <p><a href="">Cleaning</a></p>
+                                        <p><a href="">Vacuum cleaner accessories</a></p>
+                                        <p><a href="">Clothing care</a></p>
+                                        <p><a href="">Sewing-machines</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">INTEGRATED APPLIANCES</a></h4>
+
+                                        <p><a href="">Build-in Hobs</a></p>
+                                        <p><a href="">Ovens</a></p>
+                                        <p><a href="">Build-in Range Hoods</a></p>
+                                        <p><a href="">Build-in Refrigerators</a></p>
+                                        <p><a href="">Integrated Microwave Ovens</a></p>
+                                        <p><a href="">Build-in Dishwashers</a></p>
+                                        <p><a href="">Integrated Washing Machines</a></p>
+                                        <p><a href="">Integrated Appliances</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">INTEGRATED APPLIANCES</a></h4>
+
+                                        <p><a href="">Build-in Hobs</a></p>
+                                        <p><a href="">Ovens</a></p>
+                                        <p><a href="">Build-in Range Hoods</a></p>
+                                        <p><a href="">Build-in Refrigerators</a></p>
+                                        <p><a href="">Integrated Microwave Ovens</a></p>
+                                        <p><a href="">Build-in Dishwashers</a></p>
+                                        <p><a href="">Integrated Washing Machines</a></p>
+                                        <p><a href="">Integrated Appliances</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">SMALL KITCHEN APPLIANCES</a></h4>
+
+                                        <p><a href="">Microwave oven</a></p>
+                                        <p><a href="">Food Processors and Mincers</a></p>
+                                        <p><a href="">Multi cookers</a></p>
+                                        <p><a href="">Fryers</a></p>
+                                        <p><a href="">Grills</a></p>
+                                        <p><a href="">Blenders</a></p>
+                                        <p><a href="">Electric mixer</a></p>
+                                        <p><a href="">Bread toaster</a></p>
+                                        <p><a href="">Soda stream</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">OTHER KITCHEN APPLIANCES</a></h4>
+
+                                        <p><a href="">Pots, pans, baking tins</a></p>
+                                        <p><a href="">Knives</a></p>
+                                        <p><a href="">Knife sharpeners</a></p>
+                                        <p><a href="">Kitchen Scales</a></p>
+                                        <p><a href="">Other</a></p>
+                                        <p><a href="">Sets</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">COFFEE MACHINES</a></h4>
+
+                                        <p><a href="">Coffee Machines</a></p>
+                                        <p><a href="">Espresso Machines</a></p>
+                                        <p><a href="">Coffee grinders</a></p>
+                                        <p><a href="">Coffee Machines</a></p>
+                                        <p><a href="">Capsule</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">OTHER HOUSEHOLD APPLIANCES</a></h4>
+
+                                        <p><a href="">Boilers</a></p>
+                                        <p><a href="">Air Conditioners</a></p>
+                                        <p><a href="">Humidifiers</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample8" role="button" aria-expanded="false" aria-controls="collapseExample8">
+                            <i class='fas fa-tools'></i>
+                            Building and Construction
+                        </a>
+                        <div class="collapse" id="collapseExample8">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">POWER TOOLS</a></h4>
+
+                                        <p><a href="">Cordless tools</a></p>
+                                        <p><a href="">Impact Drills</a></p>
+                                        <p><a href="">Saws</a></p>
+                                        <p><a href="">Multi tool</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">HAND TOOLS</a></h4>
+
+                                        <p><a href="">Other Tools</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">POWER TOOLS FOR THE GARDEN</a></h4>
+
+                                        <p><a href="">Lawn mowers</a></p>
+                                        <p><a href="">Grass Shears & Trimmers</a></p>
+                                        <p><a href="">Hedge Shears & Pruners</a></p>
+                                        <p><a href="">Leaf Blowers & Vacuums</a></p>
+                                        <p><a href="">Pumps</a></p>
+                                        <p><a href="">Garden tool accessories</a></p>
+                                        <p><a href="">Cables and extension cords</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample9" role="button" aria-expanded="false" aria-controls="collapseExample9">
+                            <i class='fas fa-dumbbell'></i>
+                            Health and sports
+                        </a>
+                        <div class="collapse" id="collapseExample9">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">GYMS AND FITNESS</a></h4>
+
+                                        <p><a href="">Training equipment and fitness</a></p>
+                                        <p><a href="">Fitness Watches</a></p>
+                                        <p><a href="">Walking sticks</a></p>
+                                        <p><a href="">Bottles and Shakers</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">BICYCLES</a></h4>
+
+                                        <p><a href="">Bicycle</a></p>
+                                        <p><a href="">Vehicle Accessories</a></p>
+                                        <p><a href="">Velocomputers</a></p>
+                                        <p><a href="">Bottles and holders</a></p>
+                                        <p><a href="">Carrier</a></p>
+                                        <p><a href="">Locks</a></p>
+                                        <p><a href="">Wings</a></p>
+                                        <p><a href="">Pumps</a></p>
+                                        <p><a href="">Sunglasses</a></p>
+                                        <p><a href="">Lanterns</a></p>
+                                        <p><a href="">Helmets</a></p>
+                                        <p><a href="">Spare parts</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">ROLLERS, SKATEBOARDS, SCOOTERS</a></h4>
+
+                                        <p><a href="">Roller skates</a></p>
+                                        <p><a href="">Helmets</a></p>
+                                        <p><a href="">Hoverboards</a></p>
+                                        <p><a href="">Scooters</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">SPORT</a></h4>
+
+                                        <p><a href="">Tennis</a></p>
+                                        <p><a href="">Darts</a></p>
+                                        <p><a href="">Golfiseade</a></p>
+                                        <p><a href="">Badminton</a></p>
+                                        <p><a href="">SUP board</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">FOR MALE BEAUTY</a></h4>
+
+                                        <p><a href="">Shavers</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">FOR FEMALE BEAUTY</a></h4>
+
+                                        <p><a href="">Hair care</a></p>
+                                        <p><a href="">Body care</a></p>
+                                        <p><a href="">Body warming</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">HEALTH AND HYGIENE</a></h4>
+
+                                        <p><a href="">Scales</a></p>
+                                        <p><a href="">Oral care</a></p>
+                                        <p><a href="">Blood pressure monitors</a></p>
+                                        <p><a href="">Massage appliances</a></p>
+                                        <p><a href="">Thermometers</a></p>
+                                        <p><a href="">Nebulizers</a></p>
+                                        <p><a href="">Oximeter</a></p>
+                                        <p><a href="">Hygiene</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample10" role="button" aria-expanded="false" aria-controls="collapseExample10">
+                            <i class='fa fa-tree'></i>
+                            Home, Garden
+                        </a>
+                        <div class="collapse" id="collapseExample10">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">FOR HOME</a></h4>
+
+                                        <p><a href="">Candles</a></p>
+                                        <p><a href="">Vases</a></p>
+                                        <p><a href="">Solar panels</a></p>
+                                        <p><a href="">Fabrics</a></p>
+                                        <p><a href="">Saunas, stoves</a></p>
+                                        <p><a href="">Bathroom</a></p>
+                                        <p><a href="">Wall Clock</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">FOR GARDEN</a></h4>
+
+                                        <p><a href="">Garden</a></p>
+                                        <p><a href="">Garden tools</a></p>
+                                        <p><a href="">Tables</a></p>
+                                        <p><a href="">Chairs</a></p>
+                                        <p><a href="">Reclining chairs</a></p>
+                                        <p><a href="">Swings</a></p>
+                                        <p><a href="">Barbecue & raclette</a></p>
+                                        <p><a href="">Benches</a></p>
+                                        <p><a href="">Trampolines</a></p>
+                                        <p><a href="">Trimmerid</a></p>
+                                        <p><a href="">Balcony sets</a></p>
+                                        <p><a href="">Garden equipment and tools</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample11" role="button" aria-expanded="false" aria-controls="collapseExample11">
+                            <i class='fa fa-child'></i>
+                            For children
+                        </a>
+                        <div class="collapse" id="collapseExample11">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">TOYS</a></h4>
+
+                                        <p><a href="">LEGO</a></p>
+                                        <p><a href="">R / C</a></p>
+                                        <p><a href="">Slot racing tracks and accessories</a></p>
+                                        <p><a href="">Toys</a></p>
+                                        <p><a href="">Auto</a></p>
+                                        <p><a href="">Do it yourself</a></p>
+                                        <p><a href="">3D Pen</a></p>
+                                        <p><a href="">Plush toys</a></p>
+                                        <p><a href="">Bags and backpacks</a></p>
+                                        <p><a href="">Puzzle</a></p>
+                                        <p><a href="">Games for babies</a></p>
+                                        <p><a href="">Board games</a></p>
+                                        <p><a href="">Drawing and painting</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">MEANS OF TRANSPORT</a></h4>
+
+                                        <p><a href="">Electric cars</a></p>
+                                        <p><a href="">Children's bicycles</a></p>
+                                        <p><a href="">Scooters</a></p>
+                                        <p><a href="">Hoverboards</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">FOR BABIES</a></h4>
+
+                                        <p><a href="">Trolleys, carrying bags</a></p>
+                                        <p><a href="">For babies</a></p>
+                                        <p><a href="">Diapers and swaddling</a></p>
+                                        <p><a href="">Baby feeding tools</a></p>
+                                        <p><a href="">Babysitter</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">SECURITY</a></h4>
+
+                                        <p><a href="">Children's car seats</a></p>
+                                        <p><a href="">Night lights</a></p>
+                                        <p><a href="">Safety for children</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample12" role="button" aria-expanded="false" aria-controls="collapseExample12">
+                            <i class='fas fa-couch'></i>
+                            Furniture
+                        </a>
+                        <div class="collapse" id="collapseExample12">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">LIVING ROOM</a></h4>
+
+                                        <p><a href="">Sofas</a></p>
+                                        <p><a href="">Ancillary tables</a></p>
+                                        <p><a href="">Dinner tables</a></p>
+                                        <p><a href="">Mirror</a></p>
+                                        <p><a href="">Coffee tables</a></p>
+                                        <p><a href="">Decorative pillows</a></p>
+                                        <p><a href="">Living room</a></p>
+                                        <p><a href="">Chairs</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">BEDROOM</a></h4>
+
+                                        <p><a href="">Bed</a></p>
+                                        <p><a href="">Bed continental</a></p>
+                                        <p><a href="">Dressers</a></p>
+                                        <p><a href="">Mattress</a></p>
+                                        <p><a href="">Cabinets</a></p>
+                                        <p><a href="">Bedside tables for clothes</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">OFFICE FURNITURE</a></h4>
+
+                                        <p><a href="">Manager chairs</a></p>
+                                        <p><a href="">Work chairs</a></p>
+                                        <p><a href="">Office furniture</a></p>
+                                        <p><a href="">Shelving</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">CHILDREN'S FURNITURE</a></h4>
+
+                                        <p><a href="">Children's car seats</a></p>
+                                        <p><a href="">Children's chairs</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample13" role="button" aria-expanded="false" aria-controls="collapseExample13">
+                            <i class='fa-solid fa-shirt'></i>
+                            Clothes, shoes, watches, jewelry
+                        </a>
+                        <div class="collapse" id="collapseExample13">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">CLOTHES, SHOES</a></h4>
+
+                                        <p><a href="">Heated clothes</a></p>
+                                        <p><a href="">Work shoes</a></p>
+                                        <p><a href="">Shoes</a></p>
+                                        <p><a href="">Children's clothing</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">WATCHES, JEWELRY</a></h4>
+
+                                        <p><a href="">Watch</a></p>
+                                        <p><a href="">Jewelry</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample14" role="button" aria-expanded="false" aria-controls="collapseExample14">
+                            <i class='fa fa-car'></i>
+                            Transport
+                        </a>
+                        <div class="collapse" id="collapseExample14">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <p><a href="">GPS device</a></p>
+                                        <p><a href="">Hands-free</a></p>
+                                        <p><a href="">Portable radio</a></p>
+                                        <p><a href="">Video recorders</a></p>
+                                        <p><a href="">Accessories</a></p>
+                                        <p><a href="">Car audio</a></p>
+                                        <p><a href="">Chargers / Converters</a></p>
+                                        <p><a href="">Different</a></p>
+                                        <p><a href="">Tires</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample15" role="button" aria-expanded="false" aria-controls="collapseExample15">
+                            <i class='fa fa-female'></i>
+                            Cosmetics
+                        </a>
+                        <div class="collapse" id="collapseExample15">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <p><a href="">Perfume</a></p>
+                                        <p><a href="">Gift ideas</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample16" role="button" aria-expanded="false" aria-controls="collapseExample16">
+                            <i class='fa fa-cutlery'></i>
+                            Food
+                        </a>
+                        <div class="collapse" id="collapseExample16">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <p><a href="">Drinks</a></p>
+                                        <p><a href="">Coffee Tea</a></p>
+                                        <p><a href="">Supplements</a></p>
+                                        <p><a href="">Confectionery</a></p>
+                                        <p><a href="">Spices</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="border-bottom-none">
+                        <a class="btn main-links" data-bs-toggle="collapse" href="#collapseExample17" role="button" aria-expanded="false" aria-controls="collapseExample17">
+                            <i class='fas fa-cat'></i>
+                            Pet supplies
+                        </a>
+                        <div class="collapse" id="collapseExample17">
+                            <div class="card card-body">
+                                <div class="collapse-container d-flex flex-wrap">
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">FOR DOGS AND CATS</a></h4>
+
+                                        <p><a href="">Dog's food</a></p>
+                                        <p><a href="">Cat's food</a></p>
+                                        <p><a href="">Various goods</a></p>
+                                        <p><a href="">Toys for dogs and cats</a></p>
+                                        <p><a href="">Beds for cats and dogs</a></p>
+                                        <p><a href="">Collars for dogs and cats</a></p>
+                                        <p><a href="">Clothes for dogs and cats</a></p>
+                                        <p><a href="">WC boxes for dogs and cats</a></p>
+                                        <p><a href="">Cat's litter</a></p>
+                                        <p><a href="">Travel goods for pets</a></p>
+                                    </div>
+                                    <div class="under-categories">
+                                        <h4><a href="" class="font-weight-bolder">PET CARE, OTHER</a></h4>
+
+                                        <p><a href="">Goods for small animals</a></p>
+                                        <p><a href="">Shampoos for pets</a></p>
+                                        <p><a href="">Scratching posts</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="left-column login">
+            <div class="categories">
+                <div class="categories-dom">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <span>CATEGORIES</span>
+                </div>
+                <ul class="list-of-categories">
+                    <li class="orangle-font border-bottom-none">
+                        <a href="">
+                            <i class='fa-solid fa-fire-flame-curved'></i>
+                            TOP-50 Best Sellers
+                        </a>
+                    </li>
+                    <li class="Xmas-sellout border-bottom-none product-category">
+                        <a href="">
+                            <i class='fa-solid fa-tag'></i>
+                            LAOMUUK
+                        </a>
+                        <div class="underlist-product Xmas-sellout">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="">CATEGORIES 1</a></h4>
+
+                                    <p><a href="">Telefonid, tahvelarvutid, Apple pood</a></p>
+                                    <p><a href="">Arvutid</a></p>
+                                    <p><a href="">Video ja Audio</a></p>
+                                    <p><a href="">Ilu ja Tervis</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="">CATEGORIES 2</a></h4>
+
+                                    <p><a href="">Telefonid, tahvelarvutid, Apple pood</a></p>
+                                    <p><a href="">Arvutid</a></p>
+                                    <p><a href="">Video ja Audio</a></p>
+                                    <p><a href="">Ilu ja Tervis</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="">CATEGORIES 3</a></h4>
+
+                                    <p><a href="">Telefonid, tahvelarvutid, Apple pood</a></p>
+                                    <p><a href="">Arvutid</a></p>
+                                    <p><a href="">Video ja Audio</a></p>
+                                    <p><a href="">Ilu ja Tervis</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="">CATEGORIES 4</a></h4>
+
+                                    <p><a href="">Telefonid, tahvelarvutid, Apple pood</a></p>
+                                    <p><a href="">Arvutid</a></p>
+                                    <p><a href="">Video ja Audio</a></p>
+                                    <p><a href="">Ilu ja Tervis</a></p>
+                                </div>
+                            </div>
+                            <img src="images/img_for_category.png" alt="...">
+                        </div>
+                    </li>
+                    <li class="orangle-font">
+                        <a href="">
+                            <i class='fa-solid fa-cart-shopping'></i>
+                            Sell-out
+                        </a>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fas fa-mobile-alt'></i>
+                            Phones
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="">SMARTPHONES AND -WATCHES</a></h4>
+
+                                    <p><a href="">Smartphone</a></p>
+                                    <p><a href="">Mobile Phones</a></p>
+                                    <p><a href="">Cordless phones</a></p>
+                                    <p><a href="">Smart watches</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="">ACCESSORIES FOR MOBILES</a></h4>
+
+                                    <p><a href="">Protective covers</a></p>
+                                    <p><a href="">Protective films</a></p>
+                                    <p><a href="">Changing device</a></p>
+                                    <p><a href="">Phone Battery</a></p>
+                                    <p><a href="">Hands-free</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="">TABLETS AND E-READERS</a></h4>
+
+                                    <p><a href="">Tablets PC</a></p>
+                                    <p><a href="">E-Book</a></p>
+                                    <p><a href="">Charging device</a></p>
+                                    <p><a href="">Phone Battery</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fa-solid fa-microchip'></i>
+                            It technologies
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bold">COMPUTERS</a></h4>
+
+                                    <p><a href="">Desktop PCs</a></p>
+                                    <p><a href="">Laptops and accessories</a></p>
+                                    <p><a href="">Tablets PC</a></p>
+                                    <p><a href="">E-Book</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bold">COMPUTER PERIPHERALS</a></h4>
+
+                                    <p><a href="">Monitor accessories</a></p>
+                                    <p><a href="">Printers</a></p>
+                                    <p><a href="">External Hard Drives</a></p>
+                                    <p><a href="">Memory Sticks</a></p>
+                                    <p><a href="">Networking Products</a></p>
+                                    <p><a href="">Multimedia</a></p>
+                                    <p><a href="">Computer Mouses</a></p>
+                                    <p><a href="">Keyboards</a></p>
+                                    <p><a href="">Web Cameras</a></p>
+                                    <p><a href="">Scanners</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bold">FOR OFFICE</a></h4>
+
+                                    <p><a href="">Office appliances</a></p>
+                                    <p><a href="">Laminators</a></p>
+                                    <p><a href="">Paper shredders</a></p>
+                                    <p><a href="">Devices for bar codes</a></p>
+                                    <p><a href="">Smart-Home</a></p>
+                                    <p><a href="">Computer speakers</a></p>
+                                    <p><a href="">Raspberry PI</a></p>
+                                    <p><a href="">Cables and rubs</a></p>
+                                    <p><a href="">Cables and extension cords</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">PC COMPONENTS</a></h4>
+
+                                    <p><a href="">Cases</a></p>
+                                    <p><a href="">CPU</a></p>
+                                    <p><a href="">HDD</a></p>
+                                    <p><a href="">Motherboards</a></p>
+                                    <p><a href="">PSU</a></p>
+                                    <p><a href="">RAM</a></p>
+                                    <p><a href="">Sound cards</a></p>
+                                    <p><a href="">Cooler</a></p>
+                                    <p><a href="">Wi-Fi accessories</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fa fa-birthday-cake'></i>
+                            Entertainment
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">FIREWORKS 18+</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fa fa-tv'></i>
+                            TV, audio, video
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">TV, ACCESSORIES</a></h4>
+
+                                    <p><a href="">Television Sets</a></p>
+                                    <p><a href="">TV accessories</a></p>
+                                    <p><a href="">Mountings</a></p>
+                                    <p><a href="">Accessories</a></p>
+                                    <p><a href="">Kartina.tv</a></p>
+                                    <p><a href="">Digi boxes for smart-TV</a></p>
+                                    <p><a href="">Smart Sticks</a></p>
+                                    <p><a href="">Antennas and accessories</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">AUDIO</a></h4>
+
+                                    <p><a href="">Stereo Systems</a></p>
+                                    <p><a href="">Home theater systems</a></p>
+                                    <p><a href="">Loudspeakers</a></p>
+                                    <p><a href="">Headphones</a></p>
+                                    <p><a href="">Subwoofers</a></p>
+                                    <p><a href="">Soundbar speakers</a></p>
+                                    <p><a href="">Musical centers</a></p>
+                                    <p><a href="">Receivers</a></p>
+                                    <p><a href="">Amplifer</a></p>
+                                    <p><a href="">MP3 Players</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">VIDEO</a></h4>
+
+                                    <p><a href="">Video Projectors</a></p>
+                                    <p><a href="">DVD Players</a></p>
+                                    <p><a href="">Film</a></p>
+                                    <p><a href="">MP4 players</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fa-solid fa-camera'></i>
+                            Photo and Video
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">CAMERAS</a></h4>
+
+                                    <p><a href="">Digital Cameras</a></p>
+                                    <p><a href="">DSLR</a></p>
+                                    <p><a href="">Compact camera</a></p>
+                                    <p><a href="">Video Cameras</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">BAGS, TRIPODS, FILTERS</a></h4>
+
+                                    <p><a href="">Memory cards</a></p>
+                                    <p><a href="">Filters</a></p>
+                                    <p><a href="">Stands</a></p>
+                                    <p><a href="">Digital Frames</a></p>
+                                    <p><a href="">Camera Case</a></p>
+                                    <p><a href="">Others</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">LENSES AND FLASHES</a></h4>
+
+                                    <p><a href="">Lenses</a></p>
+                                    <p><a href="">Flash</a></p>
+                                    <p><a href="">Lenses Accessories</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">BATTERIES, CHARGERS AND ACCESSORIES</a></h4>
+
+                                    <p><a href="">Battery</a></p>
+                                    <p><a href="">Digital Frames</a></p>
+                                    <p><a href="">Battery and chargers</a></p>
+                                    <p><a href="">Photographic paper</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">LIGHT AND PROFESSIONAL EQUIPMENT</a></h4>
+
+                                    <p><a href="">Studio Lighting, Flash & Light Meter</a></p>
+                                    <p><a href="">Stands</a></p>
+                                    <p><a href="">Others</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fa-solid fa-guitar'></i>
+                            Musical Instruments
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">MUSICAL INSTRUMENTS</a></h4>
+
+                                    <p><a href="">Acoustic guitars</a></p>
+                                    <p><a href="">Electric guitars</a></p>
+                                    <p><a href=""></a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">BATTERIES, CHARGERS AND ACCESSORIES</a></h4>
+
+                                    <p><a href="">Battery</a></p>
+                                    <p><a href="">Digital Frames</a></p>
+                                    <p><a href="">Battery and chargers</a></p>
+                                    <p><a href="">Photographic paper</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">LIGHT AND PROFESSIONAL EQUIPMENT</a></h4>
+
+                                    <p><a href="">Studio Lighting, Flash & Light Meter</a></p>
+                                    <p><a href="">Stands</a></p>
+                                    <p><a href="">Others</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fa fa-home'></i>
+                            Home Appliance
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">LARGE HOME APPLIANCES</a></h4>
+
+                                    <p><a href="">Refrigerators</a></p>
+                                    <p><a href="">Side-by Side Refrigerators</a></p>
+                                    <p><a href="">Portable dishwasher</a></p>
+                                    <p><a href="">Washing Machines</a></p>
+                                    <p><a href="">Clothes dryers</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">SMALL HOUSEHOLD APPLIANCES</a></h4>
+
+                                    <p><a href="">Vacuum cleaner</a></p>
+                                    <p><a href="">Robot vacuum cleaner</a></p>
+                                    <p><a href="">Pressure washer</a></p>
+                                    <p><a href="">Hand vacuum cleaner</a></p>
+                                    <p><a href="">Cleaning</a></p>
+                                    <p><a href="">Vacuum cleaner accessories</a></p>
+                                    <p><a href="">Clothing care</a></p>
+                                    <p><a href="">Sewing-machines</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">INTEGRATED APPLIANCES</a></h4>
+
+                                    <p><a href="">Build-in Hobs</a></p>
+                                    <p><a href="">Ovens</a></p>
+                                    <p><a href="">Build-in Range Hoods</a></p>
+                                    <p><a href="">Build-in Refrigerators</a></p>
+                                    <p><a href="">Integrated Microwave Ovens</a></p>
+                                    <p><a href="">Build-in Dishwashers</a></p>
+                                    <p><a href="">Integrated Washing Machines</a></p>
+                                    <p><a href="">Integrated Appliances</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">INTEGRATED APPLIANCES</a></h4>
+
+                                    <p><a href="">Build-in Hobs</a></p>
+                                    <p><a href="">Ovens</a></p>
+                                    <p><a href="">Build-in Range Hoods</a></p>
+                                    <p><a href="">Build-in Refrigerators</a></p>
+                                    <p><a href="">Integrated Microwave Ovens</a></p>
+                                    <p><a href="">Build-in Dishwashers</a></p>
+                                    <p><a href="">Integrated Washing Machines</a></p>
+                                    <p><a href="">Integrated Appliances</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">SMALL KITCHEN APPLIANCES</a></h4>
+
+                                    <p><a href="">Microwave oven</a></p>
+                                    <p><a href="">Food Processors and Mincers</a></p>
+                                    <p><a href="">Multi cookers</a></p>
+                                    <p><a href="">Fryers</a></p>
+                                    <p><a href="">Grills</a></p>
+                                    <p><a href="">Blenders</a></p>
+                                    <p><a href="">Electric mixer</a></p>
+                                    <p><a href="">Bread toaster</a></p>
+                                    <p><a href="">Soda stream</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">OTHER KITCHEN APPLIANCES</a></h4>
+
+                                    <p><a href="">Pots, pans, baking tins</a></p>
+                                    <p><a href="">Knives</a></p>
+                                    <p><a href="">Knife sharpeners</a></p>
+                                    <p><a href="">Kitchen Scales</a></p>
+                                    <p><a href="">Other</a></p>
+                                    <p><a href="">Sets</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">COFFEE MACHINES</a></h4>
+
+                                    <p><a href="">Coffee Machines</a></p>
+                                    <p><a href="">Espresso Machines</a></p>
+                                    <p><a href="">Coffee grinders</a></p>
+                                    <p><a href="">Coffee Machines</a></p>
+                                    <p><a href="">Capsule</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">OTHER HOUSEHOLD APPLIANCES</a></h4>
+
+                                    <p><a href="">Boilers</a></p>
+                                    <p><a href="">Air Conditioners</a></p>
+                                    <p><a href="">Humidifiers</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fas fa-tools'></i>
+                            Building and Construction
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">POWER TOOLS</a></h4>
+
+                                    <p><a href="">Cordless tools</a></p>
+                                    <p><a href="">Impact Drills</a></p>
+                                    <p><a href="">Saws</a></p>
+                                    <p><a href="">Multi tool</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">HAND TOOLS</a></h4>
+
+                                    <p><a href="">Other Tools</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">POWER TOOLS FOR THE GARDEN</a></h4>
+
+                                    <p><a href="">Lawn mowers</a></p>
+                                    <p><a href="">Grass Shears & Trimmers</a></p>
+                                    <p><a href="">Hedge Shears & Pruners</a></p>
+                                    <p><a href="">Leaf Blowers & Vacuums</a></p>
+                                    <p><a href="">Pumps</a></p>
+                                    <p><a href="">Garden tool accessories</a></p>
+                                    <p><a href="">Cables and extension cords</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fas fa-dumbbell'></i>
+                            Health and sports
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">GYMS AND FITNESS</a></h4>
+
+                                    <p><a href="">Training equipment and fitness</a></p>
+                                    <p><a href="">Fitness Watches</a></p>
+                                    <p><a href="">Walking sticks</a></p>
+                                    <p><a href="">Bottles and Shakers</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">BICYCLES</a></h4>
+
+                                    <p><a href="">Bicycle</a></p>
+                                    <p><a href="">Vehicle Accessories</a></p>
+                                    <p><a href="">Velocomputers</a></p>
+                                    <p><a href="">Bottles and holders</a></p>
+                                    <p><a href="">Carrier</a></p>
+                                    <p><a href="">Locks</a></p>
+                                    <p><a href="">Wings</a></p>
+                                    <p><a href="">Pumps</a></p>
+                                    <p><a href="">Sunglasses</a></p>
+                                    <p><a href="">Lanterns</a></p>
+                                    <p><a href="">Helmets</a></p>
+                                    <p><a href="">Spare parts</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">ROLLERS, SKATEBOARDS, SCOOTERS</a></h4>
+
+                                    <p><a href="">Roller skates</a></p>
+                                    <p><a href="">Helmets</a></p>
+                                    <p><a href="">Hoverboards</a></p>
+                                    <p><a href="">Scooters</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">SPORT</a></h4>
+
+                                    <p><a href="">Tennis</a></p>
+                                    <p><a href="">Darts</a></p>
+                                    <p><a href="">Golfiseade</a></p>
+                                    <p><a href="">Badminton</a></p>
+                                    <p><a href="">SUP board</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">FOR MALE BEAUTY</a></h4>
+
+                                    <p><a href="">Shavers</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">FOR FEMALE BEAUTY</a></h4>
+
+                                    <p><a href="">Hair care</a></p>
+                                    <p><a href="">Body care</a></p>
+                                    <p><a href="">Body warming</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">HEALTH AND HYGIENE</a></h4>
+
+                                    <p><a href="">Scales</a></p>
+                                    <p><a href="">Oral care</a></p>
+                                    <p><a href="">Blood pressure monitors</a></p>
+                                    <p><a href="">Massage appliances</a></p>
+                                    <p><a href="">Thermometers</a></p>
+                                    <p><a href="">Nebulizers</a></p>
+                                    <p><a href="">Oximeter</a></p>
+                                    <p><a href="">Hygiene</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fa fa-tree'></i>
+                            Home, Garden
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">FOR HOME</a></h4>
+
+                                    <p><a href="">Candles</a></p>
+                                    <p><a href="">Vases</a></p>
+                                    <p><a href="">Solar panels</a></p>
+                                    <p><a href="">Fabrics</a></p>
+                                    <p><a href="">Saunas, stoves</a></p>
+                                    <p><a href="">Bathroom</a></p>
+                                    <p><a href="">Wall Clock</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">FOR GARDEN</a></h4>
+
+                                    <p><a href="">Garden</a></p>
+                                    <p><a href="">Garden tools</a></p>
+                                    <p><a href="">Tables</a></p>
+                                    <p><a href="">Chairs</a></p>
+                                    <p><a href="">Reclining chairs</a></p>
+                                    <p><a href="">Swings</a></p>
+                                    <p><a href="">Barbecue & raclette</a></p>
+                                    <p><a href="">Benches</a></p>
+                                    <p><a href="">Trampolines</a></p>
+                                    <p><a href="">Trimmerid</a></p>
+                                    <p><a href="">Balcony sets</a></p>
+                                    <p><a href="">Garden equipment and tools</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fa fa-child'></i>
+                            For children
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">TOYS</a></h4>
+
+                                    <p><a href="">LEGO</a></p>
+                                    <p><a href="">R / C</a></p>
+                                    <p><a href="">Slot racing tracks and accessories</a></p>
+                                    <p><a href="">Toys</a></p>
+                                    <p><a href="">Auto</a></p>
+                                    <p><a href="">Do it yourself</a></p>
+                                    <p><a href="">3D Pen</a></p>
+                                    <p><a href="">Plush toys</a></p>
+                                    <p><a href="">Bags and backpacks</a></p>
+                                    <p><a href="">Puzzle</a></p>
+                                    <p><a href="">Games for babies</a></p>
+                                    <p><a href="">Board games</a></p>
+                                    <p><a href="">Drawing and painting</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">MEANS OF TRANSPORT</a></h4>
+
+                                    <p><a href="">Electric cars</a></p>
+                                    <p><a href="">Children's bicycles</a></p>
+                                    <p><a href="">Scooters</a></p>
+                                    <p><a href="">Hoverboards</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">FOR BABIES</a></h4>
+
+                                    <p><a href="">Trolleys, carrying bags</a></p>
+                                    <p><a href="">For babies</a></p>
+                                    <p><a href="">Diapers and swaddling</a></p>
+                                    <p><a href="">Baby feeding tools</a></p>
+                                    <p><a href="">Babysitter</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">SECURITY</a></h4>
+
+                                    <p><a href="">Children's car seats</a></p>
+                                    <p><a href="">Night lights</a></p>
+                                    <p><a href="">Safety for children</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fas fa-couch'></i>
+                            Furniture
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">LIVING ROOM</a></h4>
+
+                                    <p><a href="">Sofas</a></p>
+                                    <p><a href="">Ancillary tables</a></p>
+                                    <p><a href="">Dinner tables</a></p>
+                                    <p><a href="">Mirror</a></p>
+                                    <p><a href="">Coffee tables</a></p>
+                                    <p><a href="">Decorative pillows</a></p>
+                                    <p><a href="">Living room</a></p>
+                                    <p><a href="">Chairs</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">BEDROOM</a></h4>
+
+                                    <p><a href="">Bed</a></p>
+                                    <p><a href="">Bed continental</a></p>
+                                    <p><a href="">Dressers</a></p>
+                                    <p><a href="">Mattress</a></p>
+                                    <p><a href="">Cabinets</a></p>
+                                    <p><a href="">Bedside tables for clothes</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">OFFICE FURNITURE</a></h4>
+
+                                    <p><a href="">Manager chairs</a></p>
+                                    <p><a href="">Work chairs</a></p>
+                                    <p><a href="">Office furniture</a></p>
+                                    <p><a href="">Shelving</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">CHILDREN'S FURNITURE</a></h4>
+
+                                    <p><a href="">Children's car seats</a></p>
+                                    <p><a href="">Children's chairs</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="#">
+                            <i class='fa-solid fa-shirt'></i>
+                            Clothes, shoes, watches, jewelry
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">CLOTHES, SHOES</a></h4>
+
+                                    <p><a href="">Heated clothes</a></p>
+                                    <p><a href="">Work shoes</a></p>
+                                    <p><a href="">Shoes</a></p>
+                                    <p><a href="">Children's clothing</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">WATCHES, JEWELRY</a></h4>
+
+                                    <p><a href="">Watch</a></p>
+                                    <p><a href="">Jewelry</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fa fa-car'></i>
+                            Transport
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <p><a href="">GPS device</a></p>
+                                    <p><a href="">Hands-free</a></p>
+                                    <p><a href="">Portable radio</a></p>
+                                    <p><a href="">Video recorders</a></p>
+                                    <p><a href="">Accessories</a></p>
+                                    <p><a href="">Car audio</a></p>
+                                    <p><a href="">Chargers / Converters</a></p>
+                                    <p><a href="">Different</a></p>
+                                    <p><a href="">Tires</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fa fa-female'></i>
+                            Cosmetics
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <p><a href="">Perfume</a></p>
+                                    <p><a href="">Gift ideas</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category">
+                        <a href="">
+                            <i class='fa fa-cutlery'></i>
+                            Food
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <p><a href="">Drinks</a></p>
+                                    <p><a href="">Coffee Tea</a></p>
+                                    <p><a href="">Supplements</a></p>
+                                    <p><a href="">Confectionery</a></p>
+                                    <p><a href="">Spices</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="product-category border-bottom-none">
+                        <a href="" class="border-bottom-hover">
+                            <i class='fas fa-cat'></i>
+                            Pet supplies
+                        </a>
+                        <div class="underlist-product">
+                            <div class="top-line">...</div>
+                            <div class="category-container">
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">FOR DOGS AND CATS</a></h4>
+
+                                    <p><a href="">Dog's food</a></p>
+                                    <p><a href="">Cat's food</a></p>
+                                    <p><a href="">Various goods</a></p>
+                                    <p><a href="">Toys for dogs and cats</a></p>
+                                    <p><a href="">Beds for cats and dogs</a></p>
+                                    <p><a href="">Collars for dogs and cats</a></p>
+                                    <p><a href="">Clothes for dogs and cats</a></p>
+                                    <p><a href="">WC boxes for dogs and cats</a></p>
+                                    <p><a href="">Cat's litter</a></p>
+                                    <p><a href="">Travel goods for pets</a></p>
+                                </div>
+                                <div class="categories-in-categories">
+                                    <h4><a href="" class="font-weight-bolder">PET CARE, OTHER</a></h4>
+
+                                    <p><a href="">Goods for small animals</a></p>
+                                    <p><a href="">Shampoos for pets</a></p>
+                                    <p><a href="">Scratching posts</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="center-column">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Login</li>
+                </ol>
+            </nav>
+            <div class="body-container">
+                <div class="title-container">
+                    <h3>Login</h3>
+                </div>
+                <div class="login-form">
+                    <div class="login-fields">
+                        <form action="">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="E-mail">
+                                <label for="floatingInput">E-mail</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+
+                            <a href="" class="forgot-pass">Forgot password?</a>
+                            <div class="login-btn">
+                                <input type="button" class="btn" value="LOGIN">
+                            </div>
+
+                            <p>
+                                No account?
+                                <a href="">
+                                    Sign up
+                                </a>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="extra-links">
+                        <a href="" class="btn facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            Facebook
+                        </a>
+                        <a href="" class="btn google">
+                            <i class="fa-brands fa-google-plus"></i>
+                            Google
+                        </a>
+                        <a href="" class="btn payPal">
+                            <img src="images/payPal.png" alt="payPal">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button
+            type="button"
+            class="btn btn-floating btn-lg"
+            id="btn-back-to-top"
+    >
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <footer>
+        <div class="footer-content">
+            <div class="logoFooter">
+                <img src="images/logo.svg" alt="logo">
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since
+                    the 1500s
+                </p>
+                <div class="SNlinks">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.twitter.com" target="_blank">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://gmail.com" target="_blank">
+                        <i class="fa-regular fa-envelope"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="extraInfoFooter">
+                <div class="infoFooter companyInformation">
+                    <h6>INFORMATION</h6>
+                    <a href="">Prices drop</a>
+                    <a href="">New products</a>
+                    <a href="">Best sales</a>
+                    <a href="">Sitemap</a>
+                    <a href="">Stores</a>
+                </div>
+                <div class="companyFooter companyInformation">
+                    <h6>OUR COMPANY</h6>
+                    <a href="">Delivery</a>
+                    <a href="">Legal Notice</a>
+                    <a href="">About us</a>
+                    <a href="">Secure payment</a>
+                    <a href="">Contact us</a>
+                </div>
+                <div class="accountFooter companyInformation">
+                    <h6>YOUR ACCOUNT</h6>
+                    <a href="">Personal info</a>
+                    <a href="">Orders</a>
+                    <a href="">Credit slips</a>
+                    <a href="">Addresses</a>
+                    <a href="">My wishlists</a>
+                </div>
+                <div class="contactFooter">
+                    <h6>CONTACT US</h6>
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Frogest OÜ (reg. 12661899), KMKR nr. EE101718990,
+                        10138 Tallinn, Estonia, Veerenni 38 E-R 09:00 - 18:00
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-clock"></i>
+                        E - R 09:00 - 18:00
+                    </p>
+                    <p>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        (+372) 6 111 111
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        info@frog.ee
+                    </p>
+                </div>
+                <div class="instagramFooter">
+                    <h6>INSTAGRAM</h6>
+                    <div class="instaPictures">
+                        <img src="images/instagram/instagram1.png" alt="...">
+                        <img src="images/instagram/instagram2.png" alt="...">
+                        <img src="images/instagram/instagram3.png" alt="...">
+                        <img src="images/instagram/instagram4.png" alt="...">
+                        <img src="images/instagram/instagram5.png" alt="...">
+                        <img src="images/instagram/instagram6.png" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="extraFooter">
+            <span>2020 FROGEST. All rights reserved</span>
+        </div>
+    </footer>
+</body>
+</html>
