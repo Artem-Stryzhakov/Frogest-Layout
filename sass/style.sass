@@ -306,6 +306,41 @@ body
       justify-content: center
       gap: 10px
 
+      &:is(.dropdown-center)
+        .dropdown-menu
+          width: 200px
+          padding: 10px
+          transform: translate(-40%, 0)
+
+          @media screen and (max-width: 1380px)
+            transform: translate(-50%, 0)
+
+          @include dropdown_menu_account
+
+          .login
+            display: flex
+            justify-content: center
+            align-items: center
+            background: $mainColor
+            height: 50px
+            border-radius: 30px
+            margin: 15px 0
+
+          .line
+            height: 1px
+            background: #9a9a9a
+            width: 100%
+
+          .not-reg
+            text-align: center
+            color: $secondColor
+            font-weight: 700
+            margin-top: 7px
+
+          .signup
+            background: darken($mainColor, 20)
+            border-radius: 30px
+
       @media screen and (min-width: 1531px)
         .data-for-buttons
           display: grid
@@ -391,6 +426,15 @@ body
     align-items: center
     justify-content: center
     gap: 10px
+
+    &:is(.dropdown-center)
+      .dropdown-menu
+        width: 200px
+        padding: 10px
+        transform: translate(-80%, 0)
+
+        @include dropdown_menu_account
+
 
     @media screen and (max-width: 992px)
       display: flex
@@ -524,32 +568,28 @@ body
   margin-left: 1%
   margin-right: 1%
 
-  @media screen and (max-width: 992px)
-    .left-column
-      display: none
-
-  @media screen and (min-width: 992px)
-    .left-column
-      display: inherit
-
   .left-column
+    display: flex
+    flex-direction: column
     width: 230px
     max-height: 836px
+    z-index: 10
 
-    &:is(.productPage)
+    @media screen and (max-width: 992px)
+      display: none
+
+    @media screen and (min-width: 992px)
+      display: inherit
+
+    &:is(.top-position)
       position: absolute
       left: 5%
       margin-left: 0
-      z-index: 19
+
+    &:is(.login)
+      margin-left: -150px
 
     // ===== CATEGORIES LIST ====== //
-    @media screen and (max-width: 1230px)
-      .categories:not(.productPage)
-        margin-top: 30px
-
-      &.productPage:is(.productPage)
-        margin-top: -15px
-
 
     .categories
       background-color: #6bb42a
@@ -658,6 +698,31 @@ body
 
                 p a
                   font-weight: normal
+
+    .nav
+      display: flex
+      flex-direction: column
+      gap: 1px
+      margin-top: 20px
+      width: 100%
+      background: lightgray
+      border-radius: 7px
+
+      .nav-link
+        background: white
+        color: $secondColor
+        border-radius: 0
+
+        &:is(.active)
+          font-weight: bold
+
+        &:is(.first)
+          border-top-left-radius: 7px
+          border-top-right-radius: 7px
+
+        &:is(.last)
+          border-bottom-left-radius: 7px
+          border-bottom-right-radius: 7px
 
   .center-column
     margin-right: 30px
@@ -1113,17 +1178,18 @@ footer
   background-color: $secondColor
 
   @media screen and (max-width: 499px)
-    .footer-content
-      display: none
-
-  @media screen and (min-width: 500px)
-    .footer-content
-      display: flex
+    margin-top: 80px
 
   .footer-content
     justify-content: center
     padding: 25px
     margin-top: 50px
+
+    @media screen and (max-width: 499px)
+      display: none
+
+    @media screen and (min-width: 500px)
+      display: flex
 
     p
       color: $lineColor
@@ -1815,3 +1881,140 @@ footer
 
     @include show-products-in-slider
     @include sliderHowerEffect
+
+// =========== LOGIN PAGE STYLES ============ //
+
+.breadcrumb
+  .breadcrumb-item
+    a
+      text-decoration: none
+      color: $secondColor
+
+  .active
+    color: $mainColor
+
+.body-container
+  border-radius: 7px
+  background: white
+
+  .login-form
+    display: flex
+    box-sizing: border-box
+    padding: 20px
+    margin: 15px 0
+
+    @media screen and (max-width: 1280px)
+      flex-direction: column
+
+    .login-fields
+      width: 45%
+      margin-right: 30px
+
+      @media screen and (max-width: 1280px)
+        width: 100%
+
+      form
+        display: flex
+        flex-direction: column
+        justify-content: right
+
+        .form-control
+          margin-bottom: 15px
+
+        .forgot-pass
+          color: $mainColor
+          text-decoration: none
+          text-align: right
+
+        .login-btn
+          display: flex
+          justify-content: end
+
+          input[type=button]
+            width: 150px
+            height: 50px
+            border-radius: 25px
+            background: $mainColor
+            color: white
+            margin: 15px 0
+
+
+        p
+          text-align: right
+          a
+            text-decoration: none
+            color: $mainColor
+
+    .extra-links
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      gap: 10px
+      width: 45%
+      background: rgb(236, 255, 221)
+
+      @media screen and (max-width: 1280px)
+        width: 100%
+        padding: 25px 0
+
+      .btn
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 10px
+        width: 260px
+        height: 60px
+        font-weight: 700
+        border-radius: 5px
+        color: white
+        font-size: 18px
+
+        @media screen and (max-width: 450px)
+          width: calc(100% - 50px)
+
+        &:is(.facebook)
+          background: #0a0a83
+
+        &:is(.google)
+          background: #4e4efa
+
+        &:is(.payPal)
+          background: white
+          border: 1px solid black
+
+        img
+          width: 100px
+
+  .main-container
+    box-sizing: border-box
+    padding: 20px
+    border-radius: 7px
+    background: white
+
+    .required-bold
+      font-weight: bold
+
+    .req-field
+      color: $mainColor
+
+    .personalInfo-form
+      display: flex
+      flex-direction: column
+      max-width: 50%
+
+      label
+        font-weight: bold
+
+        .star
+          color: $mainColor
+
+.title-container
+  box-sizing: border-box
+  padding: 7px 10px
+  background: $secondColor
+  color: white
+  border-radius: 7px
+
+  h3
+    font-size: 23px

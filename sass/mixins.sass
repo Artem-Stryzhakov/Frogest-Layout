@@ -368,3 +368,52 @@
           padding: 5px
           box-sizing: border-box
           border-radius: 50%
+
+@mixin dropdown_menu_account
+  .btn
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 7px
+    width: 100%
+    margin: auto auto 7.5px
+    color: white
+    font-weight: 700
+    height: 50px
+
+    &:is(.facebook)
+      background: #0a0a83
+
+    &:is(.google)
+      background: #4e4efa
+
+    &:is(.payPal)
+      background: white
+      border: 1px solid black
+
+      img
+        width: 100px
+
+    &:is(.login)
+      display: flex
+      justify-content: center
+      align-items: center
+      background: $mainColor
+      height: 50px
+      border-radius: 30px
+      margin: 15px 0
+
+    .line
+      height: 1px
+      background: #9a9a9a
+      width: 100%
+
+    .not-reg
+      text-align: center
+      color: $secondColor
+      font-weight: 700
+      margin-top: 7px
+
+    &:is(.signup)
+      background: darken($mainColor, 20)
+      border-radius: 30px

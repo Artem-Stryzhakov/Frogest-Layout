@@ -1,5 +1,3 @@
-<!--https://mockup.frog.ee/-->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,15 +10,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <!--FONTAWSOME ICONS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--CUSTOM CSS-->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="https://frog.ee/img/favicon-1.ico?167092613" type="image/x-icon">
-    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+    <!--JQuery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!--Carousel Top Deals-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--CUSTOM CSS-->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="https://frog.ee/img/favicon-1.ico?167092613" type="image/x-icon">
 
-    <script type="module" src="scripts/script.js"></script>
-    <script type="module" src="scripts/aboutUs.js"></script>
-    <title>About</title>
+    <script type="module" src="../scripts/script.js"></script>
+    <title>Login</title>
 </head>
 <body>
     <div class="top-header">
@@ -86,7 +87,7 @@
                 <button class="btn button-menu-in-header" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
                     <i class="fa-solid fa-bars"></i>
                 </button>
-                <img src="images/logo.svg" alt="...">
+                <img src="../images/logo.svg" alt="...">
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="d-flex form-inputs">
@@ -97,7 +98,7 @@
                             <ul>
                                 <li class="ac-odd">
                                     <a href="" class="first">
-                                        <img src="images/frog.png" alt="...">
+                                        <img src="../images/frog.png" alt="...">
                                         <div class="name-price">
                                             <p class="product-name-seach"></p>
                                             <span class="price-search"></span>
@@ -106,7 +107,7 @@
                                 </li>
                                 <li class="ac-odd">
                                     <a href="">
-                                        <img src="images/frog.png" alt="...">
+                                        <img src="../images/frog.png" alt="...">
                                         <div class="name-price">
                                             <p class="product-name-seach"></p>
                                             <span class="price-search"></span>
@@ -115,7 +116,7 @@
                                 </li>
                                 <li class="ac-odd">
                                     <a href="">
-                                        <img src="images/frog.png" alt="...">
+                                        <img src="../images/frog.png" alt="...">
                                         <div class="name-price">
                                             <p class="product-name-seach"></p>
                                             <span class="price-search"></span>
@@ -124,7 +125,7 @@
                                 </li>
                                 <li class="ac-odd">
                                     <a href="">
-                                        <img src="images/frog.png" alt="...">
+                                        <img src="../images/frog.png" alt="...">
                                         <div class="name-price">
                                             <p class="product-name-seach"></p>
                                             <span class="price-search"></span>
@@ -133,7 +134,7 @@
                                 </li>
                                 <li class="ac-odd">
                                     <a href="">
-                                        <img src="images/frog.png" alt="...">
+                                        <img src="../images/frog.png" alt="...">
                                         <div class="name-price">
                                             <p class="product-name-seach"></p>
                                             <span class="price-search"></span>
@@ -142,7 +143,7 @@
                                 </li>
                                 <li class="ac-odd">
                                     <a href="">
-                                        <img src="images/frog.png" alt="...">
+                                        <img src="../images/frog.png" alt="...">
                                         <div class="name-price">
                                             <p class="product-name-seach"></p>
                                             <span class="price-search"></span>
@@ -151,7 +152,7 @@
                                 </li>
                                 <li class="ac-odd">
                                     <a href="">
-                                        <img src="images/frog.png" alt="...">
+                                        <img src="../images/frog.png" alt="...">
                                         <div class="name-price">
                                             <p class="product-name-seach"></p>
                                             <span class="price-search"></span>
@@ -160,7 +161,7 @@
                                 </li>
                                 <li class="ac-odd">
                                     <a href="">
-                                        <img src="images/frog.png" alt="...">
+                                        <img src="../images/frog.png" alt="...">
                                         <div class="name-price">
                                             <p class="product-name-seach"></p>
                                             <span class="price-search"></span>
@@ -206,13 +207,32 @@
                                 <span>Compare</span>
                             </div>
                         </div>
-                        <div class="user-button-container">
-                            <button type="button" class="btn position-relative">
+                        <div class="user-button-container dropdown-center">
+                            <button type="button" class="btn position-relative" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class='fa fa-user'></i>
                             </button>
                             <div class="data-for-buttons">
                                 <span class="user-name">Andres</span>
                                 <span class="second-span">Logout</span>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="" class="btn facebook">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                    Facebook
+                                </a>
+                                <a href="" class="btn google">
+                                    <i class="fa-brands fa-google-plus"></i>
+                                    Google
+                                </a>
+                                <a href="" class="btn payPal">
+                                    <img src="../images/payPal.png" alt="payPal">
+                                </a>
+                                <a href="" class="btn login">LOGIN</a>
+
+                                <div class="line"></div>
+
+                                <p class="not-reg">Not registered?</p>
+                                <a href="" class="btn signup">SIGNUP</a>
                             </div>
                         </div>
                     </div>
@@ -236,10 +256,29 @@
                             </span>
                         </button>
                     </div>
-                    <div class="mobile-basket">
-                        <button type="button" class="btn position-relative">
+                    <div class="mobile-basket dropdown-center">
+                        <button type="button" class="btn position-relative" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class='fa fa-user'></i>
                         </button>
+                        <div class="dropdown-menu">
+                            <a href="" class="btn facebook">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                Facebook
+                            </a>
+                            <a href="" class="btn google">
+                                <i class="fa-brands fa-google-plus"></i>
+                                Google
+                            </a>
+                            <a href="" class="btn payPal">
+                                <img src="../images/payPal.png" alt="payPal">
+                            </a>
+                            <a href="" class="btn login">LOGIN</a>
+
+                            <div class="line"></div>
+
+                            <p class="not-reg">Not registered?</p>
+                            <a href="" class="btn signup">SIGNUP</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -252,7 +291,7 @@
                     <ul>
                         <li class="ac-odd">
                             <a href="" class="first">
-                                <img src="images/frog.png" alt="...">
+                                <img src="../images/frog.png" alt="...">
                                 <div class="name-price">
                                     <p class="product-name-seach"></p>
                                     <span class="price-search"></span>
@@ -261,7 +300,7 @@
                         </li>
                         <li class="ac-odd">
                             <a href="">
-                                <img src="images/frog.png" alt="...">
+                                <img src="../images/frog.png" alt="...">
                                 <div class="name-price">
                                     <p class="product-name-seach"></p>
                                     <span class="price-search"></span>
@@ -270,7 +309,7 @@
                         </li>
                         <li class="ac-odd">
                             <a href="">
-                                <img src="images/frog.png" alt="...">
+                                <img src="../images/frog.png" alt="...">
                                 <div class="name-price">
                                     <p class="product-name-seach"></p>
                                     <span class="price-search"></span>
@@ -279,7 +318,7 @@
                         </li>
                         <li class="ac-odd">
                             <a href="">
-                                <img src="images/frog.png" alt="...">
+                                <img src="../images/frog.png" alt="...">
                                 <div class="name-price">
                                     <p class="product-name-seach"></p>
                                     <span class="price-search"></span>
@@ -288,7 +327,7 @@
                         </li>
                         <li class="ac-odd">
                             <a href="">
-                                <img src="images/frog.png" alt="...">
+                                <img src="../images/frog.png" alt="...">
                                 <div class="name-price">
                                     <p class="product-name-seach"></p>
                                     <span class="price-search"></span>
@@ -297,7 +336,7 @@
                         </li>
                         <li class="ac-odd">
                             <a href="">
-                                <img src="images/frog.png" alt="...">
+                                <img src="../images/frog.png" alt="...">
                                 <div class="name-price">
                                     <p class="product-name-seach"></p>
                                     <span class="price-search"></span>
@@ -306,7 +345,7 @@
                         </li>
                         <li class="ac-odd">
                             <a href="">
-                                <img src="images/frog.png" alt="...">
+                                <img src="../images/frog.png" alt="...">
                                 <div class="name-price">
                                     <p class="product-name-seach"></p>
                                     <span class="price-search"></span>
@@ -315,7 +354,7 @@
                         </li>
                         <li class="ac-odd">
                             <a href="">
-                                <img src="images/frog.png" alt="...">
+                                <img src="../images/frog.png" alt="...">
                                 <div class="name-price">
                                     <p class="product-name-seach"></p>
                                     <span class="price-search"></span>
@@ -457,7 +496,7 @@
                                         <p><a href="">Ilu ja Tervis</a></p>
                                     </div>
                                 </div>
-                                <img src="images/img_for_category.png" alt="...">
+                                <img src="../images/img_for_category.png" alt="...">
                             </div>
                         </div>
                     </li>
@@ -1184,7 +1223,7 @@
     </div>
 
     <div class="column">
-        <div class="left-column">
+        <div class="left-column login">
             <div class="categories">
                 <div class="categories-dom">
                     <i class="fa fa-bars" aria-hidden="true"></i>
@@ -1238,7 +1277,7 @@
                                     <p><a href="">Ilu ja Tervis</a></p>
                                 </div>
                             </div>
-                            <img src="images/img_for_category.png" alt="...">
+                            <img src="../images/img_for_category.png" alt="...">
                         </div>
                     </li>
                     <li class="orangle-font">
@@ -1943,270 +1982,60 @@
                 </ul>
             </div>
         </div>
-
         <div class="center-column">
-            <div class="bread-crumbs">
-                <p>
-                    <span>Home</span>
-                    <span> >> </span>
-                    <span class="current-page">About</span>
-                </p>
-            </div>
-            <div class="infoContainers">
-                <div class="contentTitles">
-                    <p>About Frog.ee</p>
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Login</li>
+                </ol>
+            </nav>
+            <div class="body-container">
+                <div class="title-container">
+                    <h3>Login</h3>
                 </div>
-                <div class="content-about">
-                    <div class="description">
-                        <h2>E-shop FROG.EE</h2>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since
-                            the 1500s, when an unknown printer took a galley of type and scrambled
-                            it to make a type specimen book. It has survived not only five centuries,
-                            but also the leap into electronic typesetting, remaining essentially
-                            unchanged. <b>It was popularised in the 1960s with</b> the release of
-                            Letraset sheets containing Lorem Ipsum passages, and more recently
-                            with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.
-                        </p>
-                        <ul class="pointed-list">
-                            <li>
-                                <span>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since
-                                    the 1500s
-                                </span>
-                            </li>
-                            <li>
-                                <span>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since
-                                    the 1500s
-                                </span>
-                            </li>
-                            <li>
-                                <span>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                    Lorem Ipsum has been the industry's standard dummy text ever since
-                                    the 1500s
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                    <img src="images/imageHouse.png" alt="...">
-                </div>
-            </div>
-            <div class="infoContainers employers">
-                <div class="contentTitles">
-                    <p>Contacts</p>
-                </div>
-                <div class="content-about">
-                    <div class="main-content">
-                        <h2>Our wonderful team</h2>
-                        <div class="leadersPictures">
-                            <div class="infoAboutPerson">
-                                <img src="images/leaders/Aljona_200x300_new.jpg" alt="Elena">
-                                <div class="info-name-role">
-                                    <div class="name-role">
-                                        <span class="personName">Jelena Gorbenko</span>
-                                        <span class="personRole">Sales manager</span>
-                                    </div>
-                                    <a href="mailto:klienditugi@frog.ee">
-                                        <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
-                                    </a>
-                                </div>
+                <div class="login-form">
+                    <div class="login-fields">
+                        <form action="">
+                            <div class="form-floating">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="E-mail">
+                                <label for="floatingInput">E-mail</label>
                             </div>
-                            <div class="infoAboutPerson">
-                                <img src="images/leaders/Tatjana_200x300.jpg" alt="Tatjana">
-                                <div class="info-name-role">
-                                    <div class="name-role">
-                                        <span class="personName">Tatyana Fromzel</span>
-                                        <span class="personRole">B2B manager</span>
-                                    </div>
-                                    <a href="mailto:b2b@frog.ee">
-                                        <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
-                                    </a>
-                                </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="password">
+                                <label for="floatingPassword">Password</label>
                             </div>
-                            <div class="infoAboutPerson">
-                                <img src="images/leaders/Andrei_200x300.jpg" alt="Andrei">
-                                <div class="info-name-role">
-                                    <div class="name-role">
-                                        <span class="personName">Andrei Faizullin</span>
-                                        <span class="personRole">IT department manager</span>
-                                    </div>
-                                    <a href="mailto:it@frog.ee">
-                                        <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
-                                    </a>
-                                </div>
+
+                            <a href="" class="forgot-pass">Forgot password?</a>
+                            <div class="login-btn">
+                                <input type="button" class="btn" value="LOGIN">
                             </div>
-                            <div class="infoAboutPerson">
-                                <img src="images/leaders/Denis_200x300.jpg" alt="Denis">
-                                <div class="info-name-role">
-                                    <div class="name-role">
-                                        <span class="personName">Denis Lapa</span>
-                                        <span class="personRole">System administraator/DevOPS</span>
-                                    </div>
-                                    <a href="mailto:it@frog.ee">
-                                        <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <h2>Frogest OÜ</h2>
-                        <div class="infoPanel">
-                            <div class="information">
-                                <p>
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <span>Reg. 12661899</span>
-                                    <span>KMKR nr. EE101718990</span>
-                                </p>
-                                <p>
-                                    <i class="fa-solid fa-location-dot"></i>
-                                    <span>J.Vilmsi 41</span>
-                                    <span>Tallinn 10126, Estonia</span>
-                                </p>
-                                <p>
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                    (+372) 6 111 111
-                                </p>
-                                <p id="email">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <a href="mailto:info@frog.ee">info@frog.ee</a>
-                                </p>
-                            </div>
-                            <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029.9217598876414!2d24.749672953164676!3d59.41770006573192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46929533617c0bd5%3A0xa725ae87992cad80!2sFrog.ee%20-%20Veerenni%20Esindus!5e0!3m2!1sru!2see!4v1671008154136!5m2!1sru!2see"
-                                    style="border:0;"
-                                    allowfullscreen=""
-                                    loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
+
+                            <p>
+                                No account?
+                                <a href="">
+                                    Sign up
+                                </a>
+                            </p>
+                        </form>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="right-column">
-            <div class="right-product">
-                <p class="deal-title">Deal of the Day</p>
-                <hr>
-                <img src="https://images.hind.ee/43/62/apple-iphone-13-pro-max-128gb.jpg" alt="...">
-                <div class="side-product-info">
-                    <p class="product-name">Iphone 13 Pro Max</p>
-                    <span class="main-price">1590,90 €</span>
-                    <span class="discount-price">1239.<sup>50</sup></span>
-                </div>
-                <div class="discount-time">
-                    <div class="time-containers">
-                        <p>124</p>
-                        <p class="validity">Days</p>
-                    </div>
-                    <div class="time-containers">
-                        <p>8</p>
-                        <p class="validity">Hours</p>
-                    </div>
-                    <div class="time-containers">
-                        <p>45</p>
-                        <p class="validity">Min</p>
-                    </div>
-                    <div class="time-containers">
-                        <p>34</p>
-                        <p class="validity">Sec</p>
-                    </div>
-                </div>
-            </div>
-            <div class="new-products">
-                <p class="new-products-title">New products</p>
-                <div class="new-product-list">
-                    <img src="images/products/apple-airpods.jpg" alt="...">
-                    <div class="product-container-side">
-                        <div class="small-ratings">
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <span class="product-name-side">Apple Airpods</span>
-                        <span class="price-side">156,00 €</span>
-                    </div>
-                </div>
-                <div class="new-product-list">
-                    <img src="images/products/lenovo-ideapad-gaming-3.jpg" alt="...">
-                    <div class="product-container-side">
-                        <div class="small-ratings">
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <span class="product-name-side">Lenovo Legion 5</span>
-                        <span class="price-side">1300,00 €</span>
-                    </div>
-                </div>
-                <div class="new-product-list">
-                    <img src="images/products/playstation-playstation-icons.jpg" alt="...">
-                    <div class="product-container-side">
-                        <div class="small-ratings">
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <span class="product-name-side">Playstaion Icons</span>
-                        <span class="price-side">34,00 €</span>
-                    </div>
-                </div>
-                <div class="new-product-list">
-                    <img src="images/products/RAM.jpg" alt="...">
-                    <div class="product-container-side">
-                        <div class="small-ratings">
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <span class="product-name-side">G.SKILL Trident...</span>
-                        <span class="price-side">240,00 €</span>
-                    </div>
-                </div>
-                <div class="new-product-list">
-                    <img src="images/products/RAM.jpg" alt="...">
-                    <div class="product-container-side">
-                        <div class="small-ratings">
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <span class="product-name-side">G.SKILL Trident...</span>
-                        <span class="price-side">240,00 €</span>
-                    </div>
-                </div>
-                <div class="new-product-list">
-                    <img src="images/products/RAM.jpg" alt="...">
-                    <div class="product-container-side">
-                        <div class="small-ratings">
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star rating-color"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <span class="product-name-side">G.SKILL Trident...</span>
-                        <span class="price-side">240,00 €</span>
+                    <div class="extra-links">
+                        <a href="" class="btn facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            Facebook
+                        </a>
+                        <a href="" class="btn google">
+                            <i class="fa-brands fa-google-plus"></i>
+                            Google
+                        </a>
+                        <a href="" class="btn payPal">
+                            <img src="../images/payPal.png" alt="payPal">
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <button
             type="button"
             class="btn btn-floating btn-lg"
@@ -2217,7 +2046,7 @@
     <footer>
         <div class="footer-content">
             <div class="logoFooter">
-                <img src="images/logo.svg" alt="logo">
+                <img src="../images/logo.svg" alt="logo">
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the industry's standard dummy text ever since
@@ -2289,12 +2118,12 @@
                 <div class="instagramFooter">
                     <h6>INSTAGRAM</h6>
                     <div class="instaPictures">
-                        <img src="images/instagram/instagram1.png" alt="...">
-                        <img src="images/instagram/instagram2.png" alt="...">
-                        <img src="images/instagram/instagram3.png" alt="...">
-                        <img src="images/instagram/instagram4.png" alt="...">
-                        <img src="images/instagram/instagram5.png" alt="...">
-                        <img src="images/instagram/instagram6.png" alt="...">
+                        <img src="../images/instagram/instagram1.png" alt="...">
+                        <img src="../images/instagram/instagram2.png" alt="...">
+                        <img src="../images/instagram/instagram3.png" alt="...">
+                        <img src="../images/instagram/instagram4.png" alt="...">
+                        <img src="../images/instagram/instagram5.png" alt="...">
+                        <img src="../images/instagram/instagram6.png" alt="...">
                     </div>
                 </div>
             </div>

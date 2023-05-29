@@ -33,7 +33,7 @@ function ajaxFunc(searchbar, results) {
 
         // make request to backend (PHP file)
         $.ajax ({
-            url: "SearchbarData.php",
+            url: "../SearchbarData.php",
             type: "GET",
             success: getData
         })
