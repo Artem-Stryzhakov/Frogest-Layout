@@ -177,31 +177,67 @@
               <span class="number"><a href="tel:+3726111111">+372 611 11 11</a></span>
             </div>
             <div class="work-days">
-              <span>M - F:</span>
+              <span>M - F: </span>
               <span>09-18</span>
             </div>
           </div>
           <div class="nav-button dropdown">
-            <div class="user-button-container basket-put">
-              <button type="button" class="btn position-relative to-basket">
+            <div class="user-button-container basket-put dropdown-center">
+              <button type="button" class="btn position-relative to-basket" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-basket-shopping"></i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count-product desktop">
-                                          0
-                                          <span class="visually-hidden">unread messages</span>
-                                      </span>
+                    0
+                    <span class="visually-hidden">unread messages</span>
+                </span>
               </button>
               <div class="data-for-buttons">
                 <span>My Cart</span>
                 <span class="cart-total">0.00€</span>
+              </div>
+
+              <div class="dropdown-menu products">
+                <p class="basket-ID">BASKET ID: 22550556</p>
+                <div class="products">
+                  <div class="product">
+                    <img src="https://ee2.pigugroup.eu/colours/115/017/99/11501799/samsung-galaxy-watch-5-bt-44-mm-6c332_xbig.jpg" alt="smartwatch">
+                    <div class="name-and-price">
+                      <span class="product-name">Smartwatch SAMSUNG GALAXY 46MM SILVER</span>
+                      <span class="product-price">€ 119.00</span>
+                    </div>
+                    <button class="btn">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </div>
+                  <div class="product">
+                    <img src="" alt="">
+                    <div class="name-and-price">
+                      <span class="product-name">Helkama Saimi bicycle 28 "3-year-old, 53 cm, white"</span>
+                      <span class="product-price">€ 439.00</span>
+                    </div>
+                    <button class="btn">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </div>
+                  <div class="product">
+                    <img src="" alt="">
+                    <div class="name-and-price">
+                      <span class="product-name">CHAIRMAN KIDS 106 white</span>
+                      <span class="product-price">€ 49.00</span>
+                    </div>
+                    <button class="btn">
+                      <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="user-button-container">
               <button type="button" class="btn position-relative">
                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                                      0
-                                      <span class="visually-hidden">unread messages</span>
-                                  </span>
+                    0
+                    <span class="visually-hidden">unread messages</span>
+                </span>
               </button>
               <div class="data-for-buttons">
                 <span>Compare</span>
@@ -215,7 +251,7 @@
                 <span class="user-name">Andres</span>
                 <span class="second-span">Logout</span>
               </div>
-              <div class="dropdown-menu">
+              <div class="dropdown-menu account">
                 <a href="" class="btn facebook">
                   <i class="fa-brands fa-facebook-f"></i>
                   Facebook
@@ -242,18 +278,18 @@
             <button type="button" class="btn position-relative to-basket">
               <i class="fa-solid fa-basket-shopping"></i>
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count-product mobile">
-                              0
-                              <span class="visually-hidden">unread messages</span>
-                          </span>
+                  0
+                  <span class="visually-hidden">unread messages</span>
+              </span>
             </button>
           </div>
           <div class="mobile-basket">
             <button type="button" class="btn position-relative">
               <i class="fa-solid fa-heart"></i>
               <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                                      0
-                                      <span class="visually-hidden">unread messages</span>
-                              </span>
+                      0
+                      <span class="visually-hidden">unread messages</span>
+              </span>
             </button>
           </div>
           <div class="mobile-basket dropdown-center">
@@ -1992,23 +2028,64 @@
 <!--      </div>-->
     </div>
     <div class="center-column full-position">
-      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">My account</li>
-        </ol>
-      </nav>
       <div class="center-main-content">
-        <div class="nav nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-          <button class="nav-link first active" id="v-pills-info-tab" data-bs-toggle="pill" data-bs-target="#v-pills-info" type="button" role="tab" aria-controls="v-pills-info" aria-selected="true">Personal Information</button>
-          <button class="nav-link" id="v-pills-order-tab" data-bs-toggle="pill" data-bs-target="#v-pills-order" type="button" role="tab" aria-controls="v-pills-order" aria-selected="false">Order history & details</button>
-          <button class="nav-link" id="v-pills-slips-tab" data-bs-toggle="pill" data-bs-target="#v-pills-slips" type="button" role="tab" aria-controls="v-pills-slips" aria-selected="false">Credit slips</button>
-          <button class="nav-link" id="v-pills-addresses-tab" data-bs-toggle="pill" data-bs-target="#v-pills-addresses" type="button" role="tab" aria-controls="v-pills-addresses" aria-selected="false">Addresses</button>
-          <button class="nav-link" id="v-pills-vouchers-tab" data-bs-toggle="pill" data-bs-target="#v-pills-vouchers" type="button" role="tab" aria-controls="v-pills-vouchers" aria-selected="false">Vouchers</button>
-          <button class="nav-link" id="v-pills-wishlists-tab" data-bs-toggle="pill" data-bs-target="#v-pills-wishlists" type="button" role="tab" aria-controls="v-pills-wishlists" aria-selected="false">Wishlists</button>
-          <button class="nav-link last" id="v-pills-cards-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cards" type="button" role="tab" aria-controls="v-pills-cards" aria-selected="false">Credit Cards</button>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mobile-breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">My account</li>
+          </ol>
+        </nav>
+        <div class="nav nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <button class="nav-link first active" id="v-pills-info-tab" data-bs-toggle="pill" data-bs-target="#v-pills-info" type="button" role="tab" aria-controls="v-pills-info" aria-selected="true">
+            <div class="icons">
+              <i class="fa-regular fa-user"></i>
+            </div>
+            Personal Information
+          </button>
+          <button class="nav-link" id="v-pills-order-tab" data-bs-toggle="pill" data-bs-target="#v-pills-order" type="button" role="tab" aria-controls="v-pills-order" aria-selected="false">
+            <div class="icons">
+              <i class="fa-solid fa-clipboard-list"></i>
+            </div>
+            Order history & details
+          </button>
+          <button class="nav-link" id="v-pills-slips-tab" data-bs-toggle="pill" data-bs-target="#v-pills-slips" type="button" role="tab" aria-controls="v-pills-slips" aria-selected="false">
+            <div class="icons">
+              <i class="fa-regular fa-credit-card"></i>
+            </div>
+            Credit slips
+          </button>
+          <button class="nav-link" id="v-pills-addresses-tab" data-bs-toggle="pill" data-bs-target="#v-pills-addresses" type="button" role="tab" aria-controls="v-pills-addresses" aria-selected="false">
+            <div class="icons">
+              <i class="fa-solid fa-house"></i>
+            </div>
+            Addresses
+          </button>
+          <button class="nav-link" id="v-pills-vouchers-tab" data-bs-toggle="pill" data-bs-target="#v-pills-vouchers" type="button" role="tab" aria-controls="v-pills-vouchers" aria-selected="false">
+            <div class="icons">
+              <i class="fa-solid fa-tag"></i>
+            </div>
+            Vouchers
+          </button>
+          <button class="nav-link" id="v-pills-wishlists-tab" data-bs-toggle="pill" data-bs-target="#v-pills-wishlists" type="button" role="tab" aria-controls="v-pills-wishlists" aria-selected="false">
+            <div class="icons">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+            Wishlists
+          </button>
+          <button class="nav-link last" id="v-pills-cards-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cards" type="button" role="tab" aria-controls="v-pills-cards" aria-selected="false">
+            <div class="icons">
+              <i class="fa-solid fa-credit-card"></i>
+            </div>
+            Credit Cards
+          </button>
         </div>
         <div class="tab-content" id="v-pills-tabContent">
+          <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="desktop-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">My account</li>
+            </ol>
+          </nav>
           <div class="tab-pane fade show active" id="v-pills-info" role="tabpanel" aria-labelledby="v-pills-info-tab" tabindex="0">
             <div class="body-container">
               <div class="title-container">
@@ -2035,8 +2112,8 @@
                     <span class="star">*</span>
                     E-mail address
                   </label>
-                  <div class="email-box">
-                    <input type="email" class="form-control accept" id="email">
+                  <div class="email-box accept">
+                    <input type="email" class="form-control" id="email">
                     <i class="fa-sharp fa-solid fa-check"></i>
                   </div>
 

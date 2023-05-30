@@ -622,19 +622,19 @@ body {
           justify-content: center;
   gap: 10px;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) {
   width: 200px;
   padding: 10px;
   -webkit-transform: translate(-40%, 0);
           transform: translate(-40%, 0);
 }
 @media screen and (max-width: 1380px) {
-  .navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu {
+  .navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) {
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
   }
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .btn {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -651,20 +651,20 @@ body {
   font-weight: 700;
   height: 50px;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .btn:is(.facebook) {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .btn:is(.facebook) {
   background: #0a0a83;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .btn:is(.google) {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .btn:is(.google) {
   background: #4e4efa;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .btn:is(.payPal) {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .btn:is(.payPal) {
   background: white;
   border: 1px solid black;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .btn:is(.payPal) img {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .btn:is(.payPal) img {
   width: 100px;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .btn:is(.login) {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .btn:is(.login) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -679,22 +679,22 @@ body {
   border-radius: 30px;
   margin: 15px 0;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .btn .line {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .btn .line {
   height: 1px;
   background: #9a9a9a;
   width: 100%;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .btn .not-reg {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .btn .not-reg {
   text-align: center;
   color: #2d3850;
   font-weight: 700;
   margin-top: 7px;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .btn:is(.signup) {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .btn:is(.signup) {
   background: #1f622c;
   border-radius: 30px;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .login {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .login {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -709,20 +709,48 @@ body {
   border-radius: 30px;
   margin: 15px 0;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .line {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .line {
   height: 1px;
   background: #9a9a9a;
   width: 100%;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .not-reg {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .not-reg {
   text-align: center;
   color: #2d3850;
   font-weight: 700;
   margin-top: 7px;
 }
-.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu .signup {
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.account) .signup {
   background: #1f622c;
   border-radius: 30px;
+}
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.products) {
+  width: 300px;
+  padding: 10px;
+  -webkit-transform: translate(-40%, 0);
+          transform: translate(-40%, 0);
+}
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.products) .product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.products) .product img {
+  width: 100px;
+  height: 100px;
+}
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.products) .product .name-and-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.navbar .nav-button .user-button-container:is(.dropdown-center) .dropdown-menu:is(.products) .product .name-and-price .product-name {
+  font-size: 12px;
+  color: rgb(56, 175, 78);
 }
 @media screen and (min-width: 1531px) {
   .navbar .nav-button .user-button-container .data-for-buttons {
@@ -1394,6 +1422,12 @@ body {
 .column .center-column:is(.full-position) {
   width: 90%;
   margin-top: 50px;
+  margin-left: -4px;
+}
+@media screen and (max-width: 992px) {
+  .column .center-column:is(.full-position) {
+    margin-left: 30px;
+  }
 }
 @media screen and (max-width: 992px) {
   .column .center-column {
@@ -2043,6 +2077,30 @@ body {
   display: flex;
   width: 100%;
 }
+@media screen and (max-width: 992px) {
+  .column .center-column .center-main-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.column .center-column .center-main-content .mobile-breadcrumb {
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .column .center-column .center-main-content .mobile-breadcrumb {
+    display: inherit;
+  }
+}
+.column .center-column .center-main-content .desktop-breadcrumb {
+  display: inherit;
+}
+@media screen and (max-width: 992px) {
+  .column .center-column .center-main-content .desktop-breadcrumb {
+    display: none;
+  }
+}
 .column .center-column .center-main-content .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2052,18 +2110,36 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1px;
-  margin-top: 20px;
-  width: 230px;
+  min-width: 230px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background: lightgray;
   border-radius: 7px;
+  margin-right: 30px;
+}
+@media screen and (max-width: 992px) {
+  .column .center-column .center-main-content .nav {
+    width: 100%;
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
 }
 .column .center-column .center-main-content .nav .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
   background: white;
   color: #2d3850;
   border-radius: 0;
+  font-size: 15px;
 }
 .column .center-column .center-main-content .nav .nav-link:is(.active) {
   font-weight: bold;
@@ -2075,6 +2151,27 @@ body {
 .column .center-column .center-main-content .nav .nav-link:is(.last) {
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
+}
+.column .center-column .center-main-content .nav .nav-link .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+}
+.column .center-column .center-main-content .tab-content {
+  width: 100%;
+  margin-top: -40px;
+}
+@media screen and (max-width: 992px) {
+  .column .center-column .center-main-content .tab-content {
+    margin-top: 0;
+  }
 }
 @media screen and (max-width: 992px) {
   .column .right-column {
@@ -3613,26 +3710,26 @@ footer .extraFooter {
 .body-container .main-container .personalInfo-form .email-box {
   position: relative;
 }
-.body-container .main-container .personalInfo-form .email-box #email:is(.accept) {
-  border: 1.5px solid rgb(56, 175, 78);
-  background: rgba(56, 175, 78, 0.2);
-  color: rgb(56, 175, 78);
-}
-.body-container .main-container .personalInfo-form .email-box #email:is(.accept):focus {
-  border-color: rgb(56, 175, 78);
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(56, 175, 78, 0.6);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(56, 175, 78, 0.6);
-}
-.body-container .main-container .personalInfo-form .email-box #email:is(.accept)::after {
-  content: "Hello";
-  background: #2d3850;
-}
 .body-container .main-container .personalInfo-form .email-box i {
+  display: none;
   position: absolute;
   right: 20px;
   top: 4px;
   font-size: 30px;
   color: rgb(56, 175, 78);
+}
+.body-container .main-container .personalInfo-form .email-box:is(.accept) #email {
+  border: 1.5px solid rgb(56, 175, 78);
+  background: rgba(56, 175, 78, 0.2);
+  color: rgb(56, 175, 78);
+}
+.body-container .main-container .personalInfo-form .email-box:is(.accept) #email:focus {
+  border-color: rgb(56, 175, 78);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(56, 175, 78, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(56, 175, 78, 0.6);
+}
+.body-container .main-container .personalInfo-form .email-box:is(.accept) i {
+  display: inherit;
 }
 .body-container .main-container .personalInfo-form #birthDate {
   max-width: 250px;
