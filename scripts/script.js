@@ -50,3 +50,19 @@ mybutton.addEventListener("click", () => {
 document.addEventListener('DOMContentLoaded', () => {
     showProductReq();
 })
+
+const lists = document.querySelectorAll('.product-category .underlist-product')
+console.log(lists)
+
+console.log("Body height:", document.body.offsetHeight)
+
+window.addEventListener("scroll", () => {
+    if (document.body.offsetHeight < 1350) {
+        lists.forEach(list => {
+            console.log(list.scrollWidth)
+
+            //if (list.offsetHeight < 400)
+                //list.style.top = "-300px"
+        })
+    }
+})

@@ -313,7 +313,7 @@ body
           padding: 10px
           transform: translate(-40%, 0)
 
-          @media screen and (max-width: 1380px)
+          @media screen and (max-width: 1530px)
             transform: translate(-50%, 0)
 
           @include dropdown_menu_account
@@ -343,24 +343,7 @@ body
             border-radius: 30px
 
         .dropdown-menu:is(.products)
-          width: 300px
-          padding: 10px
-          transform: translate(-40%, 0)
-
-          .product
-            display: flex
-
-            img
-              width: 100px
-              height: 100px
-
-            .name-and-price
-              display: flex
-              flex-direction: column
-
-              .product-name
-                font-size: 12px
-                color: $mainColor
+          @include dropdown_menu_basket
 
 
       @media screen and (min-width: 1531px)
@@ -450,12 +433,15 @@ body
     gap: 10px
 
     &:is(.dropdown-center)
-      .dropdown-menu
+      .dropdown-menu:is(.account)
         width: 200px
         padding: 10px
         transform: translate(-80%, 0)
 
         @include dropdown_menu_account
+
+      .dropdown-menu:is(.products)
+        @include dropdown_menu_basket
 
 
     @media screen and (max-width: 992px)
