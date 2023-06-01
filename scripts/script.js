@@ -51,18 +51,30 @@ document.addEventListener('DOMContentLoaded', () => {
     showProductReq();
 })
 
-const lists = document.querySelectorAll('.product-category .underlist-product')
-console.log(lists)
+const lists = document.querySelectorAll('.list-of-categories .product-category a')
 
-console.log("Body height:", document.body.offsetHeight)
+lists.forEach(product => product.addEventListener('mouseover', (event) => {
+    //console.log(document.querySelector('.list-of-categories').scrollHeight)
 
-window.addEventListener("scroll", () => {
-    if (document.body.offsetHeight < 1350) {
-        lists.forEach(list => {
-            console.log(list.scrollWidth)
+    if (document.querySelector('.list-of-categories').scrollHeight > window.innerHeight) {
 
-            //if (list.offsetHeight < 400)
-                //list.style.top = "-300px"
-        })
+        // console.log("list-of-categories height:", document.querySelector('.list-of-categories').scrollHeight)
+        // console.log("document height:", window.innerHeight)
+
+        // console.log(document.querySelector('.list-of-categories').scrollHeight - window.innerHeight)
+        //
+        const list = event.target.parentElement.querySelector('.underlist-product')
+
+        list.style.top = `-${document.querySelector('.list-of-categories').scrollHeight - window.innerHeight + 107}px`
+        // console.log("minus height:", document.querySelector('.list-of-categories').scrollHeight - window.innerHeight)
+        // console.log("listProduct:", list.offsetHeight)
     }
-})
+}))
+
+// document.querySelector('.categories').addEventListener('mouseover', () => {
+//     if (document.querySelector('.list-of-categories').scrollHeight > window.innerHeight) {
+//         console.log(true, ":", document.querySelector('.list-of-categories').scrollHeight - window.innerHeight)
+//     } else {
+//         console.log(false)
+//     }
+// })

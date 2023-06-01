@@ -1636,6 +1636,8 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-height: 800px;
+  overflow-y: scroll;
 }
 .column .left-column .categories .list-of-categories .product-category .underlist-product .category-container .categories-in-categories h4 {
   max-width: 200px;
