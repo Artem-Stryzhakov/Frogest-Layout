@@ -714,6 +714,7 @@ body
     margin-left: 30px
     margin-top: 40px
     width: calc(100% - 570px)
+    min-height: 400px
     height: auto
 
     &:is(.full-position)
@@ -1103,6 +1104,45 @@ body
 
         @media screen and (max-width: 992px)
           margin-top: 0
+
+    .shopping-cart-container
+      gap: 30px
+
+      .info-product
+        max-width: 300px
+
+        .product-name
+          font-size: 15px
+          margin: 0
+          padding: 0
+
+        .product-ID
+          font-size: 12px
+          margin: 0
+
+          #id
+            color: $mainColor
+
+        .price
+          color: $mainColor
+          font-size: 18px
+          font-weight: 700
+          margin: 15px 0
+
+
+        .icons
+          i
+            color: $mainColor
+
+        .time-deliver
+          background: rgb(236, 255, 221)
+          width: fit-content
+          padding: 5px
+
+          p
+            margin: 0
+
+      @include productCounter
 
   // ======================================
 
@@ -1699,18 +1739,6 @@ footer
                 height: 30px
                 border: 0.5px solid #e0e0e0
 
-                //&:is(.color-1)
-                  background-color: #00008d
-
-                //&:is(.color-2)
-                  background-color: gold
-
-                //&:is(.color-3)
-                  background-color: #a9a9a9
-
-                //&:is(.color-4)
-                  background-color: #b43d00
-
         .quantity-container
           background-color: rgb(236, 255, 221)
           width: 100%
@@ -1732,29 +1760,9 @@ footer
             justify-content: center
             gap: 15px
 
-            .pick-quantity
-              display: flex
-              justify-content: space-evenly
-              gap: 10px
-              align-items: center
-              background-color: white
-              padding: 10px
-              width: 130px
-              height: 50px
-              border: 1px solid $mainColor
-              border-radius: 30px
+            // ======================================
 
-              button
-                height: fit-content
-                width: fit-content
-                padding: 5px
-                border: none
-                background: transparent
-                font-size: 13px
-
-                &:is(.plus)
-                  color: $mainColor
-
+            @include productCounter
 
             button
               display: flex

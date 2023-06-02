@@ -54,27 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
 const lists = document.querySelectorAll('.list-of-categories .product-category a')
 
 lists.forEach(product => product.addEventListener('mouseover', (event) => {
-    //console.log(document.querySelector('.list-of-categories').scrollHeight)
 
     if (document.querySelector('.list-of-categories').scrollHeight > window.innerHeight) {
-
-        // console.log("list-of-categories height:", document.querySelector('.list-of-categories').scrollHeight)
-        // console.log("document height:", window.innerHeight)
-
-        // console.log(document.querySelector('.list-of-categories').scrollHeight - window.innerHeight)
-        //
         const list = event.target.parentElement.querySelector('.underlist-product')
 
         list.style.top = `-${document.querySelector('.list-of-categories').scrollHeight - window.innerHeight + 107}px`
-        // console.log("minus height:", document.querySelector('.list-of-categories').scrollHeight - window.innerHeight)
-        // console.log("listProduct:", list.offsetHeight)
     }
 }))
-
-// document.querySelector('.categories').addEventListener('mouseover', () => {
-//     if (document.querySelector('.list-of-categories').scrollHeight > window.innerHeight) {
-//         console.log(true, ":", document.querySelector('.list-of-categories').scrollHeight - window.innerHeight)
-//     } else {
-//         console.log(false)
-//     }
-// })

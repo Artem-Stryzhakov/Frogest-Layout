@@ -518,3 +518,27 @@
       color: white
       background: $mainColor
       margin-top: 7px
+
+@mixin productCounter
+  .pick-quantity
+    display: flex
+    justify-content: space-evenly
+    gap: 10px
+    align-items: center
+    background-color: white
+    padding: 10px
+    width: 130px
+    height: 50px
+    border: 1px solid $mainColor
+    border-radius: 30px
+
+    button
+      height: fit-content
+      width: fit-content
+      padding: 5px
+      border: none
+      background: transparent
+      font-size: 13px
+
+      &:is(.plus)
+        color: $mainColor

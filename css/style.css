@@ -1667,6 +1667,7 @@ body {
   margin-left: 30px;
   margin-top: 40px;
   width: calc(100% - 570px);
+  min-height: 400px;
   height: auto;
 }
 .column .center-column:is(.full-position) {
@@ -2422,6 +2423,76 @@ body {
   .column .center-column .center-main-content .tab-content {
     margin-top: 0;
   }
+}
+.column .center-column .shopping-cart-container {
+  gap: 30px;
+}
+.column .center-column .shopping-cart-container .info-product {
+  max-width: 300px;
+}
+.column .center-column .shopping-cart-container .info-product .product-name {
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+.column .center-column .shopping-cart-container .info-product .product-ID {
+  font-size: 12px;
+  margin: 0;
+}
+.column .center-column .shopping-cart-container .info-product .product-ID #id {
+  color: rgb(56, 175, 78);
+}
+.column .center-column .shopping-cart-container .info-product .price {
+  color: rgb(56, 175, 78);
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+.column .center-column .shopping-cart-container .info-product .icons i {
+  color: rgb(56, 175, 78);
+}
+.column .center-column .shopping-cart-container .info-product .time-deliver {
+  background: rgb(236, 255, 221);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px;
+}
+.column .center-column .shopping-cart-container .info-product .time-deliver p {
+  margin: 0;
+}
+.column .center-column .shopping-cart-container .pick-quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding: 10px;
+  width: 130px;
+  height: 50px;
+  border: 1px solid rgb(56, 175, 78);
+  border-radius: 30px;
+}
+.column .center-column .shopping-cart-container .pick-quantity button {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px;
+  border: none;
+  background: transparent;
+  font-size: 13px;
+}
+.column .center-column .shopping-cart-container .pick-quantity button:is(.plus) {
+  color: rgb(56, 175, 78);
 }
 @media screen and (max-width: 992px) {
   .column .right-column {

@@ -1,12 +1,11 @@
 import {moveSelectedProduct, slickSliderAnimationProduct} from './components/animationBasket.js'
 import {slickSliderSelected} from "./components/slick-slider.js";
 import {
-    quantityCount,
-    decreaseQuantity,
-    increaseQuantity,
     addToCart,
     cardsProduct
 } from "./variables.js";
+
+import productCounter from "./components/UI/productCounter.js";
 
 const style = document.createElement('style')
 style.type = 'text/css'
@@ -21,26 +20,7 @@ productImage.forEach(image => image.addEventListener('click', (event) => {
     mainPictureProduct.src = event.target.src
 }))
 
-const quantityFunc = {
-    minusQuality: function () {
-        quantityCount.textContent = parseInt(quantityCount.textContent) - 1
-        if (parseInt(quantityCount.textContent) < 2) {
-            decreaseQuantity.disabled = true
-            decreaseQuantity.style.color = 'lightGray'
-        }
-    },
-    plusQuality: function () {
-        quantityCount.textContent = parseInt(quantityCount.textContent) + 1
-        if (parseInt(quantityCount.textContent) > 1) {
-            decreaseQuantity.disabled = false
-            decreaseQuantity.style.color = 'rgb(56, 175, 78)'
-        }
-    }
-}
-
-decreaseQuantity.addEventListener('click', quantityFunc.minusQuality)
-increaseQuantity.addEventListener('click', quantityFunc.plusQuality)
-
+productCounter;
 addToCart.addEventListener('click', moveSelectedProduct)
 
 cardsProduct.forEach(btn => btn.addEventListener('click', (event) => {
