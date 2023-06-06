@@ -55,7 +55,7 @@ const lists = document.querySelectorAll('.list-of-categories .product-category a
 
 lists.forEach(product => product.addEventListener('mouseover', (event) => {
 
-    if (document.querySelector('.list-of-categories').scrollHeight > window.innerHeight) {
+    if (document.querySelector('.list-of-categories').scrollHeight > document.body.offsetHeight) {
         const list = event.target.parentElement.querySelector('.underlist-product')
 
         list.style.top = `-${document.querySelector('.list-of-categories').scrollHeight - window.innerHeight + 107}px`
