@@ -51,18 +51,19 @@ document.addEventListener('DOMContentLoaded', () => {
     showProductReq();
 })
 
+// Optimize dropdown categories ==================================
 const lists = document.querySelectorAll('.list-of-categories .product-category > a')
 
-const footer = document.querySelector('footer')
-console.log("Footer:", footer.getBoundingClientRect().bottom)
+const resizeObserver = new ResizeObserver((resizer) => {
+    const footer = document.querySelector('footer')
+    console.log("Height document:", resizer[0].contentRect.height)
+    lists.forEach(product => product.addEventListener('mouseover', (event) => {
+        const list = event.target.parentElement.querySelector('.underlist-product')
+        list.style.top = `0`
+        if (list.getBoundingClientRect().bottom > footer.getBoundingClientRect().bottom) {
+            list.style.top = `-${list.getBoundingClientRect().bottom - footer.getBoundingClientRect().bottom}px`
+        }
+    }))
+})
 
-lists.forEach(product => product.addEventListener('mouseover', (event) => {
-    console.log("Categories height:", document.querySelector('.list-of-categories').scrollHeight)
-    const list = event.target.parentElement.querySelector('.underlist-product')
-    if (list.getBoundingClientRect().bottom > footer.getBoundingClientRect().bottom) {
-
-        console.log(list.getBoundingClientRect().bottom)
-
-        list.style.top = `-${list.getBoundingClientRect().bottom - footer.getBoundingClientRect().bottom}px`
-    }
-}))
+resizeObserver.observe(document.body)
