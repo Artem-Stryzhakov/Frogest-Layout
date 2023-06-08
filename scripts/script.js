@@ -51,13 +51,18 @@ document.addEventListener('DOMContentLoaded', () => {
     showProductReq();
 })
 
-const lists = document.querySelectorAll('.list-of-categories .product-category a')
+const lists = document.querySelectorAll('.list-of-categories .product-category > a')
+
+const footer = document.querySelector('footer')
+console.log("Footer:", footer.getBoundingClientRect().bottom)
 
 lists.forEach(product => product.addEventListener('mouseover', (event) => {
+    console.log("Categories height:", document.querySelector('.list-of-categories').scrollHeight)
+    const list = event.target.parentElement.querySelector('.underlist-product')
+    if (list.getBoundingClientRect().bottom > footer.getBoundingClientRect().bottom) {
 
-    if (document.querySelector('.list-of-categories').scrollHeight > document.body.offsetHeight) {
-        const list = event.target.parentElement.querySelector('.underlist-product')
+        console.log(list.getBoundingClientRect().bottom)
 
-        list.style.top = `-${document.querySelector('.list-of-categories').scrollHeight - window.innerHeight + 107}px`
+        list.style.top = `-${list.getBoundingClientRect().bottom - footer.getBoundingClientRect().bottom}px`
     }
 }))
