@@ -47,14 +47,6 @@ mybutton.addEventListener("click", () => {
     document.documentElement.scrollTop = 0;
 });
 
-const underlistProduct = document.querySelectorAll('.underlist-product')
-underlistProduct.forEach(list => list.style.display = 'none')
-
-document.addEventListener('DOMContentLoaded', () => {
-    showProductReq();
-    underlistProduct.forEach(list => list.style.display = 'inherit')
-})
-
 // Optimize dropdown categories ==================================
 const lists = document.querySelectorAll('.list-of-categories .product-category > a')
 

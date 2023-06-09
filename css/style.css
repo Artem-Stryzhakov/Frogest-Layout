@@ -1596,12 +1596,11 @@ body {
   display: flex;
 }
 .column .left-column .categories .list-of-categories .product-category:hover .underlist-product {
-  visibility: visible;
-  opacity: 1;
+  display: -ms-grid;
+  display: grid;
 }
 .column .left-column .categories .list-of-categories .product-category .underlist-product {
-  visibility: hidden;
-  opacity: 0;
+  display: none;
   position: absolute;
   top: 0;
   left: 100%;
@@ -1621,8 +1620,6 @@ body {
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
   z-index: 999;
-  -webkit-transition: visibility 0.2s, opacity 0.2s linear;
-  transition: visibility 0.2s, opacity 0.2s linear;
 }
 .column .left-column .categories .list-of-categories .product-category .underlist-product .top-line {
   width: 100%;
