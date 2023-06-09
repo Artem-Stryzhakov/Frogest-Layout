@@ -56,7 +56,6 @@ const lists = document.querySelectorAll('.list-of-categories .product-category >
 
 const resizeObserver = new ResizeObserver((resizer) => {
     const footer = document.querySelector('footer')
-    console.log("Height document:", resizer[0].contentRect.height)
     lists.forEach(product => product.addEventListener('mouseover', (event) => {
         const list = event.target.parentElement.querySelector('.underlist-product')
         list.style.top = `0`

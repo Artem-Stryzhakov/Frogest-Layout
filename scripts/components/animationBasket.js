@@ -4,7 +4,7 @@ const style = document.createElement('style')
 style.type = 'text/css'
 
 function mobileBasketAnimation() {
-    return (window.innerWidth > 991) ? icon[0] : icon[1]
+    return (window.innerWidth > 992) ? icon[0] : icon[1]
 }
 
 function slickSliderAnimationProduct(mainContainer) {
@@ -25,6 +25,7 @@ function slickSliderAnimationProduct(mainContainer) {
 
     const productImgCoor = productImg.getBoundingClientRect()
     const slickPosition = document.querySelector(mainContainer).getBoundingClientRect()
+    console.log(slickPosition)
 
     Object.assign(picture.style, {
         marginTop: (mainContainer === '.selected-products-show') ? '45px' : '20px',
@@ -84,6 +85,71 @@ function slickSliderAnimationProduct(mainContainer) {
         picture.remove()
     }, 1500)
 }
+
+function moveSelectedProductFilter(event) {
+    const node = (event.target.tagName.toLowerCase() === 'button') ? event.target : event.srcElement.parentElement;
+
+    const mainContainer = node.closest('.show-product.filterPage')
+    const pictureContainer = mainContainer.querySelector('.image-product-con')
+    const mainImage = pictureContainer.querySelector('img')
+
+    const productToCart = mainImage.cloneNode(true)
+    productToCart.classList.add('main-image-move')
+
+    const animationCoordinatesX = mobileBasketAnimation().getBoundingClientRect().x - mainImage.x
+    const animationCoordinatesY = mobileBasketAnimation().getBoundingClientRect().y - mainImage.y
+
+    pictureContainer.appendChild(productToCart)
+
+    style.innerHTML = `
+    .main-image-move {
+        animation: addToBasket 1s forwards
+    }
+    
+    @keyframes addToBasket {
+        70% {
+            transform: translate(
+                ${animationCoordinatesX + 25}px,
+                ${animationCoordinatesY + 30}px);
+            width: 50px;
+            height: 50px;
+        }
+        100% {
+            transform: translate(
+                ${animationCoordinatesX + 20}px,
+                ${animationCoordinatesY + 15}px);
+            width: 0;
+            height: 0;
+        }
+    }
+    `
+    document.querySelector('body').appendChild(style)
+
+    interactionButton(node, `
+        <i class="fa-solid fa-check"></i>
+    `, true)
+
+    setTimeout(() => {
+        const countProduct = mobileBasketAnimation().querySelector('.count-product')
+        const counterP = countProduct.textContent
+        const count = parseInt(counterP) + 1
+
+        document.querySelector('.count-product.desktop').innerHTML = count
+        document.querySelector('.count-product.mobile').innerHTML = count
+
+        style.innerHTML += `
+        .basket-put {
+            animation: backForward 0.4s forwards;
+        }
+        `
+    }, 800)
+    setTimeout(() => {
+        interactionButton(node, `
+        <i class="fa-solid fa-cart-shopping"></i>
+        `, false)
+    }, 2000)
+}
+
 function moveSelectedProduct(event) {
     const mainImageContainer = document.querySelector('.main-product-image')
     const mainImage = mainImageContainer.querySelector('img')
@@ -155,5 +221,6 @@ function interactionButton(target, DOMelement, boolean) {
 
 export {
     moveSelectedProduct,
+    moveSelectedProductFilter,
     slickSliderAnimationProduct
 }

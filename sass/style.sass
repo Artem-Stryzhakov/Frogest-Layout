@@ -626,6 +626,7 @@ body
       .list-of-categories
         background-color: white
         border: 1px solid lightgray
+        z-index: 900
 
         @include categories_theme
 
@@ -647,14 +648,14 @@ body
 
           &:hover
             .underlist-product
-              display: grid
-              //visibility: visible
-              //opacity: 1
+              //display: grid
+              visibility: visible
+              opacity: 1
 
           .underlist-product
-            display: none
-            //visibility: hidden
-            //opacity: 0
+            //display: none
+            visibility: hidden
+            opacity: 0
             position: absolute
             top: 0
             left: 100%
@@ -668,7 +669,7 @@ body
             border-top-right-radius: 7px
             border-bottom-right-radius: 7px
             z-index: 999
-            //transition: visibility 0.2s, opacity 0.2s linear
+            transition: visibility 0.2s, opacity 0.2s linear
 
             .top-line
               width: 100%
@@ -726,6 +727,9 @@ body
       width: 90%
       margin-top: 50px
       margin-left: -4px
+
+    &:is(.filterPage)
+      width: 80%
 
       @media screen and (max-width: 992px)
         margin-left: 30px
@@ -1319,6 +1323,51 @@ body
       div:is(.unactive)
         i, p
           color: rgba(98, 115, 140, 0.4)
+
+    .top-categories
+      display: flex
+      flex-wrap: wrap
+      justify-content: left
+      gap: 10.4px
+      margin-bottom: 30px
+
+      .category
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: 110px
+        background: white
+        border-radius: 7px
+        padding: 5px 10px
+        text-decoration: none
+        transition: 0.3s ease
+
+        &:hover
+          transform: scale(1.07)
+          box-shadow: 2px 2px 30px -2px rgba(0, 0, 0, 0.27)
+
+        img
+          max-width: 90px
+          max-height: 90px
+          margin-bottom: 5px
+
+        p
+          color: #777
+          font-size: 14px
+
+    .show-menu-products
+      display: flex
+      flex-wrap: wrap
+      margin-top: 20px
+      width: fit-content
+      gap: 30px
+
+      @media screen and (max-width: 992px)
+        justify-content: center
+
+      @include show-products-in-slider
+      @include sliderHowerEffect
+
 
 
   // ======================================
