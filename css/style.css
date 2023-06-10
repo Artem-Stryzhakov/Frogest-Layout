@@ -1735,6 +1735,157 @@ body {
           align-items: center;
   width: 20px;
 }
+.column .left-column .filters {
+  margin-top: 30px;
+  background: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  border-radius: 7px;
+}
+.column .left-column .filters .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 17px;
+}
+.column .left-column .filters .categories-list {
+  list-style-type: ">  ";
+}
+.column .left-column .filters .categories-list li {
+  margin: 10px 0;
+}
+.column .left-column .filters .categories-list li #accordionFilter {
+  margin-bottom: -10px;
+}
+.column .left-column .filters .categories-list li #accordionFilter button {
+  padding-left: 0;
+}
+.column .left-column .filters .categories-list li #accordionFilter ul {
+  margin-left: -12px;
+  padding: 0;
+  list-style-type: ">  ";
+}
+.column .left-column .filters .categories-list li #accordionFilter ul li a {
+  text-decoration: none;
+  color: #2d3850;
+}
+.column .left-column .filters .categories-list li #accordionFilter ul li a:is(.bold) {
+  font-weight: bold;
+}
+.column .left-column .filters .categories-list li #accordionFilter ul li #accordionInList .accordion-header button {
+  padding: 16px 0;
+}
+.column .left-column .filters .categories-list li a {
+  text-decoration: none;
+  color: black;
+}
+.column .left-column .filters .brand {
+  display: -ms-grid;
+  display: grid;
+  margin-top: 30px;
+  color: #2d3850;
+}
+.column .left-column .filters .brand .title {
+  font-weight: 700;
+  margin: 5px 0;
+}
+.column .left-column .filters .brand section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+.column .left-column .filters .brand section .form-check-input:checked {
+  background-color: green;
+  border: rgb(107, 180, 42) 1px solid;
+}
+.column .left-column .filters .brand section .form-check-input:checked ~ label {
+  font-weight: 600;
+}
+.column .left-column .filters .brand section .form-check-input:checked:focus {
+  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25);
+          box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25);
+}
+.column .left-column .filters .brand section .form-check-input:focus {
+  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+}
+.column .left-column .filters .brand section .form-check-input:active {
+  background-color: #C8FFC8;
+}
+.column .left-column .filters .price {
+  margin-top: 30px;
+  color: #2d3850;
+}
+.column .left-column .filters .price .title {
+  font-weight: 700;
+  margin: 5px 0;
+}
+.column .left-column .filters .price #slider {
+  width: 90%;
+}
+.column .left-column .filters .price #slider .noUi-connect {
+  background: rgb(107, 180, 42);
+}
+.column .left-column .filters .colors {
+  margin-top: 30px;
+  list-style-type: none;
+  padding: 0;
+}
+.column .left-column .filters .colors .title {
+  font-weight: 700;
+  margin: 5px 0;
+}
+.column .left-column .filters .colors li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+.column .left-column .filters .colors li input[type=checkbox], .column .left-column .filters .colors li label {
+  cursor: pointer;
+}
+.column .left-column .filters .colors li input[type=checkbox]:checked ~ label {
+  font-weight: 700;
+}
+.column .left-column .filters .tags {
+  margin-top: 30px;
+}
+.column .left-column .filters .tags .title {
+  font-weight: 700;
+  margin: 5px 0;
+}
+.column .left-column .filters .tags .tag-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+}
+.column .left-column .filters .tags .tag-list li {
+  margin: 5px;
+}
+.column .left-column .filters .tags .tag-list li a {
+  text-decoration: none;
+  color: #2d3850;
+  padding: 3px 7px;
+  border: 1px solid #2d3850;
+  border-radius: 25px;
+  font-size: 15px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.column .left-column .filters .tags .tag-list li a:hover {
+  background: rgb(107, 180, 42);
+  color: white;
+}
 .column .center-column {
   margin-right: 30px;
   margin-left: 30px;
@@ -1751,11 +1902,8 @@ body {
 .column .center-column:is(.filterPage) {
   width: 80%;
 }
-.column .center-column:is(.myAccount) {
-  margin-top: 55px;
-}
 @media screen and (max-width: 992px) {
-  .column .center-column:is(.myAccount) {
+  .column .center-column:is(.filterPage) {
     margin-left: 30px;
   }
 }
@@ -2072,6 +2220,9 @@ body {
 .column .center-column .product-show-container .main-products-show .products-container-show .show-product:hover .image-product-con img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+.column .center-column .product-show-container .main-products-show .products-container-show .show-product:hover .wishlist-compare {
+  max-height: 34px;
 }
 .column .center-column .product-show-container .main-products-show .products-container-show .show-product:hover .wishlist-compare a i {
   color: white;
@@ -2414,6 +2565,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  margin-top: 15px;
 }
 @media screen and (max-width: 992px) {
   .column .center-column .center-main-content {
@@ -3037,6 +3189,9 @@ body {
 .column .center-column .show-menu-products .show-product:hover .image-product-con img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+.column .center-column .show-menu-products .show-product:hover .wishlist-compare {
+  max-height: 34px;
 }
 .column .center-column .show-menu-products .show-product:hover .wishlist-compare a i {
   color: white;
@@ -4398,6 +4553,9 @@ footer .extraFooter {
 .selected-for-you .selected-products-show .show-product:hover .image-product-con img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+}
+.selected-for-you .selected-products-show .show-product:hover .wishlist-compare {
+  max-height: 34px;
 }
 .selected-for-you .selected-products-show .show-product:hover .wishlist-compare a i {
   color: white;
