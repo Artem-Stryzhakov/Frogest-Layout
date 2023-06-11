@@ -553,3 +553,48 @@
 
       &:is(.plus)
         color: $mainColor
+
+
+@mixin brand
+  section
+    display: flex
+    gap: 5px
+
+    .form-check-input:checked
+      background-color: green
+      border: $mainColor 1px solid
+
+    .form-check-input:checked ~ label
+      font-weight: 600
+
+    .form-check-input:checked:focus
+      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25)
+
+    .form-check-input:focus
+      box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25)
+
+    .form-check-input:active
+      background-color: #C8FFC8
+
+@mixin tag-list
+  .tag-list
+    display: flex
+    flex-wrap: wrap
+    padding: 0
+    list-style-type: none
+
+    li
+      margin: 5px
+
+      a
+        text-decoration: none
+        color: $secondColor
+        padding: 3px 7px
+        border: 1px solid $secondColor
+        border-radius: 25px
+        font-size: 14px
+        transition: 0.3s ease
+
+        &:hover
+          background: $mainColor
+          color: white

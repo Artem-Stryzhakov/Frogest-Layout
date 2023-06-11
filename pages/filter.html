@@ -2253,6 +2253,225 @@
             </div>
         </div>
         <div class="center-column filterPage">
+            <button class="btn button-filter position-fixed top-50 start-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter" aria-controls="offcanvasFilter">
+                <i class="fa-solid fa-filter"></i>
+                Filter
+            </button>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h4 class="offcanvas-title text-white" id="offcanvasExampleLabel">Filter</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <p class="title">
+                        <i class="fa fa-tv"></i>
+                        <span class="fw-bold">Arvutikomponendid, Vorgutooted</span>
+                    </p>
+                    <ul class="categories-list">
+                        <li>
+                            <div class="accordion accordion-flush" id="accordionFilter2">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                                            Sulearvutid
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne2" class="accordion-collapse collapse show" data-bs-parent="#accordionFilter2">
+                                        <div class="accordion-body">
+                                            <ul>
+                                                <li>
+                                                    <a href="" class="bold">
+                                                        Sulearvutite kotid ja umbrised
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Laadijad ja adapterid sulearvutitele
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Sulearvutite akud
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="">
+                                                        Sulearvutite jahutussuteemid
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <div class="accordion accordion-flush" id="accordionInList2">
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header">
+                                                                <button class="btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne2" aria-expanded="false" aria-controls="flush-collapseOne2">
+                                                                    Sulearvutite lukud
+                                                                </button>
+                                                            </h2>
+                                                            <div id="flush-collapseOne2" class="accordion-collapse collapse" data-bs-parent="#accordionInList2">
+                                                                <div class="accordion-body">
+                                                                    <ul>
+                                                                        <li>
+                                                                            <a href="" class="bold">
+                                                                                Sulearvutite kotid ja umbrised
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="">
+                                                                                Laadijad ja adapterid sulearvutitele
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="">
+                                                                                Sulearvutite akud
+                                                                            </a>
+
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="">
+                                                                                Sulearvutite jahutussuteemid
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="">
+                                Arvutid
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Video ja Audio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                Printerid
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="accordion accordion-flush brand" id="accordionBrand">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="btn collapsed btn-drop" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne3" aria-expanded="false" aria-controls="flush-collapseOne3">
+                                    Brand
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne3" class="accordion-collapse collapse show" data-bs-parent="#accordionBrand">
+                                <div class="accordion-body">
+                                    <section class="firstCheck">
+                                        <input type="checkbox" class="form-check-input" name="" id="checkbox4">
+                                        <label for="checkbox4">Electronic brand</label>
+                                    </section>
+                                    <section class="secondCheck">
+                                        <input type="checkbox" class="form-check-input" name="" id="checkbox5">
+                                        <label for="checkbox5">Electronic brand</label>
+                                    </section>
+                                    <section class="thirdCheck">
+                                        <input type="checkbox" class="form-check-input" name="" id="checkbox6" checked>
+                                        <label for="checkbox6">Electronic brand</label>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush price" id="accordionPrice">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="btn collapsed btn-drop" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne4" aria-expanded="false" aria-controls="flush-collapseOne4">
+                                    Price
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne4" class="accordion-collapse collapse show" data-bs-parent="#accordionPrice">
+                                <div class="accordion-body">
+                                    <p class="regulate-price-display2"></p>
+                                    <div id="slider2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush price" id="accordionColor">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="btn collapsed btn-drop" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne5" aria-expanded="false" aria-controls="flush-collapseOne5">
+                                    Color
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne5" class="accordion-collapse collapse show" data-bs-parent="#accordionColor">
+                                <div class="accordion-body">
+                                    <ul class="colors">
+                                        <li>
+                                            <input type="checkbox" class="form-check-input" name="" id="color6" data-color="black">
+                                            <label for="color6">Black</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="form-check-input" name="" id="color7" data-color="white">
+                                            <label for="color7">White</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="form-check-input" name="" id="color8" data-color="blue">
+                                            <label for="color8">Blue</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="form-check-input" name="" id="color9" data-color="yellow">
+                                            <label for="color9">Yellow</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="form-check-input" name="" id="color10" data-color="orange">
+                                            <label for="color10">Orange</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion accordion-flush price" id="accordionTags">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="btn collapsed btn-drop" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne6" aria-expanded="false" aria-controls="flush-collapseOne6">
+                                    Tags
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne6" class="accordion-collapse collapse show" data-bs-parent="#accordionTags">
+                                <div class="accordion-body">
+                                    <ul class="tag-list">
+                                        <li>
+                                            <a href="">TV sets</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Audio & Video</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Video Games</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Kids</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Camera & Photo</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn btn-apply">Apply</button>
+                </div>
+            </div>
             <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="mobile-breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>

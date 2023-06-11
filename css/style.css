@@ -1938,6 +1938,7 @@ body {
 }
 .column .center-column:is(.filterPage) {
   width: 80%;
+  margin-top: 15px;
 }
 @media screen and (max-width: 992px) {
   .column .center-column:is(.filterPage) {
@@ -2942,6 +2943,13 @@ body {
   gap: 10.4px;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 992px) {
+  .column .center-column .top-categories {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .column .center-column .top-categories .category {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3237,6 +3245,196 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 50%;
+}
+.column .button-filter {
+  display: none;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin-left: -25px;
+  letter-spacing: 0.2px;
+  border-radius: 0 0 7px 7px;
+  background: rgb(107, 180, 42);
+  color: white;
+  z-index: 1000;
+}
+@media screen and (max-width: 992px) {
+  .column .button-filter {
+    display: inherit;
+  }
+}
+.column .button-filter i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.column #offcanvasFilter {
+  width: 90%;
+}
+.column #offcanvasFilter .offcanvas-body {
+  padding: 10px 30px 10px 30px;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list {
+  list-style-type: "❯❯ ";
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li {
+  margin-top: 5px;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li #accordionFilter2 button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 97%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  border: none;
+  padding: 0;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li #accordionFilter2 button.collapsed::after {
+  content: "+";
+  font-size: 20px;
+  margin-top: -3px;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li #accordionFilter2 button:not(.collapsed)::after {
+  content: "-";
+  font-size: 20px;
+  margin-top: -3px;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li #accordionFilter2 .accordion-body {
+  padding: 0;
+  margin-left: 22px;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li #accordionFilter2 ul {
+  margin-left: -12px;
+  padding: 0;
+  list-style-type: "❯ ";
+  font-size: 14px;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li #accordionFilter2 ul li {
+  margin-top: 7px;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li #accordionFilter2 ul li a {
+  text-decoration: none;
+  color: #2d3850;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li #accordionFilter2 ul li a:is(.bold) {
+  font-weight: bold;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li #accordionFilter2 ul li #accordionInList2 .accordion-header button {
+  padding: 0;
+  font-size: 14px;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li #accordionFilter2 ul li #accordionInList2 .accordion-header button.collapsed::after {
+  content: "+";
+  font-size: 20px;
+  margin-top: -6px;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li #accordionFilter2 ul li #accordionInList2 .accordion-header button:not(.collapsed)::after {
+  content: "-";
+  font-size: 20px;
+  margin-top: -6px;
+}
+.column #offcanvasFilter .offcanvas-body .categories-list li a {
+  text-decoration: none;
+  color: black;
+}
+.column #offcanvasFilter .offcanvas-body .btn-drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border: none;
+}
+.column #offcanvasFilter .offcanvas-body .btn-drop.collapsed::after {
+  content: "+";
+  font-size: 20px;
+  margin-top: -3px;
+}
+.column #offcanvasFilter .offcanvas-body .btn-drop:not(.collapsed)::after {
+  content: "-";
+  font-size: 20px;
+  margin-top: -3px;
+}
+.column #offcanvasFilter .offcanvas-body #accordionBrand section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+.column #offcanvasFilter .offcanvas-body #accordionBrand section .form-check-input:checked {
+  background-color: green;
+  border: rgb(107, 180, 42) 1px solid;
+}
+.column #offcanvasFilter .offcanvas-body #accordionBrand section .form-check-input:checked ~ label {
+  font-weight: 600;
+}
+.column #offcanvasFilter .offcanvas-body #accordionBrand section .form-check-input:checked:focus {
+  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25);
+          box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25);
+}
+.column #offcanvasFilter .offcanvas-body #accordionBrand section .form-check-input:focus {
+  -webkit-box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+}
+.column #offcanvasFilter .offcanvas-body #accordionBrand section .form-check-input:active {
+  background-color: #C8FFC8;
+}
+.column #offcanvasFilter .offcanvas-body #accordionPrice #slider2 {
+  width: 90%;
+}
+.column #offcanvasFilter .offcanvas-body #accordionPrice #slider2 .noUi-connect {
+  background: rgb(107, 180, 42);
+}
+.column #offcanvasFilter .offcanvas-body #accordionColor ul {
+  padding: 0;
+}
+.column #offcanvasFilter .offcanvas-body #accordionColor ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+.column #offcanvasFilter .offcanvas-body #accordionColor ul li input[type=checkbox], .column #offcanvasFilter .offcanvas-body #accordionColor ul li label {
+  cursor: pointer;
+}
+.column #offcanvasFilter .offcanvas-body #accordionColor ul li input[type=checkbox]:checked ~ label {
+  font-weight: 700;
+}
+.column #offcanvasFilter .offcanvas-body #accordionTags .tag-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  list-style-type: none;
+}
+.column #offcanvasFilter .offcanvas-body #accordionTags .tag-list li {
+  margin: 5px;
+}
+.column #offcanvasFilter .offcanvas-body #accordionTags .tag-list li a {
+  text-decoration: none;
+  color: #2d3850;
+  padding: 3px 7px;
+  border: 1px solid #2d3850;
+  border-radius: 25px;
+  font-size: 14px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.column #offcanvasFilter .offcanvas-body #accordionTags .tag-list li a:hover {
+  background: rgb(107, 180, 42);
+  color: white;
+}
+.column #offcanvasFilter .offcanvas-body .btn-apply {
+  background: rgb(107, 180, 42);
+  color: white;
+  width: 100%;
+  margin-top: 10px;
 }
 @media screen and (max-width: 992px) {
   .column .right-column {
