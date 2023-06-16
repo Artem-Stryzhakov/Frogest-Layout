@@ -47,6 +47,10 @@ mybutton.addEventListener("click", () => {
     document.documentElement.scrollTop = 0;
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    showProductReq()
+})
+
 // Optimize dropdown categories ==================================
 const lists = document.querySelectorAll('.list-of-categories .product-category > a')
 
