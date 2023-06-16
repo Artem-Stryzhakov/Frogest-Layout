@@ -4,8 +4,14 @@ import {
     addToCart,
     cardsProduct
 } from "./variables.js";
-
 import productCounter from "./components/UI/productCounter.js";
+import {animationStyle} from './components/addCompareProducts.js'
+
+const compareIcons = document.querySelectorAll('.compare-counter')
+const wishlistIcons = document.querySelectorAll('.wishlist-counter')
+
+const addToCompare = document.querySelector('.quantity-menu .compare')
+const addToWishlist = document.querySelector('.quantity-menu .wishlist')
 
 const style = document.createElement('style')
 style.type = 'text/css'
@@ -30,4 +36,54 @@ cardsProduct.forEach(btn => btn.addEventListener('click', (event) => {
 
 window.addEventListener("DOMContentLoaded", () => {
     slickSliderSelected()
+})
+
+addToCompare.addEventListener('click', () => {
+    //const productName = event.target.closest('.info-pr').querySelector('.product-name')
+    // ============================
+    compareIcons.forEach(counter => {
+        if (counter.classList.contains('mobile')) {
+            const splitText = counter.textContent.split("")
+            splitText[1] = parseInt(splitText[1]) + 1
+            counter.textContent = splitText.join("")
+
+        } else {
+            counter.textContent = parseInt(counter.textContent) + 1
+            style.innerHTML += `
+                .user-button-container.compare {
+                    animation: backForward 0.4s forwards;
+                }
+            `;
+
+            (window.innerWidth > 992) ? document.querySelector('body').appendChild(style) : null
+
+            setTimeout(() => {
+                (document.body.contains(style)) ? document.querySelector('body').removeChild(style) : null
+            }, 400)
+        }
+    })
+})
+
+addToWishlist.addEventListener('click', () => {
+    wishlistIcons.forEach(counter => {
+        if (!counter.classList.contains('mobile')) {
+            const splitText = counter.textContent.split("")
+            splitText[1] = parseInt(splitText[1]) + 1
+            counter.textContent = splitText.join("")
+
+        } else {
+            counter.textContent = parseInt(counter.textContent) + 1
+            style.innerHTML += `
+                .mobile-basket.wishlist {
+                    animation: backForward 0.4s forwards;
+                }
+            `;
+
+            (window.innerWidth < 992) ? document.querySelector('body').appendChild(style) : null
+
+            setTimeout(() => {
+                (document.body.contains(style)) ? document.querySelector('body').removeChild(style) : null
+            }, 400)
+        }
+    })
 })

@@ -51,7 +51,7 @@
                 <i class="fa-solid fa-heart"></i>
                 <p>
                     Wishlist
-                    <span>(0)</span>
+                    <span class="wishlist-counter">(0)</span>
                 </p>
             </a>
             <div class="switch-currency dropdown-center">
@@ -186,9 +186,9 @@
                             <button type="button" class="btn position-relative to-basket" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fa-solid fa-basket-shopping"></i>
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count-product desktop">
-                      0
-                      <span class="visually-hidden">unread messages</span>
-                  </span>
+                                  0
+                                  <span class="visually-hidden">unread messages</span>
+                              </span>
                             </button>
                             <div class="data-for-buttons">
                                 <span>My Cart</span>
@@ -247,13 +247,13 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="user-button-container">
-                            <button type="button" class="btn position-relative">
+                        <div class="user-button-container compare">
+                            <button type="button" class="btn position-relative to-compare">
                                 <i class="fa-solid fa-arrow-right-arrow-left"></i>
                                 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                      0
-                      <span class="visually-hidden">unread messages</span>
-                  </span>
+                                      <span class="compare-counter">0</span>
+                                      <span class="visually-hidden">unread messages</span>
+                                  </span>
                             </button>
                             <div class="data-for-buttons">
                                 <span>Compare</span>
@@ -294,9 +294,9 @@
                         <button type="button" class="btn position-relative to-basket" data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-basket-shopping"></i>
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill count-product mobile">
-                    0
-                    <span class="visually-hidden">unread messages</span>
-                </span>
+                                0
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
                         </button>
 
                         <div class="dropdown-menu products">
@@ -351,13 +351,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mobile-basket">
+                    <div class="mobile-basket wishlist">
                         <button type="button" class="btn position-relative">
                             <i class="fa-solid fa-heart"></i>
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">
-                        0
-                        <span class="visually-hidden">unread messages</span>
-                </span>
+                                    <span class="wishlist-counter mobile">0</span>
+                                    <span class="visually-hidden">unread messages</span>
+                                </span>
                         </button>
                     </div>
                     <div class="mobile-basket dropdown-center">
@@ -537,7 +537,7 @@
                             </div>
 
                             Compare
-                            <span> (0)</span>
+                            <span class="compare-counter mobile">(0)</span>
                         </a>
                     </div>
 

@@ -4354,11 +4354,11 @@ footer .extraFooter {
   height: 50px;
   font-size: 14px;
 }
-.showing-product-container .product-menu .bottom-product-menu .choose-color-quantity .quantity-container .quantity-menu button:is(.like) {
+.showing-product-container .product-menu .bottom-product-menu .choose-color-quantity .quantity-container .quantity-menu button:is(.wishlist) {
   background-color: rgb(107, 180, 42);
   color: white;
 }
-.showing-product-container .product-menu .bottom-product-menu .choose-color-quantity .quantity-container .quantity-menu button:is(.like):hover {
+.showing-product-container .product-menu .bottom-product-menu .choose-color-quantity .quantity-container .quantity-menu button:is(.wishlist):hover {
   background-color: #84d23f;
 }
 .showing-product-container .product-menu .bottom-product-menu .choose-color-quantity .quantity-container .quantity-menu button:is(.compare) {

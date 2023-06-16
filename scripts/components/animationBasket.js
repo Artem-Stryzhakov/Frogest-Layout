@@ -25,7 +25,6 @@ function slickSliderAnimationProduct(mainContainer) {
 
     const productImgCoor = productImg.getBoundingClientRect()
     const slickPosition = document.querySelector(mainContainer).getBoundingClientRect()
-    console.log(slickPosition)
 
     Object.assign(picture.style, {
         marginTop: (mainContainer === '.selected-products-show') ? '45px' : '20px',
@@ -147,6 +146,7 @@ function moveSelectedProductFilter(event) {
         interactionButton(node, `
         <i class="fa-solid fa-cart-shopping"></i>
         `, false)
+        productToCart.remove()
     }, 2000)
 }
 
@@ -211,6 +211,7 @@ function moveSelectedProduct(event) {
         <i class="fa-solid fa-basket-shopping"></i>
         ADD TO CART
         `, false)
+        productToCart.remove()
     }, 2000)
 }
 
