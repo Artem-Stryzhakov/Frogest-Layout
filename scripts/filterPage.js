@@ -1,4 +1,5 @@
 import {moveSelectedProductFilter} from "./components/animationBasket.js";
+import {eventForCompare, eventForWishlist} from "./components/functions.js";
 
 const addToBasket = document.querySelectorAll('.add-to-basket')
 const inputs = document.querySelectorAll('.colors .form-check-input')
@@ -40,3 +41,4 @@ slider2.noUiSlider.on("update", (values) => {
 
 // ===== Change checkbox colors ===== //
 inputs.forEach(input => input.style.background = input.dataset.color)
+

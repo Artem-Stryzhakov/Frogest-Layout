@@ -8,7 +8,7 @@ function mobileBasketAnimation() {
 }
 
 function slickSliderAnimationProduct(mainContainer) {
-    const node = (event.target.tagName.toLowerCase() === 'a') ?
+    const node = (event.target.tagName.toLowerCase() === 'button') ?
         event.target : event.srcElement.parentElement
 
     node.innerHTML = `
@@ -104,7 +104,7 @@ function moveSelectedProductFilter(event) {
     .main-image-move {
         animation: addToBasket 1s forwards
     }
-    
+
     @keyframes addToBasket {
         70% {
             transform: translate(
@@ -168,7 +168,7 @@ function moveSelectedProduct(event) {
     .main-image-move {
         animation: addToBasket 1s forwards
     }
-    
+
     @keyframes addToBasket {
         70% {
             transform: translate(
